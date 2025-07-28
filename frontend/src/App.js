@@ -1,0 +1,1 @@
+import React from 'react';\nimport TaxiOptimizer from './components/TaxiOptimizer';\nimport './App.css';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <TaxiOptimizer />\n    </div>\n  );\n}\n\nexport default App;"
