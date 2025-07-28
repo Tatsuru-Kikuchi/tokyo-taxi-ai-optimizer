@@ -1,0 +1,520 @@
+.competitive-differentiation {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.competitive-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 150px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.metric .value {
+  display: block;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.metric.competitor .value {
+  color: #ff6b6b;
+  text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.metric.advantage .value {
+  color: #ffd93d;
+  text-shadow: 0 0 10px rgba(255, 217, 61, 0.5);
+}
+
+.metric .label {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.differentiation-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1em;
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.tab.active {
+  background: linear-gradient(45deg, #00ff88, #00ccff);
+  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+}
+
+.uniqueness-badge {
+  display: block;
+  font-size: 0.7em;
+  background: rgba(255, 215, 0, 0.9);
+  color: black;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.feature-details {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.feature-details h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.uniqueness {
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  color: black;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.differentiator-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.differentiator-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+
+.differentiator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.feature-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.feature-header h3 {
+  font-size: 1.3em;
+  color: #00ff88;
+  margin: 0;
+  flex: 1;
+}
+
+.accuracy-comparison {
+  display: flex;
+  gap: 15px;
+  text-align: center;
+}
+
+.our-accuracy, .improvement {
+  background: rgba(0, 255, 136, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 80px;
+}
+
+.our-accuracy .value, .improvement .value {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00ff88;
+}
+
+.our-accuracy .label, .improvement .label {
+  display: block;
+  font-size: 0.8em;
+  opacity: 0.8;
+  margin-top: 3px;
+}
+
+.description {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.technical-advantage {
+  background: rgba(0, 204, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border-left: 4px solid #00ccff;
+}
+
+.technical-advantage strong {
+  color: #00ccff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.competitive-comparison {
+  margin-top: 15px;
+}
+
+.comparison-bar {
+  position: relative;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.our-bar, .competitor-bar {
+  position: absolute;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+  transition: width 0.5s ease;
+}
+
+.our-bar {
+  top: 0;
+  background: linear-gradient(90deg, #00ff88, #00cc66);
+  color: black;
+}
+
+.competitor-bar {
+  bottom: 0;
+  background: linear-gradient(90deg, #ff6b6b, #cc5555);
+  color: white;
+}
+
+.market-positioning {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.market-positioning h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.positioning-sections {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .positioning-sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+.unique-value-propositions h3, .target-markets h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #00ff88;
+}
+
+.value-props-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.value-prop-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.value-prop-card h4 {
+  color: #ffd93d;
+  margin-bottom: 10px;
+}
+
+.competitive-advantage {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.competitive-advantage strong {
+  color: #00ff88;
+}
+
+.market-segments {
+  display: grid;
+  gap: 15px;
+}
+
+.market-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.market-card h4 {
+  color: #00ccff;
+  margin-bottom: 15px;
+}
+
+.market-metrics {
+  display: grid;
+  gap: 8px;
+}
+
+.market-metrics .metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  min-width: auto;
+}
+
+.market-metrics .metric .label {
+  opacity: 0.8;
+}
+
+.market-metrics .metric .value {
+  font-weight: bold;
+  color: #ffd93d;
+  font-size: 1em;
+  text-shadow: none;
+}
+
+.innovation-pipeline {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.innovation-pipeline h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.pipeline-stages {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.stage {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.stage.current {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.stage.next {
+  border-color: #ffd93d;
+  background: rgba(255, 217, 61, 0.1);
+}
+
+.stage.future {
+  border-color: #00ccff;
+  background: rgba(0, 204, 255, 0.1);
+}
+
+.stage h3 {
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.stage.current h3 {
+  color: #00ff88;
+}
+
+.stage.next h3 {
+  color: #ffd93d;
+}
+
+.stage.future h3 {
+  color: #00ccff;
+}
+
+.stage ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stage li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.stage li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.competitive-advantages-summary {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.competitive-advantages-summary h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.advantages-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.advantage-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-10px);
+}
+
+.advantage-card.patent {
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.advantage-card.research {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.advantage-card.data {
+  border-color: #00ccff;
+  background: rgba(0, 204, 255, 0.1);
+}
+
+.advantage-card.accuracy {
+  border-color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.advantage-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.advantage-card.patent h3 {
+  color: #ffd700;
+}
+
+.advantage-card.research h3 {
+  color: #00ff88;
+}
+
+.advantage-card.data h3 {
+  color: #00ccff;
+}
+
+.advantage-card.accuracy h3 {
+  color: #ff6b6b;
+}
+
+.advantage-card p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
