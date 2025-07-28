@@ -1,0 +1,43 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "taxi_optimizer_dev",
+    "user": "taxi_user",
+    "password": "dev_password"
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "db": 0
+  },
+  "apis": {
+    "weather": {
+      "base_url": "https://www.jma.go.jp/bosai/forecast/data",
+      "timeout": 30,
+      "rate_limit": 100
+    },
+    "odpt": {
+      "base_url": "https://api.odpt.org/api/v4",
+      "timeout": 30,
+      "rate_limit": 200
+    }
+  },
+  "cache": {
+    "weather_data": 300,
+    "traffic_data": 60,
+    "hotspots": 120,
+    "user_sessions": 3600
+  },
+  "logging": {
+    "level": "DEBUG",
+    "format": "json",
+    "file": "logs/app.log"
+  },
+  "features": {
+    "real_time_updates": true,
+    "predictive_analytics": true,
+    "mobile_api": true,
+    "admin_panel": true
+  }
+}
