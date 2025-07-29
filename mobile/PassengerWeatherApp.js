@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert, Dimensions } from 'react-native';
 import * as Location from 'expo-location';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useLocalization } from './localization/LocalizationContext';
 
 const { width, height } = Dimensions.get('window');
 
 const PassengerWeatherApp = () => {
+  const { t, formatCurrency, getCurrentLocaleInfo, formatTime } = useLocalization();
+  const localeInfo = getCurrentLocaleInfo();
+
   const [currentLocation, setCurrentLocation] = useState(null);
   const [weatherData, setWeatherData] = useState({
     condition: 'Heavy Rain',
@@ -13,7 +17,7 @@ const PassengerWeatherApp = () => {
     temperature: 18,
     expectedDuration: 120, // minutes
     stopTime: '15:30',
-    description: 'Heavy rain with occasional thunderstorms'
+    description: localeInfo.isJapanese ? '激しい雷雨を伴う大雨' : 'Heavy rain with occasional thunderstorms'
   });
 
   const [transportOptions, setTransportOptions] = useState({
@@ -29,51 +33,75 @@ const PassengerWeatherApp = () => {
       walkTime: 8,
       wetWalkDistance: 600,
       cost: 210,
-      crowdLevel: 'Very High'
+      crowdLevel: localeInfo.isJapanese ? '非常に混雑' : 'Very High'
     },
     bus: {
       available: true,
       waitTime: 12,
       walkTime: 5,
       cost: 180,
-      delayRisk: 'High'
+      delayRisk: localeInfo.isJapanese ? '高' : 'High'
     },
     wait: {
       estimatedWaitTime: 120,
-      comfortLocation: 'Coffee shop nearby',
+      comfortLocation: localeInfo.isJapanese ? '近くのコーヒーショップ' : 'Coffee shop nearby',
       costSavings: 1060
     }
   });
 
   const [recommendations, setRecommendations] = useState([
     {
-      option: 'Take Taxi Now',
+      option: localeInfo.isJapanese ? '今すぐタクシーを利用' : 'Take Taxi Now',
       score: 92,
-      reasoning: 'High comfort, immediate availability, worth the premium during heavy rain',
-      costBreakdown: 'Base fare ¥1,240 + weather premium ¥340 = ¥1,580',
-      pros: ['Immediate departure', 'Dry and comfortable', 'Direct route'],
-      cons: ['Higher cost due to weather', '1.8x surge pricing'],
-      timeToDestination: '18 minutes',
+      reasoning: localeInfo.isJapanese 
+        ? '高い快適性、即座の利用可能性、大雨時のプレミアム料金に見合う価値'
+        : 'High comfort, immediate availability, worth the premium during heavy rain',
+      costBreakdown: localeInfo.isJapanese 
+        ? `基本料金 ${formatCurrency(1240)} + 天気割増 ${formatCurrency(340)} = ${formatCurrency(1580)}`
+        : `Base fare ${formatCurrency(1240)} + weather premium ${formatCurrency(340)} = ${formatCurrency(1580)}`,
+      pros: localeInfo.isJapanese 
+        ? ['即座の出発', '乾燥して快適', '直接ルート']
+        : ['Immediate departure', 'Dry and comfortable', 'Direct route'],
+      cons: localeInfo.isJapanese 
+        ? ['天候による高額料金', '1.8倍のサージ料金']
+        : ['Higher cost due to weather', '1.8x surge pricing'],
+      timeToDestination: localeInfo.isJapanese ? '18分' : '18 minutes',
       priority: 'High'
     },
     {
-      option: 'Wait for Weather to Improve',
+      option: localeInfo.isJapanese ? '天候改善を待つ' : 'Wait for Weather to Improve',
       score: 76,
-      reasoning: 'Significant cost savings if you can wait 2 hours in comfort',
-      costBreakdown: 'Save ¥1,060 + coffee/comfort cost ¥400 = Net savings ¥660',
-      pros: ['Major cost savings', 'Coffee shop available', 'Rain will stop'],
-      cons: ['2-hour delay', 'Meeting might be affected'],
-      timeToDestination: '2h 20min (including wait)',
+      reasoning: localeInfo.isJapanese 
+        ? '快適に2時間待てれば大幅な節約が可能'
+        : 'Significant cost savings if you can wait 2 hours in comfort',
+      costBreakdown: localeInfo.isJapanese 
+        ? `節約 ${formatCurrency(1060)} + コーヒー代 ${formatCurrency(400)} = 純節約 ${formatCurrency(660)}`
+        : `Save ${formatCurrency(1060)} + coffee/comfort cost ${formatCurrency(400)} = Net savings ${formatCurrency(660)}`,
+      pros: localeInfo.isJapanese 
+        ? ['大幅な節約', 'コーヒーショップ利用可能', '雨は止む予定']
+        : ['Major cost savings', 'Coffee shop available', 'Rain will stop'],
+      cons: localeInfo.isJapanese 
+        ? ['2時間の遅れ', '会議に影響の可能性']
+        : ['2-hour delay', 'Meeting might be affected'],
+      timeToDestination: localeInfo.isJapanese ? '2時間20分（待機時間込み）' : '2h 20min (including wait)',
       priority: 'Medium'
     },
     {
-      option: 'Use Train (with umbrella)',
+      option: localeInfo.isJapanese ? '電車を利用（傘持参）' : 'Use Train (with umbrella)',
       score: 45,
-      reasoning: 'Cheapest option but very uncomfortable in current weather',
-      costBreakdown: 'Train fare ¥210 + umbrella/discomfort cost',
-      pros: ['Lowest cost', 'Reliable timing'],
-      cons: ['8-minute walk in heavy rain', 'Very crowded', 'Will get wet'],
-      timeToDestination: '35 minutes',
+      reasoning: localeInfo.isJapanese 
+        ? '最も安価だが現在の天候では非常に不快'
+        : 'Cheapest option but very uncomfortable in current weather',
+      costBreakdown: localeInfo.isJapanese 
+        ? `電車料金 ${formatCurrency(210)} + 傘・不快感コスト`
+        : `Train fare ${formatCurrency(210)} + umbrella/discomfort cost`,
+      pros: localeInfo.isJapanese 
+        ? ['最低料金', '信頼できる時間']
+        : ['Lowest cost', 'Reliable timing'],
+      cons: localeInfo.isJapanese 
+        ? ['大雨中8分の徒歩', '非常に混雑', '濡れる可能性']
+        : ['8-minute walk in heavy rain', 'Very crowded', 'Will get wet'],
+      timeToDestination: localeInfo.isJapanese ? '35分' : '35 minutes',
       priority: 'Low'
     }
   ]);
@@ -97,7 +125,7 @@ const PassengerWeatherApp = () => {
     try {
       const { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
-        Alert.alert('Permission needed', 'Location access required for weather-based recommendations');
+        Alert.alert(t('alerts.permissionDenied'), t('alerts.locationRequired'));
         return;
       }
       
@@ -107,7 +135,7 @@ const PassengerWeatherApp = () => {
         longitude: location.coords.longitude,
       });
     } catch (error) {
-      Alert.alert('Error', 'Could not get your location');
+      Alert.alert(t('common.error'), 'Could not get your location');
     }
   };
 
@@ -130,30 +158,31 @@ const PassengerWeatherApp = () => {
   };
 
   const makeDecision = (option) => {
+    const title = localeInfo.isJapanese ? '選択の確認' : 'Confirm Choice';
+    const message = localeInfo.isJapanese 
+      ? `選択されました: ${option}\n\n続行しますか？`
+      : `You selected: ${option}\n\nWould you like to proceed?`;
+    
     Alert.alert(
-      'Confirm Choice',
-      `You selected: ${option}\n\nWould you like to proceed?`,
+      title,
+      message,
       [
-        { text: 'Cancel', style: 'cancel' },
-        { text: 'Proceed', onPress: () => executeDecision(option) }
+        { text: t('common.cancel'), style: 'cancel' },
+        { text: t('common.proceed'), onPress: () => executeDecision(option) }
       ]
     );
   };
 
   const executeDecision = (option) => {
-    switch (option) {
-      case 'Take Taxi Now':
-        Alert.alert('Taxi Booked', 'A taxi has been requested. Driver will arrive in 4 minutes.');
-        break;
-      case 'Wait for Weather to Improve':
-        Alert.alert('Waiting Mode', 'Weather monitoring activated. You\'ll be notified when conditions improve.');
-        break;
-      case 'Use Train (with umbrella)':
-        Alert.alert('Train Route', 'Route to nearest station calculated. Stay dry and be safe!');
-        break;
-      default:
-        Alert.alert('Option Selected', `Proceeding with: ${option}`);
+    let message = '';
+    if (option.includes('Taxi') || option.includes('タクシー')) {
+      message = t('alerts.taxiBooked');
+    } else if (option.includes('Wait') || option.includes('待つ')) {
+      message = t('alerts.waitingMode');
+    } else if (option.includes('Train') || option.includes('電車')) {
+      message = t('alerts.trainRoute');
     }
+    Alert.alert(t('common.success'), message);
   };
 
   const adjustDecisionFactors = (factor, value) => {
@@ -161,14 +190,11 @@ const PassengerWeatherApp = () => {
       ...prev,
       [factor]: value
     }));
-    // Recalculate recommendations based on new factors
-    recalculateRecommendations();
-  };
-
-  const recalculateRecommendations = () => {
-    // This would normally involve complex AI calculations
-    // For demo, we'll just show the impact
-    Alert.alert('Preferences Updated', 'Recommendations have been updated based on your preferences');
+    
+    const message = localeInfo.isJapanese 
+      ? '設定が更新されました。推奨内容が新しい設定に基づいて更新されました。'
+      : 'Preferences updated. Recommendations have been updated based on your preferences.';
+    Alert.alert(t('common.success'), message);
   };
 
   return (
@@ -176,14 +202,16 @@ const PassengerWeatherApp = () => {
       {/* Header with current weather */}
       <LinearGradient colors={['#667eea', '#764ba2']} style={styles.header}>
         <View style={styles.headerContent}>
-          <Text style={styles.headerTitle}>🌧️ Weather Travel Assistant</Text>
+          <Text style={styles.headerTitle}>{t('passengerApp.header.title')}</Text>
           <View style={styles.weatherCard}>
-            <Text style={styles.weatherCondition}>{weatherData.condition}</Text>
+            <Text style={styles.weatherCondition}>
+              {localeInfo.isJapanese ? '大雨' : weatherData.condition}
+            </Text>
             <Text style={styles.weatherDetails}>
-              Intensity: {weatherData.intensity}% | {weatherData.temperature}°C
+              {t('passengerApp.header.intensity')}: {weatherData.intensity}% | {weatherData.temperature}°C
             </Text>
             <Text style={styles.weatherDuration}>
-              Expected to stop: {weatherData.stopTime} ({weatherData.expectedDuration} min)
+              {t('passengerApp.header.expectedToStop')}: {weatherData.stopTime} ({weatherData.expectedDuration} {t('common.minutes')})
             </Text>
           </View>
         </View>
@@ -191,40 +219,40 @@ const PassengerWeatherApp = () => {
 
       {/* Quick decision buttons */}
       <View style={styles.quickDecisionContainer}>
-        <Text style={styles.sectionTitle}>🚀 Quick Decision</Text>
+        <Text style={styles.sectionTitle}>{t('passengerApp.quickDecision.title')}</Text>
         <View style={styles.quickButtons}>
           <TouchableOpacity 
             style={[styles.quickButton, styles.taxiButton]}
-            onPress={() => makeDecision('Take Taxi Now')}
+            onPress={() => makeDecision(recommendations[0].option)}
           >
             <Text style={styles.quickButtonIcon}>🚕</Text>
-            <Text style={styles.quickButtonText}>Take Taxi</Text>
-            <Text style={styles.quickButtonSubtext}>¥{transportOptions.taxi.estimatedCost + transportOptions.taxi.weatherPremium}</Text>
+            <Text style={styles.quickButtonText}>{t('passengerApp.quickDecision.takeTaxi')}</Text>
+            <Text style={styles.quickButtonSubtext}>{formatCurrency(transportOptions.taxi.estimatedCost + transportOptions.taxi.weatherPremium)}</Text>
           </TouchableOpacity>
           
           <TouchableOpacity 
             style={[styles.quickButton, styles.waitButton]}
-            onPress={() => makeDecision('Wait for Weather to Improve')}
+            onPress={() => makeDecision(recommendations[1].option)}
           >
             <Text style={styles.quickButtonIcon}>⏰</Text>
-            <Text style={styles.quickButtonText}>Wait It Out</Text>
-            <Text style={styles.quickButtonSubtext}>{weatherData.expectedDuration} min</Text>
+            <Text style={styles.quickButtonText}>{t('passengerApp.quickDecision.waitOut')}</Text>
+            <Text style={styles.quickButtonSubtext}>{weatherData.expectedDuration} {t('common.minutes')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.quickButton, styles.trainButton]}
-            onPress={() => makeDecision('Use Train (with umbrella)')}
+            onPress={() => makeDecision(recommendations[2].option)}
           >
             <Text style={styles.quickButtonIcon}>🚊</Text>
-            <Text style={styles.quickButtonText}>Use Train</Text>
-            <Text style={styles.quickButtonSubtext}>¥{transportOptions.train.cost}</Text>
+            <Text style={styles.quickButtonText}>{t('passengerApp.quickDecision.useTrain')}</Text>
+            <Text style={styles.quickButtonSubtext}>{formatCurrency(transportOptions.train.cost)}</Text>
           </TouchableOpacity>
         </View>
       </View>
 
       {/* Detailed recommendations */}
       <View style={styles.recommendationsContainer}>
-        <Text style={styles.sectionTitle}>🤖 AI Recommendations</Text>
+        <Text style={styles.sectionTitle}>{t('passengerApp.recommendations.title')}</Text>
         {recommendations.map((rec, index) => (
           <TouchableOpacity 
             key={index} 
@@ -235,7 +263,7 @@ const PassengerWeatherApp = () => {
               <Text style={styles.recOption}>{rec.option}</Text>
               <View style={styles.scoreContainer}>
                 <Text style={styles.scoreText}>{rec.score}%</Text>
-                <Text style={styles.scoreLabel}>Match</Text>
+                <Text style={styles.scoreLabel}>{t('passengerApp.recommendations.match')}</Text>
               </View>
             </View>
             
@@ -244,14 +272,14 @@ const PassengerWeatherApp = () => {
             
             <View style={styles.prosConsContainer}>
               <View style={styles.prosContainer}>
-                <Text style={styles.prosConsTitle}>✅ Pros:</Text>
+                <Text style={styles.prosConsTitle}>{t('passengerApp.recommendations.pros')}</Text>
                 {rec.pros.map((pro, i) => (
                   <Text key={i} style={styles.prosConsItem}>• {pro}</Text>
                 ))}
               </View>
               
               <View style={styles.consContainer}>
-                <Text style={styles.prosConsTitle}>❌ Cons:</Text>
+                <Text style={styles.prosConsTitle}>{t('passengerApp.recommendations.cons')}</Text>
                 {rec.cons.map((con, i) => (
                   <Text key={i} style={styles.prosConsItem}>• {con}</Text>
                 ))}
@@ -263,7 +291,9 @@ const PassengerWeatherApp = () => {
               <Text style={[styles.recPriority, { 
                 color: rec.priority === 'High' ? '#4CAF50' : rec.priority === 'Medium' ? '#FF9800' : '#757575' 
               }]}>
-                {rec.priority} Priority
+                {rec.priority === 'High' ? (localeInfo.isJapanese ? '高優先度' : 'High Priority') : 
+                 rec.priority === 'Medium' ? (localeInfo.isJapanese ? '中優先度' : 'Medium Priority') :
+                 (localeInfo.isJapanese ? '低優先度' : 'Low Priority')}
               </Text>
             </View>
           </TouchableOpacity>
@@ -272,73 +302,73 @@ const PassengerWeatherApp = () => {
 
       {/* Live transport status */}
       <View style={styles.transportStatusContainer}>
-        <Text style={styles.sectionTitle}>🚦 Live Transport Status</Text>
+        <Text style={styles.sectionTitle}>{t('passengerApp.transportStatus.title')}</Text>
         
         <View style={styles.transportOption}>
           <View style={styles.transportHeader}>
             <Text style={styles.transportIcon}>🚕</Text>
-            <Text style={styles.transportName}>Taxi</Text>
-            <Text style={styles.transportStatus}>Available</Text>
+            <Text style={styles.transportName}>{t('passengerApp.transportStatus.taxi')}</Text>
+            <Text style={styles.transportStatus}>{t('passengerApp.transportStatus.available')}</Text>
           </View>
           <View style={styles.transportDetails}>
-            <Text style={styles.transportDetail}>Wait: {transportOptions.taxi.waitTime} min</Text>
-            <Text style={styles.transportDetail}>Cost: ¥{transportOptions.taxi.estimatedCost + transportOptions.taxi.weatherPremium}</Text>
-            <Text style={styles.transportSurge}>⚡ {transportOptions.taxi.surge}x surge pricing</Text>
+            <Text style={styles.transportDetail}>{t('passengerApp.transportStatus.wait')}: {transportOptions.taxi.waitTime} {t('common.minutes')}</Text>
+            <Text style={styles.transportDetail}>{t('passengerApp.transportStatus.cost')}: {formatCurrency(transportOptions.taxi.estimatedCost + transportOptions.taxi.weatherPremium)}</Text>
+            <Text style={styles.transportSurge}>⚡ {transportOptions.taxi.surge}x {localeInfo.isJapanese ? 'サージ料金' : 'surge pricing'}</Text>
           </View>
         </View>
 
         <View style={styles.transportOption}>
           <View style={styles.transportHeader}>
             <Text style={styles.transportIcon}>🚊</Text>
-            <Text style={styles.transportName}>Train</Text>
-            <Text style={styles.transportStatus}>Running</Text>
+            <Text style={styles.transportName}>{t('passengerApp.transportStatus.train')}</Text>
+            <Text style={styles.transportStatus}>{t('passengerApp.transportStatus.running')}</Text>
           </View>
           <View style={styles.transportDetails}>
-            <Text style={styles.transportDetail}>Walk: {transportOptions.train.walkTime} min in rain</Text>
-            <Text style={styles.transportDetail}>Cost: ¥{transportOptions.train.cost}</Text>
-            <Text style={styles.transportCrowd}>👥 {transportOptions.train.crowdLevel} crowds</Text>
+            <Text style={styles.transportDetail}>{t('passengerApp.transportStatus.walk')}: {transportOptions.train.walkTime} {t('common.minutes')} {localeInfo.isJapanese ? '雨中' : 'in rain'}</Text>
+            <Text style={styles.transportDetail}>{t('passengerApp.transportStatus.cost')}: {formatCurrency(transportOptions.train.cost)}</Text>
+            <Text style={styles.transportCrowd}>👥 {transportOptions.train.crowdLevel} {localeInfo.isJapanese ? '' : 'crowds'}</Text>
           </View>
         </View>
 
         <View style={styles.transportOption}>
           <View style={styles.transportHeader}>
             <Text style={styles.transportIcon}>🚌</Text>
-            <Text style={styles.transportName}>Bus</Text>
-            <Text style={styles.transportStatus}>Delayed</Text>
+            <Text style={styles.transportName}>{t('passengerApp.transportStatus.bus')}</Text>
+            <Text style={styles.transportStatus}>{t('passengerApp.transportStatus.delayed')}</Text>
           </View>
           <View style={styles.transportDetails}>
-            <Text style={styles.transportDetail}>Wait: {transportOptions.bus.waitTime} min</Text>
-            <Text style={styles.transportDetail}>Cost: ¥{transportOptions.bus.cost}</Text>
-            <Text style={styles.transportDelay}>⚠️ {transportOptions.bus.delayRisk} delay risk</Text>
+            <Text style={styles.transportDetail}>{t('passengerApp.transportStatus.wait')}: {transportOptions.bus.waitTime} {t('common.minutes')}</Text>
+            <Text style={styles.transportDetail}>{t('passengerApp.transportStatus.cost')}: {formatCurrency(transportOptions.bus.cost)}</Text>
+            <Text style={styles.transportDelay}>⚠️ {transportOptions.bus.delayRisk} {localeInfo.isJapanese ? '遅延リスク' : 'delay risk'}</Text>
           </View>
         </View>
       </View>
 
       {/* Weather forecast */}
       <View style={styles.forecastContainer}>
-        <Text style={styles.sectionTitle}>📊 Weather Forecast</Text>
+        <Text style={styles.sectionTitle}>{t('passengerApp.forecast.title')}</Text>
         <View style={styles.forecastCard}>
-          <Text style={styles.forecastTitle}>Next 3 Hours</Text>
+          <Text style={styles.forecastTitle}>{t('passengerApp.forecast.next3Hours')}</Text>
           <View style={styles.forecastTimeline}>
             <View style={styles.forecastItem}>
-              <Text style={styles.forecastTime}>Now</Text>
+              <Text style={styles.forecastTime}>{t('passengerApp.forecast.now')}</Text>
               <Text style={styles.forecastIcon}>🌧️</Text>
-              <Text style={styles.forecastIntensity}>Heavy</Text>
+              <Text style={styles.forecastIntensity}>{t('passengerApp.forecast.heavy')}</Text>
             </View>
             <View style={styles.forecastItem}>
               <Text style={styles.forecastTime}>+1h</Text>
               <Text style={styles.forecastIcon}>🌦️</Text>
-              <Text style={styles.forecastIntensity}>Moderate</Text>
+              <Text style={styles.forecastIntensity}>{t('passengerApp.forecast.moderate')}</Text>
             </View>
             <View style={styles.forecastItem}>
               <Text style={styles.forecastTime}>+2h</Text>
               <Text style={styles.forecastIcon}>☁️</Text>
-              <Text style={styles.forecastIntensity}>Light</Text>
+              <Text style={styles.forecastIntensity}>{t('passengerApp.forecast.light')}</Text>
             </View>
             <View style={styles.forecastItem}>
               <Text style={styles.forecastTime}>+3h</Text>
               <Text style={styles.forecastIcon}>⛅</Text>
-              <Text style={styles.forecastIntensity}>Clear</Text>
+              <Text style={styles.forecastIntensity}>{t('passengerApp.forecast.clear')}</Text>
             </View>
           </View>
         </View>
@@ -346,23 +376,23 @@ const PassengerWeatherApp = () => {
 
       {/* Preference adjustments */}
       <View style={styles.preferencesContainer}>
-        <Text style={styles.sectionTitle}>⚙️ Your Preferences</Text>
+        <Text style={styles.sectionTitle}>{t('passengerApp.preferences.title')}</Text>
         
         <View style={styles.preferenceItem}>
-          <Text style={styles.preferenceLabel}>Urgency Level</Text>
+          <Text style={styles.preferenceLabel}>{t('passengerApp.preferences.urgencyLevel')}</Text>
           <View style={styles.preferenceButtons}>
-            {['Low', 'Medium', 'High'].map((level) => (
+            {[t('passengerApp.preferences.low'), t('passengerApp.preferences.medium'), t('passengerApp.preferences.high')].map((level, index) => (
               <TouchableOpacity
                 key={level}
                 style={[
                   styles.preferenceButton,
-                  decisionFactors.urgency === level && styles.preferenceButtonActive
+                  decisionFactors.urgency === ['Low', 'Medium', 'High'][index] && styles.preferenceButtonActive
                 ]}
-                onPress={() => adjustDecisionFactors('urgency', level)}
+                onPress={() => adjustDecisionFactors('urgency', ['Low', 'Medium', 'High'][index])}
               >
                 <Text style={[
                   styles.preferenceButtonText,
-                  decisionFactors.urgency === level && styles.preferenceButtonTextActive
+                  decisionFactors.urgency === ['Low', 'Medium', 'High'][index] && styles.preferenceButtonTextActive
                 ]}>
                   {level}
                 </Text>
@@ -372,20 +402,20 @@ const PassengerWeatherApp = () => {
         </View>
 
         <View style={styles.preferenceItem}>
-          <Text style={styles.preferenceLabel}>Budget Flexibility</Text>
+          <Text style={styles.preferenceLabel}>{t('passengerApp.preferences.budgetFlexibility')}</Text>
           <View style={styles.preferenceButtons}>
-            {['Tight', 'Moderate', 'Flexible'].map((budget) => (
+            {[t('passengerApp.preferences.tight'), t('passengerApp.preferences.moderate'), t('passengerApp.preferences.flexible')].map((budget, index) => (
               <TouchableOpacity
                 key={budget}
                 style={[
                   styles.preferenceButton,
-                  decisionFactors.budget === budget && styles.preferenceButtonActive
+                  decisionFactors.budget === ['Tight', 'Moderate', 'Flexible'][index] && styles.preferenceButtonActive
                 ]}
-                onPress={() => adjustDecisionFactors('budget', budget)}
+                onPress={() => adjustDecisionFactors('budget', ['Tight', 'Moderate', 'Flexible'][index])}
               >
                 <Text style={[
                   styles.preferenceButtonText,
-                  decisionFactors.budget === budget && styles.preferenceButtonTextActive
+                  decisionFactors.budget === ['Tight', 'Moderate', 'Flexible'][index] && styles.preferenceButtonTextActive
                 ]}>
                   {budget}
                 </Text>
@@ -397,36 +427,42 @@ const PassengerWeatherApp = () => {
 
       {/* Cost comparison */}
       <View style={styles.costComparisonContainer}>
-        <Text style={styles.sectionTitle}>💰 Cost Comparison</Text>
+        <Text style={styles.sectionTitle}>{t('passengerApp.costComparison.title')}</Text>
         <View style={styles.costGrid}>
           <View style={styles.costCard}>
-            <Text style={styles.costOption}>🚕 Taxi</Text>
-            <Text style={styles.costAmount}>¥{transportOptions.taxi.estimatedCost + transportOptions.taxi.weatherPremium}</Text>
-            <Text style={styles.costNote}>+Weather premium</Text>
+            <Text style={styles.costOption}>🚕 {t('passengerApp.transportStatus.taxi')}</Text>
+            <Text style={styles.costAmount}>{formatCurrency(transportOptions.taxi.estimatedCost + transportOptions.taxi.weatherPremium)}</Text>
+            <Text style={styles.costNote}>{t('passengerApp.costComparison.weatherPremium')}</Text>
           </View>
           
           <View style={styles.costCard}>
-            <Text style={styles.costOption}>🚊 Train</Text>
-            <Text style={styles.costAmount}>¥{transportOptions.train.cost}</Text>
-            <Text style={styles.costNote}>+Discomfort cost</Text>
+            <Text style={styles.costOption}>🚊 {t('passengerApp.transportStatus.train')}</Text>
+            <Text style={styles.costAmount}>{formatCurrency(transportOptions.train.cost)}</Text>
+            <Text style={styles.costNote}>{t('passengerApp.costComparison.discomfortCost')}</Text>
           </View>
           
           <View style={styles.costCard}>
-            <Text style={styles.costOption}>⏰ Wait</Text>
-            <Text style={styles.costAmount}>¥400</Text>
-            <Text style={styles.costNote}>Coffee + time</Text>
+            <Text style={styles.costOption}>⏰ {t('passengerApp.quickDecision.waitOut')}</Text>
+            <Text style={styles.costAmount}>{formatCurrency(400)}</Text>
+            <Text style={styles.costNote}>{t('passengerApp.costComparison.coffeeTime')}</Text>
           </View>
         </View>
       </View>
 
       {/* Emergency contacts */}
       <View style={styles.emergencyContainer}>
-        <Text style={styles.sectionTitle}>🆘 Emergency Options</Text>
-        <TouchableOpacity style={styles.emergencyButton} onPress={() => Alert.alert('Emergency', 'Emergency taxi booking activated')}>
-          <Text style={styles.emergencyButtonText}>🚨 Book Emergency Taxi</Text>
+        <Text style={styles.sectionTitle}>{t('passengerApp.emergency.title')}</Text>
+        <TouchableOpacity 
+          style={styles.emergencyButton} 
+          onPress={() => Alert.alert(t('common.success'), t('alerts.emergencyTaxi'))}
+        >
+          <Text style={styles.emergencyButtonText}>{t('passengerApp.emergency.bookTaxi')}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.emergencyButton} onPress={() => Alert.alert('Shelter', 'Finding nearest weather shelter')}>
-          <Text style={styles.emergencyButtonText}>🏠 Find Nearest Shelter</Text>
+        <TouchableOpacity 
+          style={styles.emergencyButton} 
+          onPress={() => Alert.alert(t('common.success'), t('alerts.shelterFound'))}
+        >
+          <Text style={styles.emergencyButtonText}>{t('passengerApp.emergency.findShelter')}</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
