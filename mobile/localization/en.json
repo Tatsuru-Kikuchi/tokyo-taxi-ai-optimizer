@@ -2,7 +2,7 @@
   "app": {
     "title": "Weather Taxi Optimizer",
     "subtitle": "AI-powered transportation decisions during weather conditions",
-    "researchBadge": "🎓 University of Tokyo Research Validated"
+    "researchBadge": "🤖 AI-Powered Optimization System"
   },
   "userSelection": {
     "chooseExperience": "Choose Your Experience",
@@ -34,7 +34,6 @@
   },
   "footer": {
     "developer": "Developed by Tatsuru Kikuchi",
-    "university": "University of Tokyo Faculty of Economics",
     "contact": "📧 tatsuru.kikuchi@gmail.com"
   },
   "driverApp": {
