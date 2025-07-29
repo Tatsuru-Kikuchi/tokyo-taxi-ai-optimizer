@@ -3,10 +3,14 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert, Dimensions
 import MapView, { Marker, Heatmap } from 'react-native-maps';
 import * as Location from 'expo-location';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useLocalization } from './localization/LocalizationContext';
 
 const { width, height } = Dimensions.get('window');
 
 const TaxiDriverApp = () => {
+  const { t, formatCurrency, getCurrentLocaleInfo, formatTime } = useLocalization();
+  const localeInfo = getCurrentLocaleInfo();
+
   const [currentLocation, setCurrentLocation] = useState(null);
   const [weatherData, setWeatherData] = useState({
     condition: 'Rain',
@@ -17,10 +21,10 @@ const TaxiDriverApp = () => {
   });
   
   const [demandHotspots, setDemandHotspots] = useState([
-    { id: 1, lat: 35.6762, lng: 139.6503, intensity: 0.9, area: 'Shibuya Station', demandIncrease: '+45%' },
-    { id: 2, lat: 35.6812, lng: 139.7671, intensity: 0.8, area: 'Tokyo Station', demandIncrease: '+38%' },
-    { id: 3, lat: 35.6586, lng: 139.7454, intensity: 0.7, area: 'Ginza', demandIncrease: '+52%' },
-    { id: 4, lat: 35.6938, lng: 139.7036, area: 'Shinjuku', intensity: 0.85, demandIncrease: '+41%' }
+    { id: 1, lat: 35.6762, lng: 139.6503, intensity: 0.9, area: localeInfo.isJapanese ? '渋谷駅' : 'Shibuya Station', demandIncrease: '+45%' },
+    { id: 2, lat: 35.6812, lng: 139.7671, intensity: 0.8, area: localeInfo.isJapanese ? '東京駅' : 'Tokyo Station', demandIncrease: '+38%' },
+    { id: 3, lat: 35.6586, lng: 139.7454, intensity: 0.7, area: localeInfo.isJapanese ? '銀座' : 'Ginza', demandIncrease: '+52%' },
+    { id: 4, lat: 35.6938, lng: 139.7036, area: localeInfo.isJapanese ? '新宿' : 'Shinjuku', intensity: 0.85, demandIncrease: '+41%' }
   ]);
 
   const [earnings, setEarnings] = useState({
@@ -33,18 +37,18 @@ const TaxiDriverApp = () => {
   const [aiRecommendations, setAiRecommendations] = useState([
     {
       priority: 'High',
-      action: 'Move to Shibuya Station area',
-      reason: 'Heavy rain increasing demand by 45%',
-      eta: '8 minutes',
-      potentialEarnings: '¥4,200 next hour',
+      action: localeInfo.isJapanese ? '渋谷駅エリアに移動' : 'Move to Shibuya Station area',
+      reason: localeInfo.isJapanese ? '大雨により45%の需要増加' : 'Heavy rain increasing demand by 45%',
+      eta: localeInfo.isJapanese ? '8分' : '8 minutes',
+      potentialEarnings: formatCurrency(4200),
       confidence: 94
     },
     {
       priority: 'Medium',
-      action: 'Position near Tokyo Station',
-      reason: 'Business district with limited taxi availability',
-      eta: '12 minutes',
-      potentialEarnings: '¥3,800 next hour',
+      action: localeInfo.isJapanese ? '東京駅周辺にポジション' : 'Position near Tokyo Station',
+      reason: localeInfo.isJapanese ? 'ビジネス街でタクシー不足' : 'Business district with limited taxi availability',
+      eta: localeInfo.isJapanese ? '12分' : '12 minutes',
+      potentialEarnings: formatCurrency(3800),
       confidence: 87
     }
   ]);
@@ -62,7 +66,7 @@ const TaxiDriverApp = () => {
     try {
       const { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
-        Alert.alert('Permission denied', 'Location access is required for weather-based recommendations');
+        Alert.alert(t('alerts.permissionDenied'), t('alerts.locationRequired'));
         return;
       }
       
@@ -74,7 +78,7 @@ const TaxiDriverApp = () => {
         longitudeDelta: 0.0421,
       });
     } catch (error) {
-      Alert.alert('Error', 'Could not get current location');
+      Alert.alert(t('common.error'), 'Could not get current location');
     }
   };
 
@@ -96,19 +100,42 @@ const TaxiDriverApp = () => {
   };
 
   const handleHotspotPress = (hotspot) => {
+    const title = localeInfo.isJapanese ? `${hotspot.area}にナビゲート？` : `Navigate to ${hotspot.area}?`;
+    const message = localeInfo.isJapanese 
+      ? `予想需要増加: ${hotspot.demandIncrease}\n追加収益見込み: ${formatCurrency(3000)}-${formatCurrency(5000)}`
+      : `Expected demand increase: ${hotspot.demandIncrease}\nEstimated additional earnings: ${formatCurrency(3000)}-${formatCurrency(5000)}`;
+    
     Alert.alert(
-      `Navigate to ${hotspot.area}?`,
-      `Expected demand increase: ${hotspot.demandIncrease}\nEstimated additional earnings: ¥3,000-5,000`,
+      title,
+      message,
       [
-        { text: 'Cancel', style: 'cancel' },
-        { text: 'Navigate', onPress: () => navigateToHotspot(hotspot) }
+        { text: t('common.cancel'), style: 'cancel' },
+        { text: t('hotspots.navigate'), onPress: () => navigateToHotspot(hotspot) }
       ]
     );
   };
 
   const navigateToHotspot = (hotspot) => {
-    // Integration with navigation apps would go here
-    Alert.alert('Navigation', `Starting navigation to ${hotspot.area}`);
+    const message = localeInfo.isJapanese 
+      ? `${hotspot.area}へのナビゲーションを開始します`
+      : `Starting navigation to ${hotspot.area}`;
+    Alert.alert(t('alerts.navigationStarted'), message);
+  };
+
+  const handleActionPress = (action) => {
+    let message = '';
+    switch (action) {
+      case 'emergency':
+        message = t('alerts.emergencyActivated');
+        break;
+      case 'break':
+        message = t('alerts.breakMode');
+        break;
+      case 'offline':
+        message = t('alerts.offlineMode');
+        break;
+    }
+    Alert.alert(t('common.success'), message);
   };
 
   return (
@@ -116,53 +143,57 @@ const TaxiDriverApp = () => {
       {/* Header with weather and earnings */}
       <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.header}>
         <View style={styles.headerContent}>
-          <Text style={styles.headerTitle}>🌧️ Weather-Taxi AI</Text>
+          <Text style={styles.headerTitle}>{t('driverApp.header.title')}</Text>
           <View style={styles.weatherInfo}>
-            <Text style={styles.weatherText}>{weatherData.condition} - {weatherData.intensity}</Text>
-            <Text style={styles.weatherDetail}>Duration: {weatherData.duration} | {weatherData.temperature}°C</Text>
+            <Text style={styles.weatherText}>
+              {localeInfo.isJapanese ? '大雨 - 激しい' : `${weatherData.condition} - ${weatherData.intensity}`}
+            </Text>
+            <Text style={styles.weatherDetail}>
+              {localeInfo.isJapanese ? `継続時間: ${weatherData.duration} | ${weatherData.temperature}°C` : `Duration: ${weatherData.duration} | ${weatherData.temperature}°C`}
+            </Text>
           </View>
         </View>
       </LinearGradient>
 
       {/* Real-time earnings */}
       <View style={styles.earningsContainer}>
-        <Text style={styles.sectionTitle}>💰 Real-time Earnings</Text>
+        <Text style={styles.sectionTitle}>{t('driverApp.earnings.title')}</Text>
         <View style={styles.earningsGrid}>
           <View style={styles.earningCard}>
-            <Text style={styles.earningValue}>¥{earnings.currentHour.toLocaleString()}</Text>
-            <Text style={styles.earningLabel}>This Hour</Text>
+            <Text style={styles.earningValue}>{formatCurrency(earnings.currentHour)}</Text>
+            <Text style={styles.earningLabel}>{t('driverApp.earnings.thisHour')}</Text>
           </View>
           <View style={styles.earningCard}>
-            <Text style={styles.earningValue}>¥{earnings.todayTotal.toLocaleString()}</Text>
-            <Text style={styles.earningLabel}>Today Total</Text>
+            <Text style={styles.earningValue}>{formatCurrency(earnings.todayTotal)}</Text>
+            <Text style={styles.earningLabel}>{t('driverApp.earnings.todayTotal')}</Text>
           </View>
           <View style={styles.earningCard}>
-            <Text style={styles.earningValueBonus}>+¥{earnings.weatherBonus.toLocaleString()}</Text>
-            <Text style={styles.earningLabel}>Weather Bonus</Text>
+            <Text style={styles.earningValueBonus}>+{formatCurrency(earnings.weatherBonus)}</Text>
+            <Text style={styles.earningLabel}>{t('driverApp.earnings.weatherBonus')}</Text>
           </View>
           <View style={styles.earningCard}>
-            <Text style={styles.earningValue}>¥{earnings.projectedDaily.toLocaleString()}</Text>
-            <Text style={styles.earningLabel}>Projected Daily</Text>
+            <Text style={styles.earningValue}>{formatCurrency(earnings.projectedDaily)}</Text>
+            <Text style={styles.earningLabel}>{t('driverApp.earnings.projectedDaily')}</Text>
           </View>
         </View>
       </View>
 
       {/* AI Recommendations */}
       <View style={styles.recommendationsContainer}>
-        <Text style={styles.sectionTitle}>🤖 AI Recommendations</Text>
+        <Text style={styles.sectionTitle}>{t('driverApp.recommendations.title')}</Text>
         {aiRecommendations.map((rec, index) => (
           <TouchableOpacity key={index} style={styles.recommendationCard}>
             <View style={styles.recHeader}>
               <Text style={[styles.priority, { color: rec.priority === 'High' ? '#ff4444' : '#ffaa00' }]}>
-                {rec.priority} Priority
+                {rec.priority === 'High' ? t('driverApp.recommendations.highPriority') : t('driverApp.recommendations.mediumPriority')}
               </Text>
-              <Text style={styles.confidence}>{rec.confidence}% Confidence</Text>
+              <Text style={styles.confidence}>{rec.confidence}% {t('driverApp.recommendations.confidence')}</Text>
             </View>
             <Text style={styles.recAction}>{rec.action}</Text>
             <Text style={styles.recReason}>{rec.reason}</Text>
             <View style={styles.recDetails}>
-              <Text style={styles.recDetail}>ETA: {rec.eta}</Text>
-              <Text style={styles.recEarnings}>{rec.potentialEarnings}</Text>
+              <Text style={styles.recDetail}>{t('driverApp.recommendations.eta')}: {rec.eta}</Text>
+              <Text style={styles.recEarnings}>{rec.potentialEarnings} {t('driverApp.recommendations.potentialEarnings')}</Text>
             </View>
           </TouchableOpacity>
         ))}
@@ -170,7 +201,7 @@ const TaxiDriverApp = () => {
 
       {/* Map with hotspots */}
       <View style={styles.mapContainer}>
-        <Text style={styles.sectionTitle}>🗺️ Weather Demand Hotspots</Text>
+        <Text style={styles.sectionTitle}>{t('driverApp.map.title')}</Text>
         {currentLocation && (
           <MapView
             style={styles.map}
@@ -184,7 +215,7 @@ const TaxiDriverApp = () => {
                 latitude: currentLocation.latitude,
                 longitude: currentLocation.longitude,
               }}
-              title="Your Location"
+              title={t('driverApp.map.yourLocation')}
               pinColor="blue"
             />
             
@@ -197,7 +228,7 @@ const TaxiDriverApp = () => {
                   longitude: hotspot.lng,
                 }}
                 title={hotspot.area}
-                description={`Demand increase: ${hotspot.demandIncrease}`}
+                description={`${t('driverApp.map.demandIncrease')}: ${hotspot.demandIncrease}`}
                 pinColor={hotspot.intensity > 0.8 ? 'red' : hotspot.intensity > 0.6 ? 'orange' : 'yellow'}
                 onPress={() => handleHotspotPress(hotspot)}
               />
@@ -208,7 +239,7 @@ const TaxiDriverApp = () => {
 
       {/* Hotspots list */}
       <View style={styles.hotspotsContainer}>
-        <Text style={styles.sectionTitle}>🔥 Top Demand Areas</Text>
+        <Text style={styles.sectionTitle}>{t('driverApp.hotspots.title')}</Text>
         {demandHotspots.map((hotspot) => (
           <TouchableOpacity 
             key={hotspot.id} 
@@ -217,7 +248,7 @@ const TaxiDriverApp = () => {
           >
             <View style={styles.hotspotInfo}>
               <Text style={styles.hotspotArea}>{hotspot.area}</Text>
-              <Text style={styles.hotspotDemand}>{hotspot.demandIncrease} demand increase</Text>
+              <Text style={styles.hotspotDemand}>{hotspot.demandIncrease} {t('driverApp.map.demandIncrease')}</Text>
             </View>
             <View style={styles.hotspotIntensity}>
               <View style={[styles.intensityBar, { width: `${hotspot.intensity * 100}%` }]} />
@@ -229,33 +260,46 @@ const TaxiDriverApp = () => {
 
       {/* Weather insights */}
       <View style={styles.insightsContainer}>
-        <Text style={styles.sectionTitle}>📊 Weather Insights</Text>
+        <Text style={styles.sectionTitle}>{t('driverApp.insights.title')}</Text>
         <View style={styles.insightCard}>
-          <Text style={styles.insightTitle}>Rain Impact Analysis</Text>
+          <Text style={styles.insightTitle}>{t('driverApp.insights.rainImpact')}</Text>
           <Text style={styles.insightText}>
-            Heavy rain conditions are increasing taxi demand by an average of 42% across Tokyo. 
-            Peak demand areas include business districts and shopping centers where people seek immediate shelter.
+            {localeInfo.isJapanese 
+              ? '大雨の状況により、東京全体でタクシー需要が平均42%増加しています。ビジネス街やショッピングセンターなど、人々が即座に避難を求める場所で需要がピークとなっています。'
+              : 'Heavy rain conditions are increasing taxi demand by an average of 42% across Tokyo. Peak demand areas include business districts and shopping centers where people seek immediate shelter.'
+            }
           </Text>
         </View>
         <View style={styles.insightCard}>
-          <Text style={styles.insightTitle}>Optimal Strategy</Text>
+          <Text style={styles.insightTitle}>{t('driverApp.insights.optimalStrategy')}</Text>
           <Text style={styles.insightText}>
-            Position yourself near major stations and shopping areas during the next 2 hours. 
-            Expected earnings increase: ¥5,000-8,000 above normal hourly rate.
+            {localeInfo.isJapanese 
+              ? '今後2時間は主要駅とショッピングエリア周辺にポジションを取ってください。通常の時給より5,000-8,000円の収益増加が見込まれます。'
+              : 'Position yourself near major stations and shopping areas during the next 2 hours. Expected earnings increase: ¥5,000-8,000 above normal hourly rate.'
+            }
           </Text>
         </View>
       </View>
 
       {/* Quick actions */}
       <View style={styles.actionsContainer}>
-        <TouchableOpacity style={styles.actionButton} onPress={() => Alert.alert('Feature', 'Emergency mode activated')}>
-          <Text style={styles.actionButtonText}>🚨 Emergency Mode</Text>
+        <TouchableOpacity 
+          style={styles.actionButton} 
+          onPress={() => handleActionPress('emergency')}
+        >
+          <Text style={styles.actionButtonText}>{t('driverApp.actions.emergencyMode')}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.actionButton} onPress={() => Alert.alert('Feature', 'Break mode activated')}>
-          <Text style={styles.actionButtonText}>☕ Take Break</Text>
+        <TouchableOpacity 
+          style={styles.actionButton} 
+          onPress={() => handleActionPress('break')}
+        >
+          <Text style={styles.actionButtonText}>{t('driverApp.actions.takeBreak')}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.actionButton} onPress={() => Alert.alert('Feature', 'Offline mode activated')}>
-          <Text style={styles.actionButtonText}>📴 Go Offline</Text>
+        <TouchableOpacity 
+          style={styles.actionButton} 
+          onPress={() => handleActionPress('offline')}
+        >
+          <Text style={styles.actionButtonText}>{t('driverApp.actions.goOffline')}</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -338,6 +382,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#666',
     marginTop: 5,
+    textAlign: 'center',
   },
   recommendationsContainer: {
     margin: 15,
@@ -505,6 +550,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 12,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 
