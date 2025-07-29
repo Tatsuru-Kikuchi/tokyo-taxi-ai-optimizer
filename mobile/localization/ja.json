@@ -2,7 +2,7 @@
   "app": {
     "title": "天気予報タクシー最適化",
     "subtitle": "天候状況下でのAI駆動の交通決定支援システム",
-    "researchBadge": "🎓 東京大学研究検証済み"
+    "researchBadge": "🤖 AI駆動最適化システム"
   },
   "userSelection": {
     "chooseExperience": "ご利用方法をお選びください",
@@ -34,7 +34,6 @@
   },
   "footer": {
     "developer": "開発者：菊池達郎",
-    "university": "東京大学経済学部",
     "contact": "📧 tatsuru.kikuchi@gmail.com"
   },
   "driverApp": {
