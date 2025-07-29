@@ -1,0 +1,174 @@
+{
+  "app": {
+    "title": "Weather Taxi Optimizer",
+    "subtitle": "AI-powered transportation decisions during weather conditions",
+    "researchBadge": "🎓 University of Tokyo Research Validated"
+  },
+  "userSelection": {
+    "chooseExperience": "Choose Your Experience",
+    "poweredByAI": "Powered by Advanced AI",
+    "features": {
+      "aiAccuracy": "96.3% AI prediction accuracy",
+      "revenueImprovement": "30.2% proven revenue improvement", 
+      "weatherIntelligence": "Real-time weather intelligence",
+      "instantRecommendations": "Instant decision recommendations"
+    },
+    "driver": {
+      "title": "I'm a Taxi Driver",
+      "description": "Get AI-powered positioning recommendations during weather conditions",
+      "features": [
+        "Weather demand hotspots",
+        "Real-time earnings tracking", 
+        "Optimal positioning alerts"
+      ]
+    },
+    "passenger": {
+      "title": "I'm a Passenger",
+      "description": "Get smart recommendations: take taxi now or wait for weather to improve",
+      "features": [
+        "Weather forecast analysis",
+        "Cost-benefit comparisons",
+        "Smart timing recommendations"
+      ]
+    }
+  },
+  "footer": {
+    "developer": "Developed by Tatsuru Kikuchi",
+    "university": "University of Tokyo Faculty of Economics",
+    "contact": "📧 tatsuru.kikuchi@gmail.com"
+  },
+  "driverApp": {
+    "header": {
+      "title": "🌧️ Weather-Taxi AI",
+      "weatherCondition": "Heavy Rain",
+      "duration": "Duration: 2 hours"
+    },
+    "earnings": {
+      "title": "💰 Real-time Earnings",
+      "thisHour": "This Hour",
+      "todayTotal": "Today Total", 
+      "weatherBonus": "Weather Bonus",
+      "projectedDaily": "Projected Daily"
+    },
+    "recommendations": {
+      "title": "🤖 AI Recommendations",
+      "highPriority": "High Priority",
+      "mediumPriority": "Medium Priority",
+      "confidence": "Confidence",
+      "eta": "ETA",
+      "potentialEarnings": "Potential earnings"
+    },
+    "map": {
+      "title": "🗺️ Weather Demand Hotspots",
+      "yourLocation": "Your Location",
+      "demandIncrease": "Demand increase"
+    },
+    "hotspots": {
+      "title": "🔥 Top Demand Areas",
+      "navigate": "Navigate",
+      "cancel": "Cancel"
+    },
+    "insights": {
+      "title": "📊 Weather Insights",
+      "rainImpact": "Rain Impact Analysis",
+      "optimalStrategy": "Optimal Strategy"
+    },
+    "actions": {
+      "emergencyMode": "🚨 Emergency Mode",
+      "takeBreak": "☕ Take Break",
+      "goOffline": "📴 Go Offline"
+    }
+  },
+  "passengerApp": {
+    "header": {
+      "title": "🌧️ Weather Travel Assistant",
+      "intensity": "Intensity",
+      "expectedToStop": "Expected to stop"
+    },
+    "quickDecision": {
+      "title": "🚀 Quick Decision",
+      "takeTaxi": "Take Taxi",
+      "waitOut": "Wait It Out", 
+      "useTrain": "Use Train"
+    },
+    "recommendations": {
+      "title": "🤖 AI Recommendations",
+      "match": "Match",
+      "pros": "✅ Pros:",
+      "cons": "❌ Cons:",
+      "takeNow": "Take Taxi Now",
+      "waitWeather": "Wait for Weather to Improve",
+      "useTrain": "Use Train (with umbrella)"
+    },
+    "transportStatus": {
+      "title": "🚦 Live Transport Status",
+      "taxi": "Taxi",
+      "train": "Train", 
+      "bus": "Bus",
+      "available": "Available",
+      "running": "Running",
+      "delayed": "Delayed",
+      "wait": "Wait",
+      "cost": "Cost",
+      "walk": "Walk"
+    },
+    "forecast": {
+      "title": "📊 Weather Forecast",
+      "next3Hours": "Next 3 Hours",
+      "now": "Now",
+      "heavy": "Heavy",
+      "moderate": "Moderate",
+      "light": "Light",
+      "clear": "Clear"
+    },
+    "preferences": {
+      "title": "⚙️ Your Preferences",
+      "urgencyLevel": "Urgency Level",
+      "budgetFlexibility": "Budget Flexibility",
+      "low": "Low",
+      "medium": "Medium", 
+      "high": "High",
+      "tight": "Tight",
+      "moderate": "Moderate",
+      "flexible": "Flexible"
+    },
+    "costComparison": {
+      "title": "💰 Cost Comparison",
+      "weatherPremium": "+Weather premium",
+      "discomfortCost": "+Discomfort cost",
+      "coffeeTime": "Coffee + time"
+    },
+    "emergency": {
+      "title": "🆘 Emergency Options",
+      "bookTaxi": "🚨 Book Emergency Taxi",
+      "findShelter": "🏠 Find Nearest Shelter"
+    }
+  },
+  "common": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "proceed": "Proceed",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "minutes": "minutes",
+    "hours": "hours",
+    "yen": "¥"
+  },
+  "alerts": {
+    "permissionDenied": "Permission denied",
+    "locationRequired": "Location access is required for weather-based recommendations",
+    "navigationStarted": "Starting navigation to",
+    "emergencyActivated": "Emergency mode activated",
+    "breakMode": "Break mode activated",
+    "offlineMode": "Offline mode activated",
+    "taxiBooked": "A taxi has been requested. Driver will arrive in 4 minutes.",
+    "waitingMode": "Weather monitoring activated. You'll be notified when conditions improve.",
+    "trainRoute": "Route to nearest station calculated. Stay dry and be safe!",
+    "emergencyTaxi": "Emergency taxi booking activated",
+    "shelterFound": "Finding nearest weather shelter"
+  }
+}
