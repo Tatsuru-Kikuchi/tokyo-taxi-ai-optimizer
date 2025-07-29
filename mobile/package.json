@@ -1,0 +1,112 @@
+{
+  "name": "WeatherTaxiOptimizer",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "build:ios": "eas build --platform ios",
+    "build:android": "eas build --platform android",
+    "submit:ios": "eas submit --platform ios",
+    "submit:android": "eas submit --platform android"
+  },
+  "dependencies": {
+    "expo": "~49.0.0",
+    "expo-status-bar": "~1.6.0",
+    "react": "18.2.0",
+    "react-native": "0.72.3",
+    "react-native-maps": "1.7.1",
+    "expo-location": "~16.1.0",
+    "expo-linear-gradient": "~12.3.0",
+    "expo-notifications": "~0.20.1",
+    "expo-device": "~5.4.0",
+    "expo-constants": "~14.4.2",
+    "react-native-vector-icons": "^10.0.0",
+    "react-native-async-storage": "^1.19.0",
+    "react-native-animatable": "^1.3.3",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-svg": "13.9.0",
+    "expo-weather-api": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "resolutions": {
+    "react-native-maps": "1.7.1"
+  },
+  "expo": {
+    "name": "Weather Taxi Optimizer",
+    "slug": "weather-taxi-optimizer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#667eea"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tokyotaxi.weatheroptimizer",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app uses location to provide weather-based taxi recommendations in your area.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses location to provide real-time weather and traffic updates for optimal taxi positioning."
+      },
+      "config": {
+        "googleMapsApiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#667eea"
+      },
+      "package": "com.tokyotaxi.weatheroptimizer",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "weather-taxi-optimizer-tokyo"
+      }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Weather Taxi Optimizer to use your location for weather-based recommendations.",
+          "locationAlwaysPermission": "Allow Weather Taxi Optimizer to use your location for real-time updates.",
+          "locationWhenInUsePermission": "Allow Weather Taxi Optimizer to use your location for nearby weather and taxi information."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#667eea"
+        }
+      ]
+    ]
+  }
+}
