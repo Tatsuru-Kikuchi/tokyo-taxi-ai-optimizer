@@ -118,8 +118,7 @@
 .target-message {
   font-size: 1.2em;
   line-height: 1.6;
-  font-style: italic;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .supporting-values {
@@ -136,30 +135,19 @@
 }
 
 .value-card h4 {
-  color: #4ecdc4;
+  color: #00ff88;
   font-size: 1.3em;
   margin-bottom: 15px;
 }
 
 .evidence, .differentiator, .market-impact {
-  margin-bottom: 12px;
-  padding: 10px;
-  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.evidence {
-  background: rgba(76, 205, 196, 0.2);
-  border-left: 3px solid #4ecdc4;
-}
-
-.differentiator {
-  background: rgba(255, 217, 61, 0.2);
-  border-left: 3px solid #ffd93d;
-}
-
-.market-impact {
-  background: rgba(255, 107, 107, 0.2);
-  border-left: 3px solid #ff6b6b;
+.evidence strong, .differentiator strong, .market-impact strong {
+  color: #4ecdc4;
 }
 
 /* Segmentation Section */
@@ -178,12 +166,11 @@
 
 .segment-card h3 {
   color: #ff6b6b;
-  font-size: 1.4em;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 
 .segment-size {
-  font-size: 1.1em;
   color: #ffd93d;
   font-weight: bold;
   margin-bottom: 20px;
@@ -210,7 +197,7 @@
 }
 
 .characteristics li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #00ff88;
@@ -218,7 +205,7 @@
 }
 
 .pain-points li::before {
-  content: '⚠';
+  content: "⚠";
   position: absolute;
   left: 0;
   color: #ff6b6b;
@@ -234,18 +221,11 @@
 .segment-metrics .metric {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
   padding: 5px 0;
   background: none;
   border-radius: 0;
   box-shadow: none;
   min-width: auto;
-}
-
-.segment-metrics .metric .value {
-  font-size: 1em;
-  text-shadow: none;
-  color: #ffd93d;
 }
 
 .acquisition-strategy {
@@ -256,6 +236,19 @@
 }
 
 /* Competitive Section */
+.market-position {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.market-position h3 {
+  color: #ffd93d;
+  font-size: 1.5em;
+}
+
 .competitors-grid {
   display: grid;
   gap: 25px;
@@ -280,66 +273,64 @@
   background: rgba(255, 217, 61, 0.1);
 }
 
-.competitor-card.high, .competitor-card.future {
+.competitor-card.high {
   border-color: #ff6b6b;
   background: rgba(255, 107, 107, 0.1);
+}
+
+.competitor-card.future {
+  border-color: #4ecdc4;
+  background: rgba(78, 205, 196, 0.1);
 }
 
 .competitor-card h4 {
   font-size: 1.3em;
   margin-bottom: 10px;
-  color: #4ecdc4;
+  color: white;
 }
 
 .competitor-type, .market-share, .threat-level {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin: 5px 5px 5px 0;
   font-size: 0.9em;
+  margin-bottom: 5px;
+  opacity: 0.9;
 }
 
-.strengths, .weaknesses, .differentiation {
+.strengths, .weaknesses {
   margin: 15px 0;
 }
 
-.strengths strong, .weaknesses strong, .differentiation strong {
-  color: #ffd93d;
+.strengths strong {
+  color: #00ff88;
+}
+
+.weaknesses strong {
+  color: #ff6b6b;
 }
 
 .strengths ul, .weaknesses ul {
   list-style: none;
   padding: 0;
-  margin-top: 8px;
-}
-
-.strengths li {
-  padding: 3px 0;
-  padding-left: 15px;
-  position: relative;
+  margin-top: 5px;
 }
 
 .strengths li::before {
-  content: '+';
-  position: absolute;
-  left: 0;
+  content: "✓";
   color: #00ff88;
-  font-weight: bold;
-}
-
-.weaknesses li {
-  padding: 3px 0;
-  padding-left: 15px;
-  position: relative;
+  margin-right: 8px;
 }
 
 .weaknesses li::before {
-  content: '-';
-  position: absolute;
-  left: 0;
+  content: "✗";
   color: #ff6b6b;
-  font-weight: bold;
+  margin-right: 8px;
+}
+
+.differentiation {
+  background: rgba(78, 205, 196, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #4ecdc4;
+  margin-top: 15px;
 }
 
 .competitive-advantages {
@@ -349,7 +340,7 @@
 }
 
 .competitive-advantages h3 {
-  color: #00ff88;
+  color: #ffd93d;
   margin-bottom: 15px;
 }
 
@@ -365,7 +356,7 @@
 }
 
 .competitive-advantages li::before {
-  content: '🏆';
+  content: "🏆";
   position: absolute;
   left: 0;
 }
@@ -381,7 +372,7 @@
 
 .pricing-philosophy h3 {
   color: #ffd93d;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .pricing-tiers {
@@ -401,7 +392,7 @@
 
 .pricing-card h4 {
   color: #4ecdc4;
-  font-size: 1.3em;
+  font-size: 1.4em;
   margin-bottom: 15px;
 }
 
@@ -410,7 +401,7 @@
   font-weight: bold;
   color: #00ff88;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
 .features {
@@ -430,7 +421,7 @@
 }
 
 .features li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #00ff88;
@@ -447,26 +438,19 @@
 .roi-metrics .metric {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
-  background: none;
   padding: 5px 0;
+  background: none;
   border-radius: 0;
   box-shadow: none;
   min-width: auto;
 }
 
-.roi-metrics .metric .value {
-  font-size: 1em;
-  text-shadow: none;
-  color: #ffd93d;
-}
-
 .competitive-position {
-  text-align: left;
-  background: rgba(76, 205, 196, 0.1);
+  background: rgba(255, 217, 61, 0.2);
   padding: 15px;
   border-radius: 10px;
-  border-left: 4px solid #4ecdc4;
+  border-left: 4px solid #ffd93d;
+  text-align: left;
 }
 
 .pricing-justification {
@@ -476,7 +460,7 @@
 }
 
 .pricing-justification h3 {
-  color: #ff6b6b;
+  color: #ffd93d;
   margin-bottom: 15px;
 }
 
@@ -492,12 +476,12 @@
 }
 
 .pricing-justification li::before {
-  content: '💰';
+  content: "💰";
   position: absolute;
   left: 0;
 }
 
-/* GTM Section */
+/* Go-to-Market Section */
 .launch-strategy {
   text-align: center;
   margin-bottom: 30px;
@@ -508,13 +492,14 @@
 
 .launch-strategy h3 {
   color: #ffd93d;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .phases-timeline {
   display: grid;
   gap: 25px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-bottom: 40px;
 }
 
 .phase-card {
@@ -542,12 +527,13 @@
 
 .objectives strong, .key-activities strong, .success-metrics strong {
   color: #ff6b6b;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .objectives ul, .key-activities ul, .success-metrics ul {
   list-style: none;
   padding: 0;
-  margin-top: 10px;
 }
 
 .objectives li, .key-activities li, .success-metrics li {
@@ -557,21 +543,33 @@
 }
 
 .objectives li::before {
-  content: '🎯';
+  content: "🎯";
   position: absolute;
   left: 0;
 }
 
 .key-activities li::before {
-  content: '🚀';
+  content: "🚀";
   position: absolute;
   left: 0;
 }
 
 .success-metrics li::before {
-  content: '📊';
+  content: "📊";
   position: absolute;
   left: 0;
+}
+
+.marketing-channels {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.marketing-channels h3 {
+  color: #ffd93d;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .channels-grid {
@@ -582,46 +580,52 @@
 
 .channel-card {
   background: rgba(255, 255, 255, 0.1);
-  padding: 25px;
-  border-radius: 15px;
+  padding: 20px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .channel-card h4 {
-  color: #4ecdc4;
+  color: #00ff88;
   margin-bottom: 10px;
 }
 
 .budget {
-  color: #00ff88;
+  color: #ffd93d;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.activities {
+  margin-top: 15px;
 }
 
 .activities strong {
-  color: #ffd93d;
+  color: #4ecdc4;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .activities ul {
   list-style: none;
   padding: 0;
-  margin-top: 8px;
 }
 
 .activities li {
   padding: 3px 0;
   padding-left: 15px;
   position: relative;
+  font-size: 0.9em;
 }
 
 .activities li::before {
-  content: '▸';
+  content: "▸";
   position: absolute;
   left: 0;
-  color: #ff6b6b;
+  color: #4ecdc4;
 }
 
-/* Market Opportunity */
+/* Market Opportunity Section */
 .market-opportunity {
   background: rgba(255, 255, 255, 0.1);
   padding: 40px;
@@ -648,39 +652,61 @@
   border-radius: 15px;
   text-align: center;
   border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-10px);
 }
 
 .opportunity-card h3 {
   color: #4ecdc4;
   margin-bottom: 15px;
+  font-size: 1.3em;
 }
 
 .opportunity-card .value {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: bold;
   color: #00ff88;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
   display: block;
-  margin-bottom: 15px;
-  text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+  margin-bottom: 10px;
 }
 
 .opportunity-card p {
-  line-height: 1.6;
   opacity: 0.9;
+  line-height: 1.5;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .positioning-metrics {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .metric {
+    min-width: 140px;
+    padding: 15px;
   }
   
   .strategy-tabs {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 10px;
+    gap: 5px;
   }
   
-  .segments-grid, .competitors-grid, .pricing-tiers {
+  .tab {
+    padding: 12px 18px;
+    font-size: 0.85em;
+  }
+  
+  .strategy-content {
+    padding: 25px;
+  }
+  
+  .segments-grid,
+  .competitors-grid,
+  .pricing-tiers,
+  .phases-timeline {
     grid-template-columns: 1fr;
   }
 }
