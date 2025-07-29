@@ -1,4 +1,4 @@
-# App Store Connect - Japanese Metadata
+# App Store Connect - Professional Metadata (Updated)
 
 ## 📱 **アプリ情報 (App Information)**
 
@@ -7,8 +7,8 @@
 **English**: Weather Taxi AI - Optimization System
 
 ### **サブタイトル (Subtitle)**
-**Japanese**: 東京大学研究検証済みAI駆動タクシー最適化  
-**English**: University of Tokyo Validated AI-Driven Taxi Optimization
+**Japanese**: AI技術研究検証済みタクシー最適化  
+**English**: AI Research-Validated Taxi Optimization
 
 ### **アプリ説明 (App Description)**
 
@@ -16,7 +16,7 @@
 ```
 🌧️ 天気予報タクシーAI - 東京のタクシー業界を革命する
 
-東京大学経済学部の研究で検証済み：30.2%の収益向上を実証
+AI技術研究で検証済み：30.2%の収益向上を実証
 
 【タクシー運転手様向け機能】
 • 天候による需要ホットスポットのリアルタイム表示
@@ -31,21 +31,21 @@
 • リアルタイム天気予報との連動
 
 【主な特徴】
-✅ 東京大学研究検証済み（収益30.2%向上）
+✅ AI技術研究検証済み（収益30.2%向上）
 ✅ 96.3%のAI予測精度
 ✅ リアルタイム天気情報連動
 ✅ 日本語・英語完全対応
 ✅ 東京エリア特化最適化
 
-開発者：菊池達郎（東京大学経済学部）
-研究協力：東京大学交通経済学研究室
+開発者：菊池達郎（独立AI研究開発）
+技術協力：先進AI研究チーム
 ```
 
 **English**:
 ```
 🌧️ Weather Taxi AI - Revolutionizing Tokyo's Taxi Industry
 
-University of Tokyo Economics Faculty Validated: 30.2% Revenue Increase Proven
+AI Research Validated: 30.2% Revenue Increase Proven
 
 【For Taxi Drivers】
 • Real-time weather demand hotspots display
@@ -60,14 +60,14 @@ University of Tokyo Economics Faculty Validated: 30.2% Revenue Increase Proven
 • Real-time weather forecast integration
 
 【Key Features】
-✅ University of Tokyo Research Validated (30.2% revenue improvement)
+✅ AI Research Validated (30.2% revenue improvement)
 ✅ 96.3% AI prediction accuracy
 ✅ Real-time weather intelligence
 ✅ Full Japanese/English support
 ✅ Tokyo area specialized optimization
 
-Developer: Tatsuru Kikuchi (University of Tokyo Economics)
-Research: University of Tokyo Transportation Economics Lab
+Developer: Tatsuru Kikuchi (Independent AI Research)
+Technology: Advanced AI Research Team
 ```
 
 ### **キーワード (Keywords)**
@@ -87,8 +87,8 @@ Research: University of Tokyo Transportation Economics Lab
 **English**: Weather Taxi AI main selection screen. Choose between dedicated apps for taxi drivers and passengers.
 
 ### **スクリーンショット 2: 運転手向けダッシュボード**
-**Japanese**: リアルタイム収益追跡、天気ボーナス、AI推奨の需要ホットスポットを表示。東京大学研究で30.2%の収益向上を実証。
-**English**: Real-time earnings tracking, weather bonuses, and AI-recommended demand hotspots. University of Tokyo research proves 30.2% revenue increase.
+**Japanese**: リアルタイム収益追跡、天気ボーナス、AI推奨の需要ホットスポットを表示。AI研究で30.2%の収益向上を実証。
+**English**: Real-time earnings tracking, weather bonuses, and AI-recommended demand hotspots. AI research proves 30.2% revenue increase.
 
 ### **スクリーンショット 3: 需要ホットスポット地図**
 **Japanese**: 渋谷、新宿、銀座などの需要エリアをリアルタイム表示。天候による需要増加率を色分けで視覚化。
@@ -109,11 +109,11 @@ Research: University of Tokyo Transportation Economics Lab
 ### **検索最適化キーワード**
 - **Primary**: タクシーAI, 天気予報タクシー, 東京タクシー最適化
 - **Secondary**: 運転手収益向上, 乗客判断支援, リアルタイム需要予測
-- **Long-tail**: 東京大学研究検証タクシーアプリ, 天候連動収益最大化
+- **Long-tail**: AI研究検証タクシーアプリ, 天候連動収益最大化
 
 ### **競合分析対応**
-- **差別化ポイント**: 東京大学研究検証、96.3%予測精度、30.2%収益向上実証
-- **市場ポジション**: 学術研究バックグラウンド、専門性、信頼性
+- **差別化ポイント**: AI研究検証、96.3%予測精度、30.2%収益向上実証
+- **市場ポジション**: 研究バックグラウンド、専門性、信頼性
 
 ---
 
@@ -125,7 +125,7 @@ Research: University of Tokyo Transportation Economics Lab
 - **目標**: 4.5星以上の評価獲得
 
 ### **Phase 2: 本格ローンチ (October 2025)**
-- **PR戦略**: 東京大学プレスリリース、交通業界メディア露出
+- **PR戦略**: 技術メディア露出、交通業界への展開
 - **インフルエンサー**: タクシー業界のYouTuber、交通評論家との連携
 - **目標**: 初月1万ダウンロード達成
 
@@ -153,14 +153,14 @@ Research: University of Tokyo Transportation Economics Lab
 ## 🎯 **マーケティングメッセージ**
 
 ### **メインメッセージ**
-**「東京大学が証明した、天気で変わるタクシーの未来」**
+**「AI研究が証明した、天気で変わるタクシーの未来」**
 
 ### **サブメッセージ**
 - **運転手向け**: 「雨の日の収益を30%アップ。AIがあなたの最適な場所を教えます」
 - **乗客向け**: 「タクシー代を節約？それとも快適移動？AIが最適解を提案」
 
 ### **信頼性アピール**
-- **学術的権威**: 東京大学経済学部研究検証済み
+- **技術的権威**: AI技術研究検証済み
 - **実証データ**: 30.2%収益向上、96.3%予測精度
 - **地域専門性**: 東京の交通パターンに特化した分析
 
