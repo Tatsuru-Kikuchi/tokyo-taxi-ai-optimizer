@@ -2,11 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { LocalizationProvider, useLocalization } from './localization/LocalizationContext';
 import TaxiDriverApp from './TaxiDriverApp';
 import PassengerWeatherApp from './PassengerWeatherApp';
+import LanguageSelector from './components/LanguageSelector';
 
-export default function App() {
+// Main App Component with Localization
+const MainApp = () => {
   const [userType, setUserType] = useState(null); // 'driver' or 'passenger'
+  const [showLanguageSelector, setShowLanguageSelector] = useState(false);
+  const { t, getCurrentLocaleInfo, formatCurrency } = useLocalization();
 
   if (userType === 'driver') {
     return <TaxiDriverApp />;
@@ -16,48 +21,60 @@ export default function App() {
     return <PassengerWeatherApp />;
   }
 
+  const localeInfo = getCurrentLocaleInfo();
+
   // User selection screen
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
       <LinearGradient colors={['#667eea', '#764ba2']} style={styles.gradient}>
         <View style={styles.content}>
+          {/* Language Selector Button */}
+          <TouchableOpacity 
+            style={styles.languageButton}
+            onPress={() => setShowLanguageSelector(true)}
+          >
+            <Text style={styles.languageButtonText}>
+              {localeInfo.isJapanese ? '🇯🇵 日本語' : '🇺🇸 English'}
+            </Text>
+          </TouchableOpacity>
+
           {/* Header */}
           <View style={styles.header}>
             <Text style={styles.emoji}>🌧️🚕</Text>
-            <Text style={styles.title}>Weather Taxi Optimizer</Text>
+            <Text style={styles.title}>{t('app.title')}</Text>
             <Text style={styles.subtitle}>
-              AI-powered transportation decisions during weather conditions
+              {t('app.subtitle')}
             </Text>
             <Text style={styles.researchBadge}>
-              🎓 University of Tokyo Research Validated
+              {t('app.researchBadge')}
             </Text>
           </View>
 
           {/* Features showcase */}
           <View style={styles.featuresContainer}>
-            <Text style={styles.featuresTitle}>Powered by Advanced AI</Text>
+            <Text style={styles.featuresTitle}>{t('userSelection.poweredByAI')}</Text>
             <View style={styles.feature}>
               <Text style={styles.featureIcon}>🤖</Text>
-              <Text style={styles.featureText}>96.3% AI prediction accuracy</Text>
+              <Text style={styles.featureText}>{t('userSelection.features.aiAccuracy')}</Text>
             </View>
             <View style={styles.feature}>
               <Text style={styles.featureIcon}>📈</Text>
-              <Text style={styles.featureText}>30.2% proven revenue improvement</Text>
+              <Text style={styles.featureText}>{t('userSelection.features.revenueImprovement')}</Text>
             </View>
             <View style={styles.feature}>
               <Text style={styles.featureIcon}>🌦️</Text>
-              <Text style={styles.featureText}>Real-time weather intelligence</Text>
+              <Text style={styles.featureText}>{t('userSelection.features.weatherIntelligence')}</Text>
             </View>
             <View style={styles.feature}>
               <Text style={styles.featureIcon}>⚡</Text>
-              <Text style={styles.featureText}>Instant decision recommendations</Text>
+              <Text style={styles.featureText}>{t('userSelection.features.instantRecommendations')}</Text>
             </View>
           </View>
 
           {/* User type selection */}
           <View style={styles.selectionContainer}>
-            <Text style={styles.selectionTitle}>Choose Your Experience</Text>
+            <Text style={styles.selectionTitle}>{t('userSelection.chooseExperience')}</Text>
             
             <TouchableOpacity 
               style={styles.userTypeButton}
@@ -67,14 +84,14 @@ export default function App() {
               <LinearGradient colors={['#4CAF50', '#45a049']} style={styles.buttonGradient}>
                 <View style={styles.buttonContent}>
                   <Text style={styles.buttonIcon}>🚕</Text>
-                  <Text style={styles.buttonTitle}>I'm a Taxi Driver</Text>
+                  <Text style={styles.buttonTitle}>{t('userSelection.driver.title')}</Text>
                   <Text style={styles.buttonDescription}>
-                    Get AI-powered positioning recommendations during weather conditions
+                    {t('userSelection.driver.description')}
                   </Text>
                   <View style={styles.buttonFeatures}>
-                    <Text style={styles.buttonFeature}>• Weather demand hotspots</Text>
-                    <Text style={styles.buttonFeature}>• Real-time earnings tracking</Text>
-                    <Text style={styles.buttonFeature}>• Optimal positioning alerts</Text>
+                    {t('userSelection.driver.features').map((feature, index) => (
+                      <Text key={index} style={styles.buttonFeature}>• {feature}</Text>
+                    ))}
                   </View>
                 </View>
               </LinearGradient>
@@ -88,14 +105,14 @@ export default function App() {
               <LinearGradient colors={['#2196F3', '#1976D2']} style={styles.buttonGradient}>
                 <View style={styles.buttonContent}>
                   <Text style={styles.buttonIcon}>👤</Text>
-                  <Text style={styles.buttonTitle}>I'm a Passenger</Text>
+                  <Text style={styles.buttonTitle}>{t('userSelection.passenger.title')}</Text>
                   <Text style={styles.buttonDescription}>
-                    Get smart recommendations: take taxi now or wait for weather to improve
+                    {t('userSelection.passenger.description')}
                   </Text>
                   <View style={styles.buttonFeatures}>
-                    <Text style={styles.buttonFeature}>• Weather forecast analysis</Text>
-                    <Text style={styles.buttonFeature}>• Cost-benefit comparisons</Text>
-                    <Text style={styles.buttonFeature}>• Smart timing recommendations</Text>
+                    {t('userSelection.passenger.features').map((feature, index) => (
+                      <Text key={index} style={styles.buttonFeature}>• {feature}</Text>
+                    ))}
                   </View>
                 </View>
               </LinearGradient>
@@ -105,18 +122,35 @@ export default function App() {
           {/* Footer */}
           <View style={styles.footer}>
             <Text style={styles.footerText}>
-              Developed by Tatsuru Kikuchi
+              {t('footer.developer')}
             </Text>
             <Text style={styles.footerSubtext}>
-              University of Tokyo Faculty of Economics
+              {t('footer.university')}
             </Text>
             <Text style={styles.contactText}>
-              📧 tatsuru.kikuchi@gmail.com
+              {t('footer.contact')}
             </Text>
           </View>
         </View>
+
+        {/* Language Selector Modal */}
+        {showLanguageSelector && (
+          <LanguageSelector 
+            visible={showLanguageSelector}
+            onClose={() => setShowLanguageSelector(false)}
+          />
+        )}
       </LinearGradient>
     </SafeAreaView>
+  );
+};
+
+// App wrapper with LocalizationProvider
+export default function App() {
+  return (
+    <LocalizationProvider>
+      <MainApp />
+    </LocalizationProvider>
   );
 }
 
@@ -133,9 +167,25 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     justifyContent: 'space-between',
   },
+  languageButton: {
+    position: 'absolute',
+    top: 50,
+    right: 20,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    paddingHorizontal: 15,
+    paddingVertical: 8,
+    borderRadius: 20,
+    zIndex: 100,
+  },
+  languageButtonText: {
+    color: 'white',
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
   header: {
     alignItems: 'center',
     marginBottom: 20,
+    marginTop: 40,
   },
   emoji: {
     fontSize: 60,
@@ -154,6 +204,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 22,
     marginBottom: 15,
+    paddingHorizontal: 10,
   },
   researchBadge: {
     backgroundColor: 'rgba(255,255,255,0.2)',
@@ -191,6 +242,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: 'rgba(255,255,255,0.9)',
     fontWeight: '600',
+    flex: 1,
   },
   selectionContainer: {
     flex: 1,
@@ -239,6 +291,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 20,
     marginBottom: 15,
+    paddingHorizontal: 10,
   },
   buttonFeatures: {
     alignSelf: 'stretch',
@@ -248,6 +301,7 @@ const styles = StyleSheet.create({
     color: '#666',
     marginBottom: 5,
     textAlign: 'left',
+    paddingLeft: 10,
   },
   footer: {
     alignItems: 'center',
