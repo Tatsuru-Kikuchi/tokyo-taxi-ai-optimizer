@@ -1,0 +1,686 @@
+.market-positioning {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.positioning-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 160px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.metric .value {
+  display: block;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.metric .label {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.strategy-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+  backdrop-filter: blur(5px);
+  white-space: nowrap;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.tab.active {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.strategy-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+}
+
+.strategy-content h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Value Proposition Section */
+.primary-value {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.primary-value h3 {
+  font-size: 1.8em;
+  color: #ffd93d;
+  margin-bottom: 15px;
+}
+
+.target-message {
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.supporting-values {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.value-card h4 {
+  color: #4ecdc4;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.evidence, .differentiator, .market-impact {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.evidence {
+  background: rgba(76, 205, 196, 0.2);
+  border-left: 3px solid #4ecdc4;
+}
+
+.differentiator {
+  background: rgba(255, 217, 61, 0.2);
+  border-left: 3px solid #ffd93d;
+}
+
+.market-impact {
+  background: rgba(255, 107, 107, 0.2);
+  border-left: 3px solid #ff6b6b;
+}
+
+/* Segmentation Section */
+.segments-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.segment-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.segment-card h3 {
+  color: #ff6b6b;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.segment-size {
+  font-size: 1.1em;
+  color: #ffd93d;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.characteristics, .pain-points {
+  margin-bottom: 20px;
+}
+
+.characteristics h4, .pain-points h4 {
+  color: #4ecdc4;
+  margin-bottom: 10px;
+}
+
+.characteristics ul, .pain-points ul {
+  list-style: none;
+  padding: 0;
+}
+
+.characteristics li, .pain-points li {
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.characteristics li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.pain-points li::before {
+  content: '⚠';
+  position: absolute;
+  left: 0;
+  color: #ff6b6b;
+}
+
+.segment-metrics {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.segment-metrics .metric {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 5px 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  min-width: auto;
+}
+
+.segment-metrics .metric .value {
+  font-size: 1em;
+  text-shadow: none;
+  color: #ffd93d;
+}
+
+.acquisition-strategy {
+  background: rgba(0, 255, 136, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #00ff88;
+}
+
+/* Competitive Section */
+.competitors-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-bottom: 30px;
+}
+
+.competitor-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.competitor-card.low {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.competitor-card.medium {
+  border-color: #ffd93d;
+  background: rgba(255, 217, 61, 0.1);
+}
+
+.competitor-card.high, .competitor-card.future {
+  border-color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.competitor-card h4 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #4ecdc4;
+}
+
+.competitor-type, .market-share, .threat-level {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px 5px 5px 0;
+  font-size: 0.9em;
+}
+
+.strengths, .weaknesses, .differentiation {
+  margin: 15px 0;
+}
+
+.strengths strong, .weaknesses strong, .differentiation strong {
+  color: #ffd93d;
+}
+
+.strengths ul, .weaknesses ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.strengths li {
+  padding: 3px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.strengths li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.weaknesses li {
+  padding: 3px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.weaknesses li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.competitive-advantages {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.competitive-advantages h3 {
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+.competitive-advantages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.competitive-advantages li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.competitive-advantages li::before {
+  content: '🏆';
+  position: absolute;
+  left: 0;
+}
+
+/* Pricing Section */
+.pricing-philosophy {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.pricing-philosophy h3 {
+  color: #ffd93d;
+  font-size: 1.4em;
+}
+
+.pricing-tiers {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-bottom: 30px;
+}
+
+.pricing-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.pricing-card h4 {
+  color: #4ecdc4;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 2em;
+  font-weight: bold;
+  color: #00ff88;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.features {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.roi-metrics {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.roi-metrics .metric {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  background: none;
+  padding: 5px 0;
+  border-radius: 0;
+  box-shadow: none;
+  min-width: auto;
+}
+
+.roi-metrics .metric .value {
+  font-size: 1em;
+  text-shadow: none;
+  color: #ffd93d;
+}
+
+.competitive-position {
+  text-align: left;
+  background: rgba(76, 205, 196, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #4ecdc4;
+}
+
+.pricing-justification {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.pricing-justification h3 {
+  color: #ff6b6b;
+  margin-bottom: 15px;
+}
+
+.pricing-justification ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-justification li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.pricing-justification li::before {
+  content: '💰';
+  position: absolute;
+  left: 0;
+}
+
+/* GTM Section */
+.launch-strategy {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.launch-strategy h3 {
+  color: #ffd93d;
+  font-size: 1.4em;
+}
+
+.phases-timeline {
+  display: grid;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.phase-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.phase-card h4 {
+  color: #4ecdc4;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.duration {
+  color: #ffd93d;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.objectives, .key-activities, .success-metrics {
+  margin-bottom: 20px;
+}
+
+.objectives strong, .key-activities strong, .success-metrics strong {
+  color: #ff6b6b;
+}
+
+.objectives ul, .key-activities ul, .success-metrics ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.objectives li, .key-activities li, .success-metrics li {
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.objectives li::before {
+  content: '🎯';
+  position: absolute;
+  left: 0;
+}
+
+.key-activities li::before {
+  content: '🚀';
+  position: absolute;
+  left: 0;
+}
+
+.success-metrics li::before {
+  content: '📊';
+  position: absolute;
+  left: 0;
+}
+
+.channels-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.channel-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.channel-card h4 {
+  color: #4ecdc4;
+  margin-bottom: 10px;
+}
+
+.budget {
+  color: #00ff88;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.activities strong {
+  color: #ffd93d;
+}
+
+.activities ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.activities li {
+  padding: 3px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.activities li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #ff6b6b;
+}
+
+/* Market Opportunity */
+.market-opportunity {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.market-opportunity h2 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.opportunity-metrics {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.opportunity-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.opportunity-card h3 {
+  color: #4ecdc4;
+  margin-bottom: 15px;
+}
+
+.opportunity-card .value {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #00ff88;
+  display: block;
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+.opportunity-card p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .positioning-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .strategy-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .segments-grid, .competitors-grid, .pricing-tiers {
+    grid-template-columns: 1fr;
+  }
+}
