@@ -7,6 +7,8 @@ import MarketPositioning from './components/MarketPositioning';
 import InvestorPresentation from './components/InvestorPresentation';
 import StrategicRoadmap from './components/StrategicRoadmap';
 import PartnershipOutreach from './components/PartnershipOutreach';
+import GlobalExpansion from './components/GlobalExpansion';
+import AdvancedAI from './components/AdvancedAI';
 import './App.css';
 
 function App() {
@@ -56,6 +58,16 @@ function App() {
                 <small>Research validation dashboard</small>
               </span>
             </button>
+            <button
+              className={`nav-btn ${activeView === 'advanced-ai' ? 'active' : ''}`}
+              onClick={() => handleViewChange('advanced-ai')}
+            >
+              <span className="btn-icon">🤖</span>
+              <span className="btn-text">
+                <strong>Advanced AI Platform</strong>
+                <small>Next-gen intelligence systems</small>
+              </span>
+            </button>
           </div>
 
           <div className="strategic-tools">
@@ -90,6 +102,10 @@ function App() {
                 <small>¥50M Series A pitch deck</small>
               </span>
             </button>
+          </div>
+
+          <div className="expansion-tools">
+            <h3>🌍 Global Expansion</h3>
             <button
               className={`nav-btn ${activeView === 'roadmap' ? 'active' : ''}`}
               onClick={() => handleViewChange('roadmap')}
@@ -110,6 +126,16 @@ function App() {
                 <small>Strategic alliance pipeline</small>
               </span>
             </button>
+            <button
+              className={`nav-btn ${activeView === 'global' ? 'active' : ''}`}
+              onClick={() => handleViewChange('global')}
+            >
+              <span className="btn-icon">🌍</span>
+              <span className="btn-text">
+                <strong>Global Expansion</strong>
+                <small>15 international markets</small>
+              </span>
+            </button>
           </div>
         </div>
         
@@ -121,9 +147,11 @@ function App() {
             <span className="badge patent">⚖️ Patent-Pending Technology</span>
             <span className="badge ready">🚀 Series A Ready</span>
             <span className="badge partnerships">🤝 47 Strategic Prospects</span>
+            <span className="badge global">🌍 15 Global Markets</span>
+            <span className="badge ai">🤖 96.3% AI Accuracy</span>
           </div>
           <p className="mission-statement">
-            Revolutionizing Tokyo transportation through weather-intelligent AI optimization
+            Revolutionizing global transportation through weather-intelligent AI optimization
           </p>
         </div>
       </div>
@@ -132,17 +160,19 @@ function App() {
         {activeView === 'driver' && <DriverDashboard />}
         {activeView === 'passenger' && <PassengerAssistant />}
         {activeView === 'analytics' && <AdvancedAnalytics />}
+        {activeView === 'advanced-ai' && <AdvancedAI />}
         {activeView === 'competitive' && <CompetitiveDifferentiation />}
         {activeView === 'market' && <MarketPositioning />}
         {activeView === 'investor' && <InvestorPresentation />}
         {activeView === 'roadmap' && <StrategicRoadmap />}
         {activeView === 'partnerships' && <PartnershipOutreach />}
+        {activeView === 'global' && <GlobalExpansion />}
       </div>
 
       <div className="success-metrics-footer">
         <div className="metrics-container">
           <div className="metric">
-            <span className="value">94.7%</span>
+            <span className="value">96.3%</span>
             <span className="label">AI Accuracy</span>
           </div>
           <div className="metric">
@@ -150,8 +180,12 @@ function App() {
             <span className="label">Revenue Increase</span>
           </div>
           <div className="metric">
-            <span className="value">¥2.7B</span>
-            <span className="label">Market Opportunity</span>
+            <span className="value">¥12.8B</span>
+            <span className="label">Global Market</span>
+          </div>
+          <div className="metric">
+            <span className="value">15</span>
+            <span className="label">International Markets</span>
           </div>
           <div className="metric">
             <span className="value">47</span>
