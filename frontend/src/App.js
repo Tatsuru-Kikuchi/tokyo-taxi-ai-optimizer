@@ -4,7 +4,7 @@ import PassengerAssistant from './components/PassengerAssistant';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import CompetitiveDifferentiation from './components/CompetitiveDifferentiation';
 import MarketPositioning from './components/MarketPositioning';
-import InvestorPitchSystem from './components/InvestorPitchSystem';
+import InvestorPresentation from './components/InvestorPresentation';
 import './App.css';
 
 function App() {
@@ -88,8 +88,8 @@ function App() {
             >
               <span className="btn-icon">💼</span>
               <span className="btn-text">
-                <strong>Investor Pitch</strong>
-                <small>Series A presentation</small>
+                <strong>Investor Presentation</strong>
+                <small>¥50M Series A pitch deck</small>
               </span>
             </button>
           </div>
@@ -116,7 +116,7 @@ function App() {
         {activeView === 'analytics' && <AdvancedAnalytics />}
         {activeView === 'competitive' && <CompetitiveDifferentiation />}
         {activeView === 'market' && <MarketPositioning />}
-        {activeView === 'investor' && <InvestorPitchSystem />}
+        {activeView === 'investor' && <InvestorPresentation />}
       </div>
 
       {/* Success Metrics Footer */}
@@ -135,7 +135,7 @@ function App() {
             <span className="label">Market Opportunity</span>
           </div>
           <div className="metric">
-            <span className="value">¥200M</span>
+            <span className="value">¥50M</span>
             <span className="label">Series A Target</span>
           </div>
         </div>
