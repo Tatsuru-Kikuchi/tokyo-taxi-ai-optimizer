@@ -5,10 +5,12 @@ import AdvancedAnalytics from './components/AdvancedAnalytics';
 import CompetitiveDifferentiation from './components/CompetitiveDifferentiation';
 import MarketPositioning from './components/MarketPositioning';
 import InvestorPresentation from './components/InvestorPresentation';
+import StrategicRoadmap from './components/StrategicRoadmap';
+import PartnershipOutreach from './components/PartnershipOutreach';
 import './App.css';
 
 function App() {
-  const [activeView, setActiveView] = useState('driver'); // 'driver', 'passenger', 'analytics', 'competitive', 'market', 'investor'
+  const [activeView, setActiveView] = useState('driver');
 
   const handleViewChange = (view) => {
     setActiveView(view);
@@ -16,10 +18,8 @@ function App() {
 
   return (
     <div className="app">
-      {/* Enhanced Navigation System */}
       <div className="main-navigation">
         <div className="nav-container">
-          {/* User Interface Navigation */}
           <div className="user-interfaces">
             <h3>🚕 User Interfaces</h3>
             <button
@@ -44,7 +44,6 @@ function App() {
             </button>
           </div>
 
-          {/* Enterprise Analytics */}
           <div className="enterprise-tools">
             <h3>📊 Enterprise Analytics</h3>
             <button
@@ -59,7 +58,6 @@ function App() {
             </button>
           </div>
 
-          {/* Strategic Business Tools */}
           <div className="strategic-tools">
             <h3>🏆 Strategic Business</h3>
             <button
@@ -92,6 +90,26 @@ function App() {
                 <small>¥50M Series A pitch deck</small>
               </span>
             </button>
+            <button
+              className={`nav-btn ${activeView === 'roadmap' ? 'active' : ''}`}
+              onClick={() => handleViewChange('roadmap')}
+            >
+              <span className="btn-icon">🗺️</span>
+              <span className="btn-text">
+                <strong>Strategic Roadmap</strong>
+                <small>Multi-quarter execution plan</small>
+              </span>
+            </button>
+            <button
+              className={`nav-btn ${activeView === 'partnerships' ? 'active' : ''}`}
+              onClick={() => handleViewChange('partnerships')}
+            >
+              <span className="btn-icon">🤝</span>
+              <span className="btn-text">
+                <strong>Partnership Outreach</strong>
+                <small>Strategic alliance pipeline</small>
+              </span>
+            </button>
           </div>
         </div>
         
@@ -102,6 +120,7 @@ function App() {
             <span className="badge improvement">📈 30.2% Revenue Improvement</span>
             <span className="badge patent">⚖️ Patent-Pending Technology</span>
             <span className="badge ready">🚀 Series A Ready</span>
+            <span className="badge partnerships">🤝 47 Strategic Prospects</span>
           </div>
           <p className="mission-statement">
             Revolutionizing Tokyo transportation through weather-intelligent AI optimization
@@ -109,7 +128,6 @@ function App() {
         </div>
       </div>
 
-      {/* Dynamic Content Rendering */}
       <div className="app-content">
         {activeView === 'driver' && <DriverDashboard />}
         {activeView === 'passenger' && <PassengerAssistant />}
@@ -117,9 +135,10 @@ function App() {
         {activeView === 'competitive' && <CompetitiveDifferentiation />}
         {activeView === 'market' && <MarketPositioning />}
         {activeView === 'investor' && <InvestorPresentation />}
+        {activeView === 'roadmap' && <StrategicRoadmap />}
+        {activeView === 'partnerships' && <PartnershipOutreach />}
       </div>
 
-      {/* Success Metrics Footer */}
       <div className="success-metrics-footer">
         <div className="metrics-container">
           <div className="metric">
@@ -133,6 +152,10 @@ function App() {
           <div className="metric">
             <span className="value">¥2.7B</span>
             <span className="label">Market Opportunity</span>
+          </div>
+          <div className="metric">
+            <span className="value">47</span>
+            <span className="label">Strategic Prospects</span>
           </div>
           <div className="metric">
             <span className="value">¥50M</span>
