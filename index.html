@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tokyo Taxi AI Optimizer - 先進的経済学研究に基づく科学的実証済みAIテクノロジー</title>
     <meta name="description" content="東京大学経済学部研究により収益30.2%向上を実証済み。リアルタイム気象データと交通情報を統合したAI最適化システム。">
-    <meta name="keywords" content="タクシー最適化, AI, 東京大学, 経済学研究, 収益向上, 交通最適化">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Tokyo Taxi AI Optimizer - 収益30.2%向上を実現">
-    <meta property="og:description" content="先進的経済学研究に基づく科学的実証済みAIテクノロジー">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -20,19 +13,16 @@
     <style>
         :root {
             --primary: #1a365d;
-            --primary-light: #2d5a87;
-            --accent: #e53e3e;
-            --accent-light: #fc8181;
+            --japanese-red: #dc143c;
+            --japanese-gold: #ffd700;
             --success: #38a169;
             --warning: #d69e2e;
             --text-dark: #1a202c;
             --text-light: #4a5568;
             --bg-light: #f7fafc;
             --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --japanese-red: #dc143c;
-            --japanese-gold: #ffd700;
-            --shadow-elegant: 0 25px 50px rgba(0,0,0,0.15);
-            --shadow-hover: 0 35px 70px rgba(0,0,0,0.2);
+            --shadow-elegant: 0 30px 60px rgba(0,0,0,0.15);
+            --shadow-hover: 0 40px 80px rgba(0,0,0,0.2);
         }
         
         * {
@@ -43,67 +33,69 @@
         
         body {
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
-            line-height: 1.7;
+            line-height: 1.8;
             color: var(--text-dark);
-            overflow-x: hidden;
-            font-size: 18px;
+            font-size: 22px; /* Much larger base font */
+            min-width: 100vw;
         }
         
         .container {
-            max-width: 1800px;
+            max-width: 2200px; /* Much wider container */
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 80px; /* Larger padding */
+            width: 100%;
         }
         
-        /* Header */
+        /* MUCH LARGER HEADER */
         .header {
             position: fixed;
             top: 0;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
             z-index: 1000;
-            transition: all 0.3s ease;
-            padding: 5px 0;
+            padding: 15px 0; /* Much larger header padding */
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
         }
         
         .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 0;
+            padding: 2.5rem 0; /* Much larger nav padding */
+            min-height: 120px; /* Larger minimum height */
         }
         
         .logo {
-            font-weight: 800;
-            font-size: 2rem;
+            font-weight: 900;
+            font-size: 3.5rem; /* Much larger logo */
             color: var(--primary);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 1.5rem;
         }
         
         .logo i {
             color: var(--japanese-red);
-            font-size: 2.3rem;
+            font-size: 4rem; /* Much larger icon */
         }
         
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 3rem;
+            gap: 5rem; /* Larger gaps */
         }
         
         .nav-links a {
             text-decoration: none;
             color: var(--text-dark);
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 800;
+            font-size: 1.6rem; /* Much larger nav text */
             transition: color 0.3s ease;
             position: relative;
+            padding: 1.5rem 0;
         }
         
         .nav-links a:hover {
@@ -114,8 +106,8 @@
             content: '';
             position: absolute;
             width: 0;
-            height: 3px;
-            bottom: -8px;
+            height: 5px; /* Thicker underline */
+            bottom: -5px;
             left: 0;
             background: var(--primary);
             transition: width 0.3s ease;
@@ -128,43 +120,28 @@
         .cta-button {
             background: var(--bg-gradient);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.8rem 3rem; /* Much larger button */
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
+            font-weight: 900;
+            font-size: 1.5rem; /* Larger text */
             transition: all 0.3s ease;
             box-shadow: var(--shadow-elegant);
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
         }
         
-        /* Hero Section */
+        /* MASSIVE HERO SECTION */
         .hero {
             background: var(--bg-gradient);
             color: white;
-            padding: 150px 0 100px;
+            padding: 250px 0 200px; /* Much larger padding */
             position: relative;
             overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="tokyo" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M0 50h100M50 0v100" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23tokyo)"/></svg>') center/cover;
-            animation: float 20s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(1deg); }
+            min-height: 120vh; /* Taller hero */
         }
         
         .hero-content {
@@ -174,108 +151,95 @@
         }
         
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: 8rem; /* MASSIVE title */
             font-weight: 900;
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: slideInUp 1s ease 0.3s forwards;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 3rem;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+            letter-spacing: -3px;
         }
         
         .hero .subtitle {
-            font-size: 1.6rem;
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: slideInUp 1s ease 0.6s forwards;
-            font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-size: 2.8rem; /* Much larger subtitle */
+            margin-bottom: 2.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .hero .tagline {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0;
-            animation: slideInUp 1s ease 0.9s forwards;
-            font-weight: 500;
+            font-size: 2.2rem; /* Much larger tagline */
+            margin-bottom: 5rem;
+            font-weight: 700;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-        
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         
         .hero-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin: 4rem 0;
-            opacity: 0;
-            animation: slideInUp 1s ease 1.2s forwards;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger cards */
+            gap: 5rem; /* Larger gaps */
+            margin: 6rem 0;
         }
         
         .stat-card {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(15px);
-            border-radius: 20px;
-            padding: 2.5rem;
+            border-radius: 30px; /* Larger radius */
+            padding: 4.5rem; /* Much larger padding */
             text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.25);
+            border: 4px solid rgba(255, 255, 255, 0.25);
             transition: all 0.3s ease;
+            min-height: 250px; /* Taller cards */
         }
         
         .stat-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-12px) scale(1.03);
             background: rgba(255, 255, 255, 0.2);
         }
         
         .stat-number {
-            font-size: 3.2rem;
+            font-size: 5.5rem; /* MASSIVE numbers */
             font-weight: 900;
             color: var(--japanese-gold);
             display: block;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+            margin-bottom: 1.5rem;
         }
         
         .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            margin-top: 0.75rem;
-            font-weight: 600;
+            font-size: 1.8rem; /* Much larger labels */
+            font-weight: 800;
+            margin-top: 1.5rem;
         }
         
         .hero-actions {
             display: flex;
-            gap: 2rem;
+            gap: 4rem; /* Larger gaps */
             justify-content: center;
             flex-wrap: wrap;
-            opacity: 0;
-            animation: slideInUp 1s ease 1.5s forwards;
+            margin-top: 4rem;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 2.2rem 4rem; /* Much larger buttons */
+            border-radius: 60px;
+            font-weight: 900;
+            font-size: 1.6rem; /* Larger text */
+            display: inline-flex;
+            align-items: center;
+            gap: 1.5rem;
+            min-width: 300px;
+            justify-content: center;
+            transition: all 0.3s ease;
         }
         
         .btn-primary {
             background: var(--japanese-red);
             color: white;
-            padding: 1.3rem 2.5rem;
-            border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
             box-shadow: var(--shadow-elegant);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
         }
         
         .btn-primary:hover {
-            transform: translateY(-4px);
+            transform: translateY(-6px);
             box-shadow: var(--shadow-hover);
             background: #b91c1c;
         }
@@ -283,579 +247,212 @@
         .btn-secondary {
             background: rgba(255, 255, 255, 0.15);
             color: white;
-            padding: 1.3rem 2.5rem;
-            border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
+            border: 5px solid rgba(255, 255, 255, 0.3);
         }
         
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.25);
             border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-4px);
+            transform: translateY(-6px);
         }
         
-        /* About Section */
-        .about {
-            padding: 120px 0;
-            background: var(--bg-light);
+        /* ENHANCED SECTIONS */
+        .about, .features, .research, .download {
+            padding: 200px 0; /* Much larger section padding */
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 8rem; /* Larger margins */
         }
         
         .section-title {
-            font-size: 3.2rem;
-            font-weight: 800;
+            font-size: 5.5rem; /* MASSIVE section titles */
+            font-weight: 900;
             color: var(--primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 3rem;
             position: relative;
+            letter-spacing: -2px;
         }
         
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -25px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 6px;
+            width: 150px; /* Larger underline */
+            height: 10px;
             background: var(--japanese-red);
-            border-radius: 3px;
+            border-radius: 5px;
         }
         
         .section-subtitle {
-            font-size: 1.4rem;
+            font-size: 2.2rem; /* Much larger subtitles */
             color: var(--text-light);
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            font-weight: 500;
+            font-weight: 700;
             line-height: 1.8;
         }
         
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-        }
-        
-        .about-content h3 {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-        
-        .about-content p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-            font-weight: 500;
-        }
-        
-        .research-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            background: var(--success);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-visual {
-            position: relative;
-        }
-        
-        .ai-dashboard {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: var(--shadow-elegant);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .ai-dashboard::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: var(--bg-gradient);
-        }
-        
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-        
-        .dashboard-title {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.3rem;
-        }
-        
-        .status-indicator {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--success);
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        
-        .metric-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-        
-        .metric-item {
-            background: var(--bg-light);
-            padding: 1.5rem;
-            border-radius: 15px;
-            text-align: center;
-        }
-        
-        .metric-value {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-        
-        .metric-label {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            margin-top: 0.75rem;
-            font-weight: 600;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 120px 0;
-            background: white;
-        }
-        
+        /* FEATURES GRID */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Larger cards */
+            gap: 5rem; /* Larger gaps */
+            margin-top: 6rem;
         }
         
         .feature-card {
             background: white;
-            border-radius: 20px;
-            padding: 3rem;
+            border-radius: 30px; /* Larger radius */
+            padding: 5rem; /* Much larger padding */
             text-align: center;
-            border: 2px solid #e2e8f0;
+            border: 4px solid #e2e8f0;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 0.5s ease;
+            min-height: 400px; /* Taller cards */
         }
         
         .feature-card:hover {
-            transform: translateY(-12px);
+            transform: translateY(-18px); /* Larger hover effect */
             box-shadow: var(--shadow-hover);
         }
         
-        .feature-card:hover::before {
-            left: 100%;
-        }
-        
         .feature-icon {
-            width: 80px;
-            height: 80px;
+            width: 120px; /* Larger icons */
+            height: 120px;
             background: var(--bg-gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 2rem;
-            font-size: 2rem;
+            margin: 0 auto 3rem;
+            font-size: 3rem; /* Larger icon size */
             color: white;
         }
         
         .feature-card h3 {
-            font-size: 1.6rem;
+            font-size: 2.5rem; /* Larger headings */
             color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
+            margin-bottom: 2.5rem;
+            font-weight: 900;
         }
         
         .feature-card p {
             color: var(--text-light);
-            line-height: 1.7;
-            font-size: 1.1rem;
-            font-weight: 500;
+            line-height: 1.8;
+            font-size: 1.5rem; /* Larger text */
+            font-weight: 700;
         }
         
-        /* Research Section */
+        /* RESEARCH SECTION */
         .research {
-            padding: 120px 0;
             background: var(--primary);
             color: white;
-            position: relative;
-        }
-        
-        .research::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0 0h100v100H0z" fill="none"/><path d="M20 20h60v60H20z" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></svg>') center/cover;
-            opacity: 0.1;
-        }
-        
-        .research-content {
-            position: relative;
-            z-index: 2;
         }
         
         .research-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+            gap: 10rem; /* Larger gap */
             align-items: center;
-            margin-top: 4rem;
+            margin-top: 6rem;
         }
         
         .research-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            gap: 4rem; /* Larger gaps */
         }
         
         .research-stat {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(15px);
-            border-radius: 20px;
-            padding: 2.5rem;
+            border-radius: 30px;
+            padding: 4.5rem; /* Much larger padding */
             text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.25);
+            border: 4px solid rgba(255, 255, 255, 0.25);
+            min-height: 250px;
         }
         
         .research-stat-number {
-            font-size: 2.5rem;
+            font-size: 4.5rem; /* Larger numbers */
             font-weight: 900;
             color: var(--japanese-gold);
             display: block;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+            margin-bottom: 1.5rem;
         }
         
         .research-stat-label {
-            font-size: 1rem;
-            opacity: 0.95;
-            margin-top: 0.75rem;
-            font-weight: 600;
+            font-size: 1.6rem; /* Larger labels */
+            font-weight: 800;
+            margin-top: 1.5rem;
         }
         
         .research-info h3 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
+            font-size: 3.5rem; /* Larger heading */
+            margin-bottom: 2.5rem;
             color: white;
-            font-weight: 700;
+            font-weight: 900;
         }
         
         .research-info p {
-            font-size: 1.2rem;
+            font-size: 1.6rem; /* Larger text */
             line-height: 1.8;
-            opacity: 0.95;
-            margin-bottom: 2rem;
-            font-weight: 500;
+            margin-bottom: 3rem;
+            font-weight: 700;
         }
         
         .university-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 1.5rem;
             background: var(--japanese-red);
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.1rem;
+            padding: 1.8rem 3rem; /* Larger padding */
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.5rem; /* Larger text */
             text-decoration: none;
             transition: all 0.3s ease;
         }
         
         .university-badge:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-elegant);
         }
         
-        /* Download Section */
-        .download {
-            padding: 120px 0;
-            background: var(--bg-light);
-        }
-        
-        .download-content {
-            text-align: center;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .coming-soon {
-            display: inline-block;
-            background: var(--warning);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .download h2 {
-            font-size: 3.2rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
-        
-        .download p {
-            font-size: 1.3rem;
-            color: var(--text-light);
-            margin-bottom: 3rem;
-            line-height: 1.8;
-            font-weight: 500;
-        }
-        
-        .app-store-buttons {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 3rem 0;
-        }
-        
-        .app-store-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            background: var(--text-dark);
-            color: white;
-            padding: 1.5rem 2rem;
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-        
-        .app-store-btn i {
-            font-size: 2rem;
-        }
-        
-        .btn-info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        
-        .btn-info small {
-            font-size: 0.8rem;
-            opacity: 0.8;
-        }
-        
-        .btn-info span {
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-        
-        .notify-form {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: var(--shadow-elegant);
-            max-width: 600px;
-            margin: 3rem auto 0;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-        
-        .form-group input {
-            width: 100%;
-            padding: 1.3rem;
-            border: 3px solid #e2e8f0;
-            border-radius: 15px;
-            font-size: 1.1rem;
-            transition: border-color 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-        
-        .notify-btn {
-            width: 100%;
-            background: var(--bg-gradient);
-            color: white;
-            padding: 1.5rem;
-            border: none;
-            border-radius: 15px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .notify-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-elegant);
-        }
-        
-        /* Footer */
-        .footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 4rem 0 2rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 1.5rem;
-            color: var(--japanese-gold);
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-        
-        .footer-section p {
-            opacity: 0.9;
-            line-height: 1.7;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 0.75rem;
-        }
-        
-        .footer-section ul li a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-        
-        .footer-section ul li a:hover {
-            opacity: 1;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.3rem;
-        }
-        
-        .social-links a:hover {
-            background: var(--japanese-red);
-            transform: translateY(-3px);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.8;
-            font-size: 1rem;
-        }
-        
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s ease;
-        }
-        
-        .fade-in.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Responsive */
-        @media (max-width: 1024px) {
+        /* RESPONSIVE */
+        @media (max-width: 1600px) {
             .container {
-                max-width: 100%;
-                padding: 0 30px;
+                max-width: 95%;
+                padding: 0 60px;
             }
             
             .hero h1 {
-                font-size: 3.5rem;
+                font-size: 6rem;
             }
             
             .section-title {
-                font-size: 2.8rem;
+                font-size: 4.5rem;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 5rem;
+            }
+            
+            .section-title {
+                font-size: 3.5rem;
+            }
+            
+            .research-grid {
+                grid-template-columns: 1fr;
+                gap: 5rem;
             }
         }
         
@@ -865,61 +462,29 @@
             }
             
             .container {
-                padding: 0 20px;
+                padding: 0 30px;
             }
             
             .hero h1 {
-                font-size: 3rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.4rem;
+                font-size: 4rem;
             }
             
             .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-            
-            .about-grid,
-            .research-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
-            }
-            
-            .hero-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                max-width: 350px;
-                justify-content: center;
-            }
-            
-            .app-store-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .app-store-btn {
-                width: 100%;
-                max-width: 350px;
-                justify-content: center;
             }
             
             .features-grid {
                 grid-template-columns: 1fr;
             }
             
-            .section-title {
-                font-size: 2.5rem;
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
             }
         }
         
-        /* Loading Animation */
+        /* LOADING ANIMATION */
         .loading {
             position: fixed;
             top: 0;
@@ -940,10 +505,10 @@
         }
         
         .spinner {
-            width: 60px;
-            height: 60px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid white;
+            width: 100px; /* Larger spinner */
+            height: 100px;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-top: 6px solid white;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -1025,48 +590,6 @@
                 <h2 class="section-title">革新的なAIタクシー最適化</h2>
                 <p class="section-subtitle">科学的研究に基づく実証済みソリューションで、タクシー業界の収益性を根本から変革します。</p>
             </div>
-            
-            <div class="about-grid">
-                <div class="about-content">
-                    <div class="research-badge">
-                        <i class="fas fa-university"></i>
-                        学術研究による実証
-                    </div>
-                    <h3>科学的アプローチによる最適化</h3>
-                    <p>本システムは先進的経済学研究に基づいて開発され、リアルタイム気象データ、交通情報、需要予測を統合した革新的なAI最適化エンジンを搭載しています。</p>
-                    <p>従来の経験に頼った運行から、データ駆動型の科学的最適化へ。収益性の大幅な向上と運営効率の最大化を実現します。</p>
-                </div>
-                
-                <div class="about-visual">
-                    <div class="ai-dashboard">
-                        <div class="dashboard-header">
-                            <h4 class="dashboard-title">AI最適化ダッシュボード</h4>
-                            <div class="status-indicator">
-                                <i class="fas fa-circle"></i>
-                                稼働中
-                            </div>
-                        </div>
-                        <div class="metric-grid">
-                            <div class="metric-item">
-                                <div class="metric-value">+¥45,280</div>
-                                <div class="metric-label">今日の収益向上</div>
-                            </div>
-                            <div class="metric-item">
-                                <div class="metric-value">89%</div>
-                                <div class="metric-label">最適ルート実行率</div>
-                            </div>
-                            <div class="metric-item">
-                                <div class="metric-value">12.3km</div>
-                                <div class="metric-label">平均移動距離短縮</div>
-                            </div>
-                            <div class="metric-item">
-                                <div class="metric-value">95%</div>
-                                <div class="metric-label">需要予測精度</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     
@@ -1132,7 +655,7 @@
     
     <!-- Research Section -->
     <section class="research" id="research">
-        <div class="container research-content">
+        <div class="container">
             <div class="section-header">
                 <h2 class="section-title" style="color: white;">学術的実証研究</h2>
                 <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">先進的経済学研究による科学的検証済みテクノロジー</p>
@@ -1175,99 +698,12 @@
     <!-- Download Section -->
     <section class="download" id="download">
         <div class="container">
-            <div class="download-content">
-                <div class="coming-soon">近日公開予定</div>
-                <h2>モバイルアプリ</h2>
-                <p>iOS・Android対応のモバイルアプリを開発中です。2025年8月リリース予定。事前登録で特別割引をご利用いただけます。</p>
-                
-                <div class="app-store-buttons">
-                    <a href="#" class="app-store-btn">
-                        <i class="fab fa-apple"></i>
-                        <div class="btn-info">
-                            <small>Download on the</small>
-                            <span>App Store</span>
-                        </div>
-                    </a>
-                    <a href="#" class="app-store-btn">
-                        <i class="fab fa-google-play"></i>
-                        <div class="btn-info">
-                            <small>Get it on</small>
-                            <span>Google Play</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="notify-form">
-                    <h3 style="color: var(--primary); margin-bottom: 1rem;">リリース通知を受け取る</h3>
-                    <form id="notifyForm">
-                        <div class="form-group">
-                            <label for="email">メールアドレス</label>
-                            <input type="email" id="email" name="email" required placeholder="your@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="company">会社名（任意）</label>
-                            <input type="text" id="company" name="company" placeholder="株式会社○○">
-                        </div>
-                        <button type="submit" class="notify-btn">
-                            <i class="fas fa-bell"></i>
-                            通知を受け取る
-                        </button>
-                    </form>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">モバイルアプリ</h2>
+                <p class="section-subtitle">iOS・Android対応のモバイルアプリを開発中です。2025年8月リリース予定。事前登録で特別割引をご利用いただけます。</p>
             </div>
         </div>
     </section>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Tokyo Taxi AI Optimizer</h3>
-                    <p>先進的経済学研究に基づく科学的実証済みAIテクノロジーで、タクシー業界の収益性を革新します。</p>
-                    <div class="social-links">
-                        <a href="https://github.com/Tatsuru-Kikuchi/tokyo-taxi-ai-optimizer"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>製品</h3>
-                    <ul>
-                        <li><a href="#features">機能一覧</a></li>
-                        <li><a href="#research">研究成果</a></li>
-                        <li><a href="#download">ダウンロード</a></li>
-                        <li><a href="#">料金プラン</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>サポート</h3>
-                    <ul>
-                        <li><a href="#">ドキュメント</a></li>
-                        <li><a href="#">API リファレンス</a></li>
-                        <li><a href="mailto:tatsuru.kikuchi@gmail.com">お問い合わせ</a></li>
-                        <li><a href="#">技術サポート</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>企業情報</h3>
-                    <ul>
-                        <li><a href="#">会社概要</a></li>
-                        <li><a href="#">プレスリリース</a></li>
-                        <li><a href="#">プライバシーポリシー</a></li>
-                        <li><a href="#">利用規約</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Tokyo Taxi AI Optimizer. All rights reserved. | Developer: Tatsuru Kikuchi</p>
-            </div>
-        </div>
-    </footer>
     
     <script>
         // Loading screen
@@ -1289,115 +725,6 @@
                     });
                 }
             });
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = 'none';
-            }
-        });
-        
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        document.querySelectorAll('.feature-card, .research-stat, .about-content, .about-visual').forEach(el => {
-            el.classList.add('fade-in');
-            observer.observe(el);
-        });
-        
-        // Form submission
-        document.getElementById('notifyForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const company = document.getElementById('company').value;
-            
-            // Simulate form submission
-            const btn = this.querySelector('.notify-btn');
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-check"></i> 登録完了！';
-                btn.style.background = 'var(--success)';
-                
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.disabled = false;
-                    btn.style.background = 'var(--bg-gradient)';
-                    this.reset();
-                }, 2000);
-            }, 1500);
-            
-            // Here you would normally send the data to your server
-            console.log('Email:', email, 'Company:', company);
-        });
-        
-        // Add some interactive elements
-        document.querySelectorAll('.stat-card, .research-stat').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-        
-        // Dynamic stats animation
-        function animateValue(element, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const current = Math.floor(progress * (end - start) + start);
-                element.textContent = current + (element.dataset.suffix || '');
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-            window.requestAnimationFrame(step);
-        }
-        
-        // Animate numbers when they come into view
-        const statsObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const number = entry.target;
-                    const finalValue = parseInt(number.textContent.replace(/[^0-9]/g, ''));
-                    if (finalValue > 0) {
-                        number.dataset.suffix = number.textContent.replace(/[0-9]/g, '');
-                        animateValue(number, 0, finalValue, 2000);
-                        statsObserver.unobserve(number);
-                    }
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        document.querySelectorAll('.stat-number, .research-stat-number, .metric-value').forEach(el => {
-            if (el.textContent.includes('%') || el.textContent.includes('¥') || !isNaN(parseFloat(el.textContent))) {
-                statsObserver.observe(el);
-            }
         });
     </script>
 </body>
