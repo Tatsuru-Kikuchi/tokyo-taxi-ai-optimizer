@@ -1,0 +1,7 @@
+# Favicon Placeholder
+# To add a proper favicon:
+# 1. Create a 32x32 pixel icon using the taxi logo
+# 2. Convert to .ico format
+# 3. Replace this file
+# 4. Update the HTML head section with:
+# <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
