@@ -7,7 +7,8 @@
 [![Research Backed](https://img.shields.io/badge/🔬_Research_Validated-Proven_Results-purple?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 [![AI Enhanced](https://img.shields.io/badge/🤖_AI_Enhanced-30.2%25_Improvement-orange?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 
-**🌟 Research-Driven Transportation Revolution - 科学的実証済み収益30.2%向上を実現**
+**🌟 先進的経済学研究に基づくAIテクノロジー**  
+**📈 収益30.2%向上を実現するタクシー最適化システム**
 
 </div>
 
@@ -78,14 +79,14 @@
 
 ## 🔬 **学術研究基盤**
 
-### 📚 **先進的経済学研究プロジェクト**
+### 📚 **データサイエンス駆動型研究プロジェクト**
 
 <div align="center">
 
 [![MCP-taxi](https://img.shields.io/badge/🔬_Research-MCP--taxi-blue?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 [![MCP-traffic](https://img.shields.io/badge/🔬_Research-MCP--traffic-blue?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-traffic)
 
-**🎓 Research-Driven Innovation - 学術的厳密性と商業的成功の融合**
+**🎓 データ駆動型イノベーション - 学術的厳密性と商業的成功の融合**
 
 </div>
 
@@ -199,14 +200,14 @@ cd frontend && npm start
 
 <div align="center">
 
-### **菊池達琉 (Tatsuru Kikuchi)**
-**🔬 経済学研究者 | 🚀 AI実装スペシャリスト | 📱 アプリ開発者**
+### **Tatsuru Kikuchi**
+**🔬 データサイエンティスト | 🚀 AI実装スペシャリスト | 📱 アプリ開発者**
 
 [![Email](https://img.shields.io/badge/📧_Email-tatsuru.kikuchi@gmail.com-red?style=for-the-badge)](mailto:tatsuru.kikuchi@gmail.com)
 [![GitHub](https://img.shields.io/badge/💻_GitHub-@Tatsuru--Kikuchi-black?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi)
 [![Research](https://img.shields.io/badge/🔬_Research-Economic_Analysis-blue?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 
-**🎯 専門分野**: 交通最適化・都市経済学・AI応用研究  
+**🎯 専門分野**: 交通最適化・都市経済学・AI応用研究・データサイエンス  
 **💼 研究目標**: 学術成果の実社会実装による社会貢献  
 **🏆 主要成果**: 30.2%収益向上効果の実証、AI予測精度87%達成  
 
@@ -214,6 +215,7 @@ cd frontend && npm start
 
 ### 🔬 **研究・開発の背景**
 - **学術的基盤**: 先進的経済学研究機関での研究プロジェクト成果
+- **データサイエンス**: 大規模データ解析と機械学習モデル開発
 - **実証的アプローチ**: データドリブンな研究方法論
 - **社会実装重視**: 理論から実用へのブリッジング
 - **継続的改善**: 学術コミュニティとの連携による品質向上
@@ -301,7 +303,7 @@ cd frontend && npm start
 [![📚 研究詳細](https://img.shields.io/badge/📚_Research-詳細を見る-orange?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 [![💼 ビジネス](https://img.shields.io/badge/💼_Business-提携相談-purple?style=for-the-badge)](mailto:tatsuru.kikuchi@gmail.com)
 
-**🚕 科学的根拠に基づくAI技術で、東京の交通を革新** ✨
+**🚕 データサイエンス駆動型AIテクノロジーで、東京の交通を革新** ✨
 
 ---
 
@@ -318,7 +320,7 @@ cd frontend && npm start
 <div align="center">
 
 **© 2025 Tatsuru Kikuchi - Tokyo Taxi AI Optimizer. All Rights Reserved.**  
-**🔬 Research-Driven Transportation Innovation Project**
+**🔬 データサイエンス駆動型交通イノベーションプロジェクト**
 
 Made with ❤️ in Tokyo, Japan 🗾
 
