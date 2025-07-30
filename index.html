@@ -6,8 +6,11 @@
     <title>Tokyo Taxi AI Optimizer - 先進的経済学研究に基づく科学的実証済みAIテクノロジー</title>
     <meta name="description" content="東京大学経済学部研究により収益30.2%向上を実証済み。リアルタイム気象データと交通情報を統合したAI最適化システム。">
     
-    <!-- Cache Busting Version 3.0 -->
-    <meta name="version" content="3.0">
+    <!-- FORCE CACHE BUSTING Version 4.0 -->
+    <meta name="version" content="4.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -38,14 +41,14 @@
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
             line-height: 1.7;
             color: var(--text-dark);
-            font-size: 20px; /* Much larger base font */
+            font-size: 22px; /* EVEN LARGER base font */
             overflow-x: auto;
         }
         
         .container {
-            max-width: 1800px; /* Much wider container */
+            max-width: 1900px; /* EVEN WIDER container */
             margin: 0 auto;
-            padding: 0 60px; /* Larger padding */
+            padding: 0 80px; /* LARGER padding */
             width: 100%;
         }
         
@@ -58,7 +61,7 @@
             backdrop-filter: blur(20px);
             border-bottom: 3px solid rgba(255, 255, 255, 0.2);
             z-index: 1000;
-            padding: 15px 0;
+            padding: 20px 0; /* Larger padding */
             box-shadow: 0 5px 25px rgba(0,0,0,0.1);
         }
         
@@ -66,39 +69,39 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 0;
-            min-height: 100px; /* Larger minimum height */
+            padding: 2rem 0; /* LARGER padding */
+            min-height: 120px; /* LARGER minimum height */
         }
         
         .logo {
             font-weight: 900;
-            font-size: 2.8rem; /* Much larger logo */
+            font-size: 3.2rem; /* EVEN LARGER logo */
             color: var(--primary);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1.8rem;
         }
         
         .logo i {
             color: var(--japanese-red);
-            font-size: 3.2rem; /* Larger icon */
+            font-size: 3.6rem; /* EVEN LARGER icon */
         }
         
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 4rem; /* Larger gaps */
+            gap: 5rem; /* EVEN LARGER gaps */
         }
         
         .nav-links a {
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 600;
-            font-size: 1.3rem; /* Much larger nav text */
+            font-size: 1.5rem; /* EVEN LARGER nav text */
             transition: color 0.3s ease;
             position: relative;
-            padding: 1rem 0;
+            padding: 1.2rem 0;
         }
         
         .nav-links a:hover {
@@ -109,8 +112,8 @@
             content: '';
             position: absolute;
             width: 0;
-            height: 3px;
-            bottom: -3px;
+            height: 4px; /* Thicker underline */
+            bottom: -5px;
             left: 0;
             background: var(--primary);
             transition: width 0.3s ease;
@@ -123,17 +126,17 @@
         .cta-button {
             background: var(--bg-gradient);
             color: white;
-            padding: 1.2rem 2.5rem; /* Larger button */
+            padding: 1.5rem 3rem; /* LARGER button */
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.4rem; /* Larger text */
             transition: all 0.3s ease;
             box-shadow: var(--shadow-elegant);
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-hover);
         }
         
@@ -141,10 +144,10 @@
         .hero {
             background: var(--bg-gradient);
             color: white;
-            padding: 220px 0 180px; /* Much larger padding */
+            padding: 250px 0 200px; /* EVEN LARGER padding */
             position: relative;
             overflow: hidden;
-            min-height: 100vh;
+            min-height: 110vh; /* Even taller */
         }
         
         .hero::before {
@@ -160,7 +163,7 @@
         
         @keyframes float {
             0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(1deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
         }
         
         .hero-content {
@@ -170,85 +173,85 @@
         }
         
         .hero h1 {
-            font-size: 5.5rem; /* Much larger title */
+            font-size: 6.5rem; /* ABSOLUTELY MASSIVE title */
             font-weight: 900;
-            margin-bottom: 2.5rem;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
-            letter-spacing: -2px;
+            margin-bottom: 3rem;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+            letter-spacing: -3px;
             line-height: 1.1;
         }
         
         .hero .subtitle {
-            font-size: 2.2rem; /* Much larger subtitle */
-            margin-bottom: 2rem;
+            font-size: 2.6rem; /* EVEN LARGER subtitle */
+            margin-bottom: 2.5rem;
             font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
             line-height: 1.4;
         }
         
         .hero .tagline {
-            font-size: 1.8rem; /* Much larger tagline */
-            margin-bottom: 4rem;
+            font-size: 2.1rem; /* EVEN LARGER tagline */
+            margin-bottom: 5rem;
             font-weight: 500;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
             line-height: 1.5;
         }
         
         .hero-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Larger cards */
-            gap: 3rem;
-            margin: 5rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* EVEN LARGER cards */
+            gap: 4rem; /* Larger gaps */
+            margin: 6rem 0;
         }
         
         .stat-card {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(15px);
-            border-radius: 25px;
-            padding: 3rem; /* Much larger padding */
+            border-radius: 30px; /* Larger radius */
+            padding: 4rem; /* EVEN LARGER padding */
             text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.25);
+            border: 3px solid rgba(255, 255, 255, 0.25); /* Thicker border */
             transition: all 0.3s ease;
-            min-height: 200px; /* Larger cards */
+            min-height: 250px; /* EVEN LARGER cards */
         }
         
         .stat-card:hover {
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-10px) scale(1.03);
             background: rgba(255, 255, 255, 0.2);
         }
         
         .stat-number {
-            font-size: 3.5rem; /* Much larger numbers */
+            font-size: 4.2rem; /* ABSOLUTELY MASSIVE numbers */
             font-weight: 900;
             color: var(--japanese-gold);
             display: block;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            margin-bottom: 1.5rem;
         }
         
         .stat-label {
-            font-size: 1.3rem; /* Larger labels */
+            font-size: 1.5rem; /* LARGER labels */
             font-weight: 600;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
         
         .hero-actions {
             display: flex;
-            gap: 3rem;
+            gap: 4rem; /* Larger gaps */
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 4rem;
+            margin-top: 5rem;
         }
         
         .btn-primary, .btn-secondary {
-            padding: 1.5rem 3rem; /* Much larger buttons */
-            border-radius: 50px;
+            padding: 2rem 4rem; /* EVEN LARGER buttons */
+            border-radius: 60px;
             font-weight: 700;
-            font-size: 1.3rem; /* Larger text */
+            font-size: 1.5rem; /* LARGER text */
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
-            min-width: 250px;
+            gap: 1.5rem;
+            min-width: 300px; /* Wider buttons */
             justify-content: center;
             transition: all 0.3s ease;
         }
@@ -261,7 +264,7 @@
         }
         
         .btn-primary:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
             box-shadow: var(--shadow-hover);
             background: #b91c1c;
         }
@@ -270,108 +273,108 @@
             background: rgba(255, 255, 255, 0.15);
             color: white;
             text-decoration: none;
-            border: 3px solid rgba(255, 255, 255, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.3); /* Thicker border */
         }
         
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.25);
             border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-5px);
+            transform: translateY(-6px);
         }
         
-        /* LARGE SECTIONS */
-        .about, .features, .research, .download {
-            padding: 120px 0; /* Much larger section padding */
+        /* ENORMOUS SECTIONS */
+        .about, .features, .research, .download, .developer-info {
+            padding: 150px 0; /* EVEN LARGER section padding */
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 6rem;
+            margin-bottom: 8rem; /* Larger margins */
         }
         
         .section-title {
-            font-size: 4rem; /* Much larger section titles */
+            font-size: 4.8rem; /* ABSOLUTELY MASSIVE section titles */
             font-weight: 900;
             color: var(--primary);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             position: relative;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
             line-height: 1.2;
         }
         
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 120px;
-            height: 6px;
+            width: 150px; /* Larger underline */
+            height: 8px; /* Thicker underline */
             background: var(--japanese-red);
-            border-radius: 3px;
+            border-radius: 4px;
         }
         
         .section-subtitle {
-            font-size: 1.5rem; /* Much larger subtitles */
+            font-size: 1.8rem; /* EVEN LARGER subtitles */
             color: var(--text-light);
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             font-weight: 500;
             line-height: 1.6;
         }
         
-        /* LARGE FEATURES GRID */
+        /* MASSIVE FEATURES GRID */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Larger cards */
-            gap: 4rem;
-            margin-top: 6rem;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* EVEN LARGER cards */
+            gap: 5rem; /* Larger gaps */
+            margin-top: 8rem;
         }
         
         .feature-card {
             background: white;
-            border-radius: 25px;
-            padding: 3.5rem; /* Much larger padding */
+            border-radius: 30px; /* Larger radius */
+            padding: 4.5rem; /* EVEN LARGER padding */
             text-align: center;
-            border: 2px solid #e2e8f0;
+            border: 3px solid #e2e8f0; /* Thicker border */
             transition: all 0.3s ease;
-            min-height: 350px; /* Larger cards */
+            min-height: 400px; /* EVEN LARGER cards */
         }
         
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
             box-shadow: var(--shadow-hover);
             border-color: var(--primary);
         }
         
         .feature-icon {
-            width: 100px; /* Larger icons */
-            height: 100px;
+            width: 120px; /* EVEN LARGER icons */
+            height: 120px;
             background: var(--bg-gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 2.5rem;
-            font-size: 2.5rem;
+            margin: 0 auto 3rem;
+            font-size: 3rem; /* Larger icon size */
             color: white;
         }
         
         .feature-card h3 {
-            font-size: 1.8rem; /* Larger headings */
+            font-size: 2.2rem; /* EVEN LARGER headings */
             color: var(--primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             font-weight: 700;
         }
         
         .feature-card p {
             color: var(--text-light);
             line-height: 1.6;
-            font-size: 1.1rem; /* Larger text */
+            font-size: 1.3rem; /* EVEN LARGER text */
             font-weight: 400;
         }
         
-        /* LARGE RESEARCH SECTION */
+        /* MASSIVE RESEARCH SECTION */
         .research {
             background: var(--primary);
             color: white;
@@ -380,163 +383,158 @@
         .research-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+            gap: 8rem; /* EVEN LARGER gap */
             align-items: center;
-            margin-top: 6rem;
+            margin-top: 8rem;
         }
         
         .research-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem;
+            gap: 3.5rem; /* Larger gaps */
         }
         
         .research-stat {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(15px);
-            border-radius: 25px;
-            padding: 3rem; /* Larger padding */
+            border-radius: 30px;
+            padding: 4rem; /* EVEN LARGER padding */
             text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.25);
-            min-height: 200px;
+            border: 3px solid rgba(255, 255, 255, 0.25); /* Thicker border */
+            min-height: 250px; /* Larger cards */
         }
         
         .research-stat-number {
-            font-size: 3rem; /* Larger numbers */
+            font-size: 3.5rem; /* EVEN LARGER numbers */
             font-weight: 900;
             color: var(--japanese-gold);
             display: block;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            margin-bottom: 1.5rem;
         }
         
         .research-stat-label {
-            font-size: 1.1rem; /* Larger labels */
+            font-size: 1.3rem; /* LARGER labels */
             font-weight: 600;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
         
         .research-info h3 {
-            font-size: 2.5rem; /* Larger heading */
-            margin-bottom: 2rem;
+            font-size: 3rem; /* EVEN LARGER heading */
+            margin-bottom: 2.5rem;
             color: white;
             font-weight: 700;
         }
         
         .research-info p {
-            font-size: 1.2rem; /* Larger text */
+            font-size: 1.4rem; /* EVEN LARGER text */
             line-height: 1.6;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             font-weight: 400;
         }
         
         .university-badge {
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
             background: var(--japanese-red);
             color: white;
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
+            padding: 1.5rem 3rem; /* Larger padding */
+            border-radius: 60px;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.4rem; /* Larger text */
             text-decoration: none;
             transition: all 0.3s ease;
         }
         
         .university-badge:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-elegant);
         }
         
         /* DEVELOPER INFO SECTION */
-        .developer-info {
-            background: var(--bg-light);
-            padding: 120px 0;
-        }
-        
         .developer-card {
             background: white;
-            border-radius: 25px;
-            padding: 4rem;
+            border-radius: 30px;
+            padding: 5rem; /* EVEN LARGER padding */
             text-align: center;
             box-shadow: var(--shadow-elegant);
-            max-width: 800px;
+            max-width: 900px; /* Wider card */
             margin: 0 auto;
         }
         
         .developer-title {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: var(--primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             font-weight: 700;
         }
         
         .developer-name {
-            font-size: 3rem;
+            font-size: 3.5rem; /* LARGER name */
             color: var(--japanese-red);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             font-weight: 900;
         }
         
         .developer-role {
-            font-size: 1.4rem;
+            font-size: 1.6rem; /* Larger role text */
             color: var(--text-light);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             font-weight: 500;
         }
         
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 4rem; /* Larger gaps */
             flex-wrap: wrap;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
         
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
-            font-size: 1.2rem;
+            gap: 1rem;
+            font-size: 1.4rem; /* Larger text */
             color: var(--text-dark);
             font-weight: 500;
         }
         
         .contact-item i {
             color: var(--primary);
-            font-size: 1.4rem;
+            font-size: 1.6rem; /* Larger icons */
         }
         
         /* RESPONSIVE DESIGN */
-        @media (max-width: 1400px) {
+        @media (max-width: 1600px) {
             .container {
                 max-width: 95%;
-                padding: 0 40px;
+                padding: 0 60px;
             }
             
+            .hero h1 {
+                font-size: 5.5rem;
+            }
+            
+            .section-title {
+                font-size: 4rem;
+            }
+        }
+        
+        @media (max-width: 1200px) {
             .hero h1 {
                 font-size: 4.5rem;
             }
             
-            .section-title {
-                font-size: 3.2rem;
-            }
-        }
-        
-        @media (max-width: 1024px) {
-            .hero h1 {
-                font-size: 3.8rem;
-            }
-            
             .research-grid {
                 grid-template-columns: 1fr;
-                gap: 4rem;
+                gap: 5rem;
             }
             
             .hero-stats {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
+                gap: 3rem;
             }
         }
         
@@ -550,15 +548,15 @@
             }
             
             .hero h1 {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
             
             .hero .subtitle {
-                font-size: 1.6rem;
+                font-size: 2rem;
             }
             
             .hero .tagline {
-                font-size: 1.3rem;
+                font-size: 1.6rem;
             }
             
             .hero-stats {
@@ -579,7 +577,11 @@
             
             .contact-info {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 2rem;
+            }
+            
+            .section-title {
+                font-size: 3rem;
             }
         }
         
@@ -604,10 +606,10 @@
         }
         
         .spinner {
-            width: 80px;
-            height: 80px;
-            border: 6px solid rgba(255, 255, 255, 0.3);
-            border-top: 6px solid white;
+            width: 100px; /* Larger spinner */
+            height: 100px;
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid white;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -620,17 +622,34 @@
         /* SCROLL ANIMATIONS */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
         }
         
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* CACHE BUSTER INDICATOR */
+        .cache-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--japanese-red);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            z-index: 9999;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
+    <!-- Cache Indicator -->
+    <div class="cache-indicator">Version 4.0 - Enhanced UI</div>
+    
     <!-- Loading Screen -->
     <div class="loading" id="loading">
         <div class="spinner"></div>
@@ -836,7 +855,7 @@
                 <h2 class="section-title">モバイルアプリ</h2>
                 <p class="section-subtitle">iOS・Android対応のモバイルアプリを開発中です。2025年8月リリース予定。事前登録で特別割引をご利用いただけます。GitHub上で最新の開発状況をご確認いただけます。</p>
                 
-                <div style="margin-top: 3rem;">
+                <div style="margin-top: 4rem;">
                     <a href="https://github.com/Tatsuru-Kikuchi/tokyo-taxi-ai-optimizer" class="btn-primary">
                         <i class="fab fa-github"></i>
                         GitHubで詳細を見る
@@ -851,7 +870,7 @@
         window.addEventListener('load', function() {
             setTimeout(() => {
                 document.getElementById('loading').classList.add('hide');
-            }, 800);
+            }, 1000);
         });
         
         // Smooth scrolling
@@ -888,9 +907,17 @@
         });
         
         // Cache busting and console info
-        console.log('Tokyo Taxi AI Optimizer - Enhanced Version 3.0');
-        console.log('Developer: Tatsuru Kikuchi');
-        console.log('Contact: tatsuru.kikuchi@gmail.com');
+        console.log('🚕 Tokyo Taxi AI Optimizer - ENHANCED VERSION 4.0 🚕');
+        console.log('✅ MASSIVELY LARGER TEXT AND UI');
+        console.log('✅ ULTRA-WIDE LAYOUT OPTIMIZED');
+        console.log('📧 Developer: Tatsuru Kikuchi');
+        console.log('📧 Contact: tatsuru.kikuchi@gmail.com');
+        console.log('📱 Phone: +81-80-3641-9973');
+        
+        // Force cache refresh
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+            console.log('🔄 Cache refreshed - Version 4.0 loaded successfully!');
+        }
     </script>
 </body>
 </html>
