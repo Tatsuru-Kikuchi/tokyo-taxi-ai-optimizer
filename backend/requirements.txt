@@ -25,7 +25,7 @@ prometheus-client==0.19.0
 structlog==23.2.0
 
 # API documentation
-python-multipart==0.0.6
+python-multipart==0.0.18
 
 # Testing
 pytest==7.4.3
