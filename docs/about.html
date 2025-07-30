@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>開発者について - Tokyo Taxi AI Optimizer</title>
+    <meta name="description" content="Tokyo Taxi AI Optimizer開発者 菊池達琉（東京大学経済学部）の研究背景と開発理念について詳しく紹介。">
+    <link rel="canonical" href="https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/about.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .about-section {
+            padding: 4rem 0;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .profile-header {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .profile-info h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info .title {
+            font-size: 1.2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .profile-info .description {
+            color: #666;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .research-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid #e9ecef;
+            transition: transform 0.3s ease;
+        }
+
+        .research-item:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+        }
+
+        .research-item h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .achievement-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .achievement-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .achievement-list li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FFD700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .contact-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 2rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .profile-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-card {
+                padding: 2rem;
+            }
+
+            .research-grid,
+            .stats-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>👨‍💼 開発者について</h1>
+                <p>Tokyo Taxi AI Optimizer開発者の研究背景と開発理念</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <a href="index.html" class="back-btn">← メインページに戻る</a>
+
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-image">👨‍🎓</div>
+                    <div class="profile-info">
+                        <h2>菊池 達琉</h2>
+                        <div class="title">Tatsuru Kikuchi</div>
+                        <div class="description">
+                            東京大学 経済学部 所属<br>
+                            空間経済学・AI実装研究専攻<br>
+                            交通最適化システム開発者
+                        </div>
+                    </div>
+                </div>
+                
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
+                    東京大学経済学部で空間経済学を専攻し、特に都市交通システムの最適化について研究しています。
+                    理論研究だけでなく、実際の社会問題解決に貢献するため、AI技術を活用した実用的なアプリケーション開発に取り組んでいます。
+                    Tokyo Taxi AI Optimizerは、学術研究の成果を実社会に還元する取り組みの一環として開発されました。
+                </p>
+            </div>
+
+            <div class="profile-card">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">🔬 研究実績</h2>
+                
+                <div class="research-grid">
+                    <div class="research-item">
+                        <h3>🚕 MCP-taxi プロジェクト</h3>
+                        <p>天気データとタクシー需要の相関関係を分析し、30.2%の収益向上効果を実証した革新的研究。雨天時の需要増加率0.847という高い相関を発見。</p>
+                        <ul class="achievement-list">
+                            <li>収益向上率30.2%を実証</li>
+                            <li>天気・需要相関係数0.847を発見</li>
+                            <li>3ヶ月間の実証実験実施</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="research-item">
+                        <h3>🚊 MCP-traffic プロジェクト</h3>
+                        <p>ODPT APIを活用した東京の公共交通データ収集・分析システム。リアルタイム交通情報とタクシー需要の関係性を明らかにした。</p>
+                        <ul class="achievement-list">
+                            <li>200+路線のリアルタイム監視</li>
+                            <li>遅延時需要増加60%を確認</li>
+                            <li>マルチモーダル分析手法確立</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="research-item">
+                        <h3>🤖 AI最適化アルゴリズム</h3>
+                        <p>機械学習を活用した需要予測モデルの開発。87%の高精度予測を実現し、実用的なタクシー最適化システムの基盤を構築。</p>
+                        <ul class="achievement-list">
+                            <li>予測精度87%を達成</li>
+                            <li>3時間先までの需要予測可能</li>
+                            <li>リアルタイム学習機能実装</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">📊 研究成果</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9;">東京大学での研究活動で達成した主要な成果指標</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">30.2%</span>
+                    <span class="stat-label">実証済み収益向上率</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">87%</span>
+                    <span class="stat-label">AI予測精度</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">0.847</span>
+                    <span class="stat-label">天気・需要相関係数</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">監視対象交通路線</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">¥285k</span>
+                    <span class="stat-label">年間収益増加見込</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3ヶ月</span>
+                    <span class="stat-label">実証実験期間</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #333;">📞 連絡先</h2>
+            <p style="font-size: 1.2rem; color: #666;">研究に関するお問い合わせやコラボレーションのご相談はお気軽にどうぞ</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">📧</div>
+                    <h3>メール</h3>
+                    <p><a href="mailto:tatsuru.kikuchi@gmail.com">tatsuru.kikuchi@gmail.com</a></p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">研究・開発に関するお問い合わせ</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💻</div>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/Tatsuru-Kikuchi">@Tatsuru-Kikuchi</a></p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">開発コード・技術資料</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🏛️</div>
+                    <h3>東京大学</h3>
+                    <p><a href="https://www.e.u-tokyo.ac.jp/">経済学部</a></p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">所属・研究機関情報</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🔬</div>
+                    <h3>研究プロジェクト</h3>
+                    <p>
+                        <a href="https://github.com/Tatsuru-Kikuchi/MCP-taxi">MCP-taxi</a><br>
+                        <a href="https://github.com/Tatsuru-Kikuchi/MCP-traffic">MCP-traffic</a>
+                    </p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">研究成果・データ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards
+        document.querySelectorAll('.profile-card, .research-item, .contact-item').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(el);
+        });
+
+        // Add floating animation to profile image
+        const profileImage = document.querySelector('.profile-image');
+        profileImage.style.animation = 'floating 4s ease-in-out infinite';
+        
+        // Add floating keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floating {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

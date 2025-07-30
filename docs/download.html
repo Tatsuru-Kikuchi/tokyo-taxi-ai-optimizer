@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ダウンロード - Tokyo Taxi AI Optimizer</title>
+    <meta name="description" content="Tokyo Taxi AI OptimizerのiPhone・Android版アプリダウンロードページ。App Store・Google Play対応。">
+    <link rel="canonical" href="https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/download.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 20px;
+        }
+
+        .download-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            margin: 0 auto 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .download-buttons {
+            display: grid;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .download-btn.ios {
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            color: white;
+            border: none;
+        }
+
+        .download-btn.android {
+            background: linear-gradient(135deg, #34A853 0%, #4285F4 100%);
+            color: white;
+            border: none;
+        }
+
+        .download-btn.github {
+            background: linear-gradient(135deg, #333 0%, #555 100%);
+            color: white;
+            border: none;
+        }
+
+        .download-btn .icon {
+            font-size: 2rem;
+        }
+
+        .download-info {
+            text-align: left;
+        }
+
+        .platform {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .app-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .release-info {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .release-info h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .features-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-item .emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .system-requirements {
+            background: #e3f2fd;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .system-requirements h3 {
+            color: #1976d2;
+            margin-bottom: 1rem;
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .requirement-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem 10px;
+            }
+
+            .download-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .features-preview {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← メインページに戻る</a>
+        
+        <div class="download-card">
+            <div class="app-icon">🚕</div>
+            <h1>Tokyo Taxi AI Optimizer</h1>
+            <p class="subtitle">革新的なタクシー最適化アプリを今すぐダウンロード</p>
+            
+            <div class="download-buttons">
+                <a href="#" class="download-btn ios" id="ios-download">
+                    <span class="icon">🍎</span>
+                    <div class="download-info">
+                        <div class="platform">App Store で入手</div>
+                        <div class="app-name">iPhone版アプリ</div>
+                    </div>
+                </a>
+                
+                <a href="#" class="download-btn android" id="android-download">
+                    <span class="icon">🤖</span>
+                    <div class="download-info">
+                        <div class="platform">Google Play で入手</div>
+                        <div class="app-name">Android版アプリ</div>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/Tatsuru-Kikuchi/tokyo-taxi-ai-optimizer" class="download-btn github">
+                    <span class="icon">💻</span>
+                    <div class="download-info">
+                        <div class="platform">GitHub で確認</div>
+                        <div class="app-name">開発者向け情報</div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="release-info">
+                <h3>🎯 アプリ公開予定</h3>
+                <p>
+                    現在App Store・Google Play審査中！<br>
+                    <strong>2025年8月上旬</strong>にリリース予定<br>
+                    事前登録で通知を受け取れます
+                </p>
+            </div>
+        </div>
+        
+        <div class="download-card">
+            <h2>🌟 主要機能プレビュー</h2>
+            <div class="features-preview">
+                <div class="feature-item">
+                    <span class="emoji">🤖</span>
+                    <h4>AI需要予測</h4>
+                    <p>87%の精度で需要を予測</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji">☔</span>
+                    <h4>天気連動</h4>
+                    <p>気象データと連携した最適化</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji">💰</span>
+                    <h4>収益最大化</h4>
+                    <p>+30.2%の収益向上を実現</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji">📊</span>
+                    <h4>詳細分析</h4>
+                    <p>リアルタイム収益レポート</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="download-card">
+            <div class="system-requirements">
+                <h3>📱 システム要件</h3>
+                <div class="requirements-grid">
+                    <div class="requirement-item">
+                        <h4>🍎 iPhone版</h4>
+                        <ul style="text-align: left; margin-top: 0.5rem;">
+                            <li>iOS 14.0 以降</li>
+                            <li>iPhone 8 以降</li>
+                            <li>100MB の空き容量</li>
+                            <li>インターネット接続必須</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>🤖 Android版</h4>
+                        <ul style="text-align: left; margin-top: 0.5rem;">
+                            <li>Android 8.0 (API 26) 以降</li>
+                            <li>RAM 3GB 以上推奨</li>
+                            <li>120MB の空き容量</li>
+                            <li>Google Play Services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="download-card">
+            <h2>📧 開発者情報</h2>
+            <p style="margin-bottom: 1rem;">
+                <strong>菊池達琉（Tatsuru Kikuchi）</strong><br>
+                東京大学 経済学部<br>
+                空間経済学・AI実装研究
+            </p>
+            
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; margin-top: 2rem;">
+                <a href="mailto:tatsuru.kikuchi@gmail.com" class="download-btn" style="flex: 1; min-width: 200px;">
+                    📧 メール
+                </a>
+                <a href="https://github.com/Tatsuru-Kikuchi" class="download-btn" style="flex: 1; min-width: 200px;">
+                    💻 GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Download button interactions
+        document.getElementById('ios-download').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('🍎 iPhone版アプリは現在App Store審査中です！\n2025年8月上旬にリリース予定です。\n\n事前登録をご希望の場合は、開発者にメールでお知らせください。');
+        });
+
+        document.getElementById('android-download').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('🤖 Android版アプリは現在Google Play審査中です！\n2025年8月上旬にリリース予定です。\n\n事前登録をご希望の場合は、開発者にメールでお知らせください。');
+        });
+
+        // Add animation on load
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.download-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+
+        // Add floating animation to app icon
+        const appIcon = document.querySelector('.app-icon');
+        appIcon.style.animation = 'floating 3s ease-in-out infinite';
+        
+        // Add floating keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floating {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
