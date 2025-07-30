@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Taxi AI Optimizer | 革新的なタクシー最適化アプリ</title>
+    <meta name="description" content="先進的経済学研究に基づく革新的なタクシーAI最適化システム。収益を30.2%向上、東京のタクシー運転手向けの次世代iPhone/Androidアプリ。">
+    <meta name="keywords" content="タクシー, AI, 最適化, 東京, iPhone, Android アプリ, 収益向上, 交通最適化, 経済学研究">
+    <link rel="canonical" href="https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tokyo Taxi AI Optimizer - 革新的タクシー最適化アプリ">
+    <meta property="og:description" content="研究検証済み、収益30.2%向上を実現するタクシー運転手向けAIアプリ">
+    <meta property="og:image" content="https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/assets/app-icon.png">
+    <meta property="og:url" content="https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tokyo Taxi AI Optimizer">
+    <meta name="twitter:description" content="革新的なタクシーAI最適化システム - 収益30.2%向上">
+    <meta name="twitter:image" content="https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/assets/app-icon.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    
+    <!-- Modern CSS Styling -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #667eea;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f0f8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FFD700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #333;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: block;
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* App Screenshots Section */
+        .screenshots {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot {
+            background: white;
+            border-radius: 20px;
+            padding: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+
+        .screenshot img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Download Section */
+        .download {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .download-btn .icon {
+            font-size: 2rem;
+        }
+
+        .download-info {
+            text-align: left;
+        }
+
+        .download-info .platform {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .download-info .app-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 20px;
+            margin-top: 3rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            text-align: center;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Japanese Typography */
+        .ja-text {
+            font-family: 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo', sans-serif;
+            font-feature-settings: "palt";
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Floating Elements */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                🚕 Tokyo Taxi AI
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">機能</a></li>
+                <li><a href="#screenshots">スクリーンショット</a></li>
+                <li><a href="#download">ダウンロード</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="ja-text">🚕 Tokyo Taxi AI Optimizer</h1>
+                <p class="hero-subtitle ja-text">
+                    先進的経済学研究に基づく革新的なタクシーAI最適化システム<br>
+                    科学的実証済み、収益を<strong>30.2%向上</strong>させる次世代iPhone/Androidアプリ
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">+30.2%</span>
+                        <span class="stat-label ja-text">収益向上</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">87%</span>
+                        <span class="stat-label ja-text">予測精度</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">-38%</span>
+                        <span class="stat-label ja-text">待機時間削減</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">¥285k</span>
+                        <span class="stat-label ja-text">年間収益増</span>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        📱 アプリをダウンロード
+                    </a>
+                    <a href="https://github.com/Tatsuru-Kikuchi/tokyo-taxi-ai-optimizer" class="btn btn-secondary">
+                        📚 GitHub で詳細を見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title ja-text">🌟 主要機能</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🤖</span>
+                    <h3 class="ja-text">AI需要予測</h3>
+                    <p class="ja-text">
+                        87%の精度でタクシー需要のホットスポットを予測。天気データと交通状況を統合した最先端のAIアルゴリズムで、最適なポジショニングを提案します。
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">⛈️</span>
+                    <h3 class="ja-text">天気連動最適化</h3>
+                    <p class="ja-text">
+                        研究で実証された雨天時の需要増加（相関係数0.847）を活用。天気予報と連動して収益機会を最大化します。
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🚆</span>
+                    <h3 class="ja-text">交通情報統合</h3>
+                    <p class="ja-text">
+                        ODPT APIからリアルタイムの交通データを取得。電車の遅延や運行停止時の需要急増を事前に察知し、収益チャンスを逃しません。
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">💰</span>
+                    <h3 class="ja-text">収益最適化</h3>
+                    <p class="ja-text">
+                        実証済みの30.2%収益向上を実現。1日の売上を平均¥7,950増加させ、年間で¥285,000の追加収入を可能にします。
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">📊</span>
+                    <h3 class="ja-text">詳細分析レポート</h3>
+                    <p class="ja-text">
+                        走行データ、収益分析、効率指標を詳細にレポート。データに基づいた意思決定で継続的な収益改善をサポートします。
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🔔</span>
+                    <h3 class="ja-text">スマート通知</h3>
+                    <p class="ja-text">
+                        重要な需要変動、天気変化、交通情報をリアルタイムで通知。タイムリーな行動で競合他社に差をつけます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2 class="section-title ja-text">📱 アプリスクリーンショット</h2>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 400px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center;">
+                        🤖 AIダッシュボード<br>需要予測マップ
+                    </div>
+                </div>
+                
+                <div class="screenshot">
+                    <div style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); height: 400px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: #333; font-size: 1.2rem; text-align: center;">
+                        📊 収益分析<br>リアルタイム統計
+                    </div>
+                </div>
+                
+                <div class="screenshot">
+                    <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); height: 400px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center;">
+                        🗺️ 最適ルート<br>ナビゲーション
+                    </div>
+                </div>
+                
+                <div class="screenshot">
+                    <div style="background: linear-gradient(135deg, #ee5a24 0%, #ffc048 100%); height: 400px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center;">
+                        ⛈️ 天気連動<br>需要アラート
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title ja-text" style="color: white;">📲 今すぐダウンロード</h2>
+            <p class="hero-subtitle ja-text" style="opacity: 0.9;">
+                iPhone・Android対応の革新的タクシー最適化アプリ<br>
+                <strong>完全無料</strong>でダウンロード開始！
+            </p>
+            
+            <div class="download-buttons">
+                <a href="#" class="download-btn" id="ios-download">
+                    <span class="icon">🍎</span>
+                    <div class="download-info">
+                        <div class="platform">App Store で入手</div>
+                        <div class="app-name">iPhone版アプリ</div>
+                    </div>
+                </a>
+                
+                <a href="#" class="download-btn" id="android-download">
+                    <span class="icon">🤖</span>
+                    <div class="download-info">
+                        <div class="platform">Google Play で入手</div>
+                        <div class="app-name">Android版アプリ</div>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/Tatsuru-Kikuchi/tokyo-taxi-ai-optimizer" class="download-btn">
+                    <span class="icon">💻</span>
+                    <div class="download-info">
+                        <div class="platform">GitHub で確認</div>
+                        <div class="app-name">開発者向け情報</div>
+                    </div>
+                </a>
+            </div>
+            
+            <div style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px; backdrop-filter: blur(10px);">
+                <h3 class="ja-text" style="margin-bottom: 1rem;">🎯 アプリ公開予定</h3>
+                <p class="ja-text" style="font-size: 1.1rem; opacity: 0.9;">
+                    現在App Store審査中！<br>
+                    <strong>2025年8月上旬</strong>にリリース予定<br>
+                    事前登録でリリース通知を受け取れます
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title ja-text">📧 お問い合わせ</h2>
+            
+            <div class="contact-info">
+                <h3 class="ja-text" style="margin-bottom: 1rem; color: #667eea;">開発者情報</h3>
+                <p class="ja-text" style="margin-bottom: 1rem;">
+                    <strong>菊池達琉（Tatsuru Kikuchi）</strong><br>
+                    経済学研究者・AI実装スペシャリスト<br>
+                    交通最適化・都市経済学・AI応用研究
+                </p>
+                
+                <div style="display: flex; justify-content: space-around; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                    <a href="mailto:tatsuru.kikuchi@gmail.com" class="btn btn-secondary" style="color: #333; background: #f8f9fa; border: 2px solid #667eea;">
+                        📧 メール
+                    </a>
+                    <a href="https://github.com/Tatsuru-Kikuchi" class="btn btn-secondary" style="color: #333; background: #f8f9fa; border: 2px solid #667eea;">
+                        💻 GitHub
+                    </a>
+                    <a href="https://github.com/Tatsuru-Kikuchi/MCP-taxi" class="btn btn-secondary" style="color: #333; background: #f8f9fa; border: 2px solid #667eea;">
+                        🔬 研究詳細
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚕 Tokyo Taxi AI Optimizer</h3>
+                    <p class="ja-text">先進的経済学研究に基づく革新的なタクシー最適化システム</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>リンク</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="https://github.com/Tatsuru-Kikuchi/tokyo-taxi-ai-optimizer">GitHub Repository</a></li>
+                        <li><a href="https://github.com/Tatsuru-Kikuchi/MCP-taxi">Research: MCP-taxi</a></li>
+                        <li><a href="https://github.com/Tatsuru-Kikuchi/MCP-traffic">Research: MCP-traffic</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>データ協力</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="https://developer.odpt.org/">ODPT API</a></li>
+                        <li><a href="https://www.jma.go.jp/">気象庁</a></li>
+                        <li><a href="https://www.opendata.metro.tokyo.lg.jp/">東京都オープンデータ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tatsuru Kikuchi - Tokyo Taxi AI Optimizer. All Rights Reserved.</p>
+                <p class="ja-text" style="margin-top: 0.5rem; opacity: 0.7;">先進的経済学研究プロジェクト</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Download button interactions
+        document.getElementById('ios-download').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('🍎 iPhone版アプリは現在App Store審査中です！\n2025年8月上旬にリリース予定です。');
+        });
+
+        document.getElementById('android-download').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('🤖 Android版アプリは現在Google Play審査中です！\n2025年8月上旬にリリース予定です。');
+        });
+
+        // Add floating animation to hero stats
+        document.querySelectorAll('.stat-item').forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.2}s`;
+            item.classList.add('floating');
+        });
+
+        // Particle effect for hero section (simple)
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: rgba(255,255,255,0.5);
+                border-radius: 50%;
+                pointer-events: none;
+                animation: particleFloat 3s linear infinite;
+                left: ${Math.random() * 100}%;
+                top: 100%;
+            `;
+            
+            document.querySelector('.hero').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 3000);
+        }
+
+        // Create particles periodically
+        setInterval(createParticle, 500);
+
+        // Add particle float animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes particleFloat {
+                to {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Console log for developers
+        console.log('🚕 Tokyo Taxi AI Optimizer - Professional Marketing Website');
+        console.log('🎯 Ready for App Store Launch!');
+        console.log('📱 Developer: Tatsuru Kikuchi - Economic Research Specialist');
+        console.log('🌟 GitHub: https://github.com/Tatsuru-Kikuchi/tokyo-taxi-ai-optimizer');
+    </script>
+</body>
+</html>
