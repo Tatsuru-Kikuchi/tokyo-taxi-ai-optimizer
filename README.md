@@ -2,12 +2,12 @@
 
 <div align="center">
 
-[![GitHub Pages](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/)
-[![iPhone App](https://img.shields.io/badge/📱_iPhone_App-Coming_Soon-success?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/download.html)
-[![Research Backed](https://img.shields.io/badge/🔬_Research_Validated-Proven_Results-purple?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
-[![AI Enhanced](https://img.shields.io/badge/🤖_AI_Enhanced-30.2%25_Improvement-orange?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
+[![🌐 Live Website](https://img.shields.io/badge/🌐_Live_Website-Visit_Enhanced_Site-blue?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/)
+[![📱 iPhone App](https://img.shields.io/badge/📱_iPhone_App-Coming_Soon-success?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/#download)
+[![🔬 Research Backed](https://img.shields.io/badge/🔬_Research_Validated-Proven_Results-purple?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
+[![🤖 AI Enhanced](https://img.shields.io/badge/🤖_AI_Enhanced-30.2%25_Improvement-orange?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 
-**🌟 先進的経済学研究に基づくAIテクノロジー**  
+**🌟 先進的経済学研究に基づく科学的実証済みAIテクノロジー**  
 **📈 収益30.2%向上を実現するタクシー最適化システム**
 
 </div>
@@ -17,6 +17,17 @@
 ## 🎯 **プロジェクト概要**
 
 **Tokyo Taxi AI Optimizer**は、先進的な経済学研究の成果を実用化した、世界初の天気連動型タクシー最適化システムです。iPhone/Androidアプリとして2025年8月リリース予定で、科学的に実証済みの**30.2%収益向上**を全てのタクシー運転手に提供します。
+
+### 🌐 **Enhanced Website Experience**
+
+🚀 **新機能**: ウェブサイトが大幅にアップグレードされました！
+
+- **📱 Wide Layout**: 最大1800pxの広々としたレイアウト
+- **🔍 Enhanced Readability**: より大きなフォント、改善されたコントラスト
+- **⚡ Better UX**: より大きなボタン、改良された視覚的階層
+- **🎨 Modern Design**: 最新のUI/UXトレンドに対応
+
+👆 **[Enhanced Website をチェック](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/)** - 完全にリニューアルされたユーザーエクスペリエンス！
 
 ### 🏆 **主要実績**
 
@@ -49,14 +60,40 @@
 
 ---
 
+## 🌐 **Website & GitHub Pages Deployment**
+
+### 📋 **Live Website Links**
+
+<div align="center">
+
+| 🔗 **Page** | 📱 **Description** | 🚀 **Link** |
+|-------------|-------------------|------------|
+| **🏠 Home** | メインランディングページ | [Visit](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/) |
+| **📖 About** | システム概要・研究背景 | [Visit](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/#about) |
+| **⚙️ Features** | 機能詳細・技術解説 | [Visit](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/#features) |
+| **🔬 Research** | 学術研究・実証データ | [Visit](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/#research) |
+| **📱 Download** | アプリDL・事前登録 | [Visit](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/#download) |
+
+</div>
+
+### 🎨 **Website Technology Stack**
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Design**: Responsive Design, Modern UI/UX
+- **Deployment**: GitHub Pages (Automatic)
+- **Performance**: Optimized for mobile and desktop
+- **SEO**: OpenGraph tags, proper meta descriptions
+
+---
+
 ## 📱 **iPhone/Androidアプリ**
 
 <div align="center">
 
 ### 🎉 **2025年8月App Store/Google Playリリース予定！**
 
-[![Download for iPhone](https://img.shields.io/badge/📱_Download_for-iPhone-black?style=for-the-badge&logo=apple)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/download.html)
-[![Download for Android](https://img.shields.io/badge/📱_Download_for-Android-green?style=for-the-badge&logo=android)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/download.html)
+[![Download for iPhone](https://img.shields.io/badge/📱_Download_for-iPhone-black?style=for-the-badge&logo=apple)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/#download)
+[![Download for Android](https://img.shields.io/badge/📱_Download_for-Android-green?style=for-the-badge&logo=android)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/#download)
 
 **現在App Store審査中 - 事前登録で通知を受け取れます！**
 
@@ -67,7 +104,7 @@
 <div align="center">
 
 | 🍎 **iPhone版** | 🤖 **Android版** |
-|----------------|-------------------|
+|----------------|------------------|
 | iOS 14.0以降 | Android 8.0以降 |
 | iPhone 8以降 | RAM 3GB以上推奨 |
 | 100MBの空き容量 | 120MBの空き容量 |
@@ -144,6 +181,7 @@
 |-------------|---------------------|-------------|
 | **Q1 2025** | ✅ 研究統合・AI実装完了 | 100% |
 | **Q2 2025** | ✅ コア機能開発完了 | 100% |
+| **Q3 2025** | ✅ Enhanced Website デプロイ | 100% |
 | **Q3 2025** | 🚀 iPhone/Androidアプリ開発 | 95% |
 | **8月上旬** | 📱 App Store/Google Play リリース | 準備中 |
 | **Q4 2025** | 🌟 マーケティング・ユーザー獲得 | 計画中 |
@@ -175,8 +213,11 @@ npm install
 # ターミナル1: バックエンド
 cd backend && python main.py
 
-# ターミナル2: フロントエンド
+# ターミナル2: フロントエンド  
 cd frontend && npm start
+
+# Website: GitHub Pages で自動デプロイ済み
+# https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/
 ```
 
 ### 🔧 **主要技術スタック**
@@ -185,6 +226,7 @@ cd frontend && npm start
 
 | 🏗️ **カテゴリ** | 🛠️ **技術** |
 |------------------|-------------|
+| **🌐 Website** | HTML5, CSS3, JavaScript ES6+, GitHub Pages |
 | **📱 モバイル** | React Native, Swift, Kotlin |
 | **🤖 AI/ML** | TensorFlow, scikit-learn, Pandas |
 | **☁️ バックエンド** | Python, FastAPI, PostgreSQL |
@@ -203,9 +245,10 @@ cd frontend && npm start
 ### **Tatsuru Kikuchi**
 **🔬 データサイエンティスト | 🚀 AI実装スペシャリスト | 📱 アプリ開発者**
 
-[![Email](https://img.shields.io/badge/📧_Email-tatsuru.kikuchi@gmail.com-red?style=for-the-badge)](mailto:tatsuru.kikuchi@gmail.com)
-[![GitHub](https://img.shields.io/badge/💻_GitHub-@Tatsuru--Kikuchi-black?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi)
-[![Research](https://img.shields.io/badge/🔬_Research-Economic_Analysis-blue?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
+[![📧 Email](https://img.shields.io/badge/📧_Email-tatsuru.kikuchi@gmail.com-red?style=for-the-badge)](mailto:tatsuru.kikuchi@gmail.com)
+[![📞 Phone](https://img.shields.io/badge/📞_Phone-+81--80--3641--9973-green?style=for-the-badge)](tel:+81803419973)
+[![💻 GitHub](https://img.shields.io/badge/💻_GitHub-@Tatsuru--Kikuchi-black?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi)
+[![🔬 Research](https://img.shields.io/badge/🔬_Research-Economic_Analysis-blue?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 
 **🎯 専門分野**: 交通最適化・都市経済学・AI応用研究・データサイエンス  
 **💼 研究目標**: 学術成果の実社会実装による社会貢献  
@@ -298,8 +341,8 @@ cd frontend && npm start
 
 ## 🎯 **今すぐ東京の交通を最適化しませんか？**
 
-[![🌐 デモサイト](https://img.shields.io/badge/🌐_Live_Demo-今すぐ体験-blue?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/)
-[![📱 アプリDL](https://img.shields.io/badge/📱_iPhone_App-事前登録-success?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/download.html)
+[![🌐 Enhanced Website](https://img.shields.io/badge/🌐_Enhanced_Website-今すぐ体験-blue?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/)
+[![📱 アプリDL](https://img.shields.io/badge/📱_iPhone_App-事前登録-success?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/#download)
 [![📚 研究詳細](https://img.shields.io/badge/📚_Research-詳細を見る-orange?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 [![💼 ビジネス](https://img.shields.io/badge/💼_Business-提携相談-purple?style=for-the-badge)](mailto:tatsuru.kikuchi@gmail.com)
 
@@ -311,7 +354,8 @@ cd frontend && npm start
 🔔 **Watchで開発進捗を追跡**  
 🤝 **データドリブンな都市交通の未来を一緒に作りましょう**
 
-**📱 iPhone/Androidアプリ - 2025年8月リリース予定！**
+**📱 iPhone/Androidアプリ - 2025年8月リリース予定！**  
+**🌐 Enhanced Website - 今すぐ体験可能！**
 
 </div>
 
@@ -323,5 +367,7 @@ cd frontend && npm start
 **🔬 データサイエンス駆動型交通イノベーションプロジェクト**
 
 Made with ❤️ in Tokyo, Japan 🗾
+
+**🌐 Live at**: https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/
 
 </div>
