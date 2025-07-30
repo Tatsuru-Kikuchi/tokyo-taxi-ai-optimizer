@@ -4,10 +4,10 @@
 
 [![GitHub Pages](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/)
 [![iPhone App](https://img.shields.io/badge/📱_iPhone_App-Coming_Soon-success?style=for-the-badge)](https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/download.html)
-[![University of Tokyo](https://img.shields.io/badge/🎓_University_of_Tokyo-Research_Backed-purple?style=for-the-badge)](https://www.u-tokyo.ac.jp/)
+[![Research Backed](https://img.shields.io/badge/🔬_Research_Validated-Proven_Results-purple?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 [![AI Enhanced](https://img.shields.io/badge/🤖_AI_Enhanced-30.2%25_Improvement-orange?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 
-**🌟 革新的タクシー最適化アプリ - 東京大学研究に基づく収益30.2%向上を実現**
+**🌟 革新的タクシー最適化アプリ - 科学的実証済み、収益30.2%向上を実現**
 
 </div>
 
@@ -15,7 +15,7 @@
 
 ## 🎯 **プロジェクト概要**
 
-**Tokyo Taxi AI Optimizer**は、東京大学経済学部の研究成果を基に開発された、世界初の天気連動型タクシー最適化システムです。iPhone/Androidアプリとして2025年8月リリース予定で、実証済みの**30.2%収益向上**を全てのタクシー運転手に提供します。
+**Tokyo Taxi AI Optimizer**は、先進的な経済学研究の成果を実用化した、世界初の天気連動型タクシー最適化システムです。iPhone/Androidアプリとして2025年8月リリース予定で、科学的に実証済みの**30.2%収益向上**を全てのタクシー運転手に提供します。
 
 ### 🏆 **主要実績**
 
@@ -78,7 +78,7 @@
 
 ## 🔬 **学術研究基盤**
 
-### 📚 **東京大学経済学部研究プロジェクト**
+### 📚 **先進的経済学研究プロジェクト**
 
 <div align="center">
 
@@ -190,11 +190,11 @@ cd frontend && npm start
 <div align="center">
 
 ### **菊池達琉 (Tatsuru Kikuchi)**
-**🎓 東京大学経済学部 | 🔬 空間経済学・AI実装研究**
+**🔬 経済学研究者 | 🚀 AI実装スペシャリスト | 📱 アプリ開発者**
 
 [![Email](https://img.shields.io/badge/📧_Email-tatsuru.kikuchi@gmail.com-red?style=for-the-badge)](mailto:tatsuru.kikuchi@gmail.com)
 [![GitHub](https://img.shields.io/badge/💻_GitHub-@Tatsuru--Kikuchi-black?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi)
-[![University](https://img.shields.io/badge/🏛️_University-Tokyo_Economics-blue?style=for-the-badge)](https://www.e.u-tokyo.ac.jp/)
+[![Research](https://img.shields.io/badge/🔬_Research-Economic_Analysis-blue?style=for-the-badge)](https://github.com/Tatsuru-Kikuchi/MCP-taxi)
 
 **🎯 専門分野**: 交通最適化・都市経済学・AI応用研究  
 **💼 研究目標**: 学術成果の実社会実装による社会貢献  
@@ -243,7 +243,7 @@ cd frontend && npm start
 ### 👥 **コントリビューター**
 
 特別な感謝を以下の方々に：
-- **🎓 東京大学経済学部**: 学術支援・研究指導
+- **🔬 経済学研究コミュニティ**: 理論的基盤と方法論の提供
 - **🚕 協力タクシー会社**: 実証実験データ提供
 - **👨‍💻 βテスター**: アプリ品質向上への貢献
 
@@ -257,7 +257,7 @@ cd frontend && npm start
 
 | 🏛️ **機関** | 🤝 **協力内容** |
 |-------------|------------------|
-| **🎓 東京大学経済学部** | 学術研究支援・指導 |
+| **🔬 経済学研究機関** | 理論的基盤・方法論指導 |
 | **🚆 ODPT** | リアルタイム交通データ |
 | **🌤️ 気象庁** | 気象データ・予報API |
 | **🗼 東京都** | オープンデータ取組 |
@@ -293,7 +293,7 @@ cd frontend && npm start
 <div align="center">
 
 **© 2025 Tatsuru Kikuchi - Tokyo Taxi AI Optimizer. All Rights Reserved.**  
-**🎓 東京大学経済学部研究プロジェクト**
+**🔬 先進的経済学研究プロジェクト**
 
 Made with ❤️ in Tokyo, Japan 🗾
 
