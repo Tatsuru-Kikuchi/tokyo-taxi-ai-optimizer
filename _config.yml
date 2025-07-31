@@ -1,13 +1,38 @@
-# Force GitHub Pages complete rebuild
-# Updated: Thu Jul 31 2025 14:51 JST
+# GitHub Pages Configuration for Tokyo Taxi AI Optimizer
+# Updated: Thu Jul 31 2025 17:31 JST
+
+# Site settings
 url: https://tatsuru-kikuchi.github.io
 baseurl: /tokyo-taxi-ai-optimizer
-title: Tokyo Taxi AI Optimizer - Massive UI Enhanced
-description: Professional Enhanced UI Version - Enormous Interface Active
-# Force complete cache refresh 
-cache_version: v4.2.2025073105
-rebuild_trigger: force-massive-ui-refresh-final
-github_pages_refresh: true
-# No Jekyll theme - use plain HTML
+title: Tokyo Taxi AI Optimizer - App Store Assets
+description: Professional iPhone App Icons and Screenshots Generator
+
+# GitHub Pages settings
+github_pages_enabled: true
+rebuild_trigger: app-assets-fix-20250731
+
+# Include HTML files for app assets
+include:
+  - "app-icons.html"
+  - "app-screenshots.html" 
+  - "app-assets.html"
+  - "index.html"
+  - "main.html"
+  - "enhanced.html"
+
+# Exclude backend files but include frontend assets
+exclude: 
+  - "backend/"
+  - "docs/"
+  - "k8s/"
+  - "*.md"
+  - "Dockerfile"
+  - "docker-compose.yml"
+
+# No Jekyll processing - serve as static files
 plugins: []
-exclude: ["*.md", "backend/", "frontend/", "docs/"]
+markdown: kramdown
+highlighter: rouge
+
+# Force complete rebuild
+cache_version: v5.0.20250731
