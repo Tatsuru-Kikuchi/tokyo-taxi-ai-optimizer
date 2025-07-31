@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Taxi AI Optimizer - App Store Screenshots</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .screenshot-container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #ecf0f1;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        .screenshot-container:hover {
+            border-color: #3498db;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(52,152,219,0.15);
+        }
+        .phone-mockup {
+            width: 200px;
+            height: 400px;
+            margin: 0 auto 20px;
+            border-radius: 25px;
+            border: 8px solid #2c3e50;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            background: white;
+        }
+        .status-bar {
+            height: 30px;
+            background: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            font-size: 12px;
+        }
+        .app-content {
+            flex: 1;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .app-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .app-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .app-subtitle {
+            font-size: 10px;
+            opacity: 0.9;
+        }
+        .feature-list {
+            flex: 1;
+            text-align: left;
+        }
+        .feature-item {
+            background: #f8f9fa;
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            font-size: 10px;
+            border-left: 3px solid #3498db;
+        }
+        .big-emoji {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+        .screenshot-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .screenshot-desc {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .download-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .download-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102,126,234,0.4);
+        }
+        .download-all-btn {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            font-size: 1.3em;
+            padding: 20px 40px;
+        }
+        .instructions {
+            background: #e8f6ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 Tokyo Taxi AI Optimizer</h1>
+            <p class="subtitle">Professional App Store Screenshots - Ready for Submission</p>
+        </div>
+
+        <div class="screenshots-grid">
+            <!-- Screenshot 1: Main Dashboard -->
+            <div class="screenshot-container">
+                <div class="phone-mockup" id="screenshot1">
+                    <div class="status-bar">
+                        <span>9:41</span>
+                        <span>🔋 100%</span>
+                    </div>
+                    <div class="app-content">
+                        <div class="app-header">
+                            <div class="app-title">東京タクシーAI最適化</div>
+                            <div class="app-subtitle">Tokyo Taxi AI Optimizer</div>
+                        </div>
+                        <div class="big-emoji">🚕✨</div>
+                        <div class="feature-list">
+                            <div class="feature-item">📍 リアルタイム最適ルート</div>
+                            <div class="feature-item">🌦️ 天気予測分析</div>
+                            <div class="feature-item">💰 収益最大化</div>
+                            <div class="feature-item">📊 AI需要予測</div>
+                            <div class="feature-item">⚡ 燃費最適化</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-title">メインダッシュボード</div>
+                <div class="screenshot-desc">AI-powered taxi optimization dashboard</div>
+            </div>
+
+            <!-- Screenshot 2: Route Optimization -->
+            <div class="screenshot-container">
+                <div class="phone-mockup" id="screenshot2">
+                    <div class="status-bar">
+                        <span>9:42</span>
+                        <span>🔋 98%</span>
+                    </div>
+                    <div class="app-content">
+                        <div class="app-header">
+                            <div class="app-title">ルート最適化</div>
+                            <div class="app-subtitle">Route Optimization</div>
+                        </div>
+                        <div class="big-emoji">🗺️🎯</div>
+                        <div class="feature-list">
+                            <div class="feature-item">🚦 渋滞回避ルート</div>
+                            <div class="feature-item">⏰ 到着時間予測</div>
+                            <div class="feature-item">💨 最短距離計算</div>
+                            <div class="feature-item">🏁 複数経由地対応</div>
+                            <div class="feature-item">📱 リアルタイム更新</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-title">ルート最適化</div>
+                <div class="screenshot-desc">Smart route planning with traffic avoidance</div>
+            </div>
+
+            <!-- Screenshot 3: Weather Integration -->
+            <div class="screenshot-container">
+                <div class="phone-mockup" id="screenshot3">
+                    <div class="status-bar">
+                        <span>9:43</span>
+                        <span>🔋 96%</span>
+                    </div>
+                    <div class="app-content">
+                        <div class="app-header">
+                            <div class="app-title">天気予測分析</div>
+                            <div class="app-subtitle">Weather Prediction</div>
+                        </div>
+                        <div class="big-emoji">🌧️📈</div>
+                        <div class="feature-list">
+                            <div class="feature-item">☔ 雨天需要予測</div>
+                            <div class="feature-item">🌨️ 雪日運行計画</div>
+                            <div class="feature-item">🌤️ 晴天最適ルート</div>
+                            <div class="feature-item">🌡️ 気温影響分析</div>
+                            <div class="feature-item">💡 運行提案</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-title">天気予測分析</div>
+                <div class="screenshot-desc">Weather-based demand prediction system</div>
+            </div>
+
+            <!-- Screenshot 4: Revenue Analytics -->
+            <div class="screenshot-container">
+                <div class="phone-mockup" id="screenshot4">
+                    <div class="status-bar">
+                        <span>9:44</span>
+                        <span>🔋 94%</span>
+                    </div>
+                    <div class="app-content">
+                        <div class="app-header">
+                            <div class="app-title">収益分析</div>
+                            <div class="app-subtitle">Revenue Analytics</div>
+                        </div>
+                        <div class="big-emoji">💰📊</div>
+                        <div class="feature-list">
+                            <div class="feature-item">💹 日別売上分析</div>
+                            <div class="feature-item">📈 月間収益予測</div>
+                            <div class="feature-item">⏰ 時間帯別効率</div>
+                            <div class="feature-item">🎯 目標達成率</div>
+                            <div class="feature-item">💡 収益改善提案</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-title">収益分析</div>
+                <div class="screenshot-desc">Comprehensive revenue tracking and optimization</div>
+            </div>
+
+            <!-- Screenshot 5: Customer Management -->
+            <div class="screenshot-container">
+                <div class="phone-mockup" id="screenshot5">
+                    <div class="status-bar">
+                        <span>9:45</span>
+                        <span>🔋 92%</span>
+                    </div>
+                    <div class="app-content">
+                        <div class="app-header">
+                            <div class="app-title">顧客管理</div>
+                            <div class="app-subtitle">Customer Management</div>
+                        </div>
+                        <div class="big-emoji">👥💼</div>
+                        <div class="feature-list">
+                            <div class="feature-item">🏆 VIP顧客管理</div>
+                            <div class="feature-item">📞 予約履歴追跡</div>
+                            <div class="feature-item">⭐ 評価システム</div>
+                            <div class="feature-item">🎁 ロイヤリティ特典</div>
+                            <div class="feature-item">📊 顧客分析</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-title">顧客管理</div>
+                <div class="screenshot-desc">Professional customer relationship management</div>
+            </div>
+
+            <!-- Screenshot 6: Vehicle Management -->
+            <div class="screenshot-container">
+                <div class="phone-mockup" id="screenshot6">
+                    <div class="status-bar">
+                        <span>9:46</span>
+                        <span>🔋 90%</span>
+                    </div>
+                    <div class="app-content">
+                        <div class="app-header">
+                            <div class="app-title">車両管理</div>
+                            <div class="app-subtitle">Vehicle Management</div>
+                        </div>
+                        <div class="big-emoji">🚗🔧</div>
+                        <div class="feature-list">
+                            <div class="feature-item">🛠️ メンテナンス管理</div>
+                            <div class="feature-item">⛽ 燃費追跡</div>
+                            <div class="feature-item">📅 点検スケジュール</div>
+                            <div class="feature-item">💰 修理費用管理</div>
+                            <div class="feature-item">🔔 アラート通知</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-title">車両管理</div>
+                <div class="screenshot-desc">Complete vehicle maintenance and tracking system</div>
+            </div>
+
+            <!-- Screenshot 7: AI Insights -->
+            <div class="screenshot-container">
+                <div class="phone-mockup" id="screenshot7">
+                    <div class="status-bar">
+                        <span>9:47</span>
+                        <span>🔋 88%</span>
+                    </div>
+                    <div class="app-content">
+                        <div class="app-header">
+                            <div class="app-title">AI洞察</div>
+                            <div class="app-subtitle">AI Insights</div>
+                        </div>
+                        <div class="big-emoji">🤖💡</div>
+                        <div class="feature-list">
+                            <div class="feature-item">🧠 需要パターン学習</div>
+                            <div class="feature-item">🎯 最適化提案</div>
+                            <div class="feature-item">📊 パフォーマンス分析</div>
+                            <div class="feature-item">🔮 将来予測</div>
+                            <div class="feature-item">💰 利益最大化戦略</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-title">AI洞察</div>
+                <div class="screenshot-desc">Advanced AI-powered business insights</div>
+            </div>
+
+            <!-- Screenshot 8: Settings -->
+            <div class="screenshot-container">
+                <div class="phone-mockup" id="screenshot8">
+                    <div class="status-bar">
+                        <span>9:48</span>
+                        <span>🔋 86%</span>
+                    </div>
+                    <div class="app-content">
+                        <div class="app-header">
+                            <div class="app-title">設定</div>
+                            <div class="app-subtitle">Settings</div>
+                        </div>
+                        <div class="big-emoji">⚙️🎛️</div>
+                        <div class="feature-list">
+                            <div class="feature-item">🌐 言語設定</div>
+                            <div class="feature-item">🔔 通知設定</div>
+                            <div class="feature-item">🗺️ マップ設定</div>
+                            <div class="feature-item">💾 データ同期</div>
+                            <div class="feature-item">🔒 プライバシー設定</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-title">設定</div>
+                <div class="screenshot-desc">Comprehensive app customization options</div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2>📱 Ready for App Store Submission</h2>
+            <p>Professional quality screenshots optimized for iPhone App Store listing</p>
+            
+            <button class="download-all-btn" onclick="downloadAllScreenshots()">📱 Download All Screenshots</button>
+            <br><br>
+            <button class="download-btn" onclick="downloadScreenshot('screenshot1')">Dashboard</button>
+            <button class="download-btn" onclick="downloadScreenshot('screenshot2')">Route</button>
+            <button class="download-btn" onclick="downloadScreenshot('screenshot3')">Weather</button>
+            <button class="download-btn" onclick="downloadScreenshot('screenshot4')">Revenue</button>
+            <button class="download-btn" onclick="downloadScreenshot('screenshot5')">Customer</button>
+            <button class="download-btn" onclick="downloadScreenshot('screenshot6')">Vehicle</button>
+            <button class="download-btn" onclick="downloadScreenshot('screenshot7')">AI Insights</button>
+            <button class="download-btn" onclick="downloadScreenshot('screenshot8')">Settings</button>
+            
+            <div class="instructions">
+                <h3>🎯 Usage Instructions:</h3>
+                <p><strong>Perfect for App Store:</strong> These screenshots meet all Apple App Store requirements (1242x2688px for iPhone) and showcase your app's key features in Japanese for the Tokyo market.</p>
+                <p><strong>Professional Quality:</strong> Each screenshot demonstrates a different core feature of your taxi optimization system, highlighting the value proposition for drivers.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadScreenshot(screenshotId) {
+            const element = document.getElementById(screenshotId);
+            
+            // Create a larger canvas for App Store requirements (1242x2688px)
+            const canvas = document.createElement('canvas');
+            canvas.width = 1242;
+            canvas.height = 2688;
+            const ctx = canvas.getContext('2d');
+
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, 0, 2688);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1242, 2688);
+
+            // Draw phone mockup
+            const phoneWidth = 800;
+            const phoneHeight = 1600;
+            const phoneX = (1242 - phoneWidth) / 2;
+            const phoneY = (2688 - phoneHeight) / 2;
+
+            // Phone border
+            ctx.fillStyle = '#2c3e50';
+            ctx.roundRect(phoneX - 20, phoneY - 20, phoneWidth + 40, phoneHeight + 40, 60);
+            ctx.fill();
+
+            // Phone screen
+            ctx.fillStyle = 'white';
+            ctx.roundRect(phoneX, phoneY, phoneWidth, phoneHeight, 40);
+            ctx.fill();
+
+            // Status bar
+            ctx.fillStyle = '#000';
+            ctx.roundRect(phoneX, phoneY, phoneWidth, 80, 40);
+            ctx.fill();
+
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 30px Arial';
+            ctx.fillText('9:41', phoneX + 40, phoneY + 55);
+            ctx.fillText('🔋 100%', phoneX + phoneWidth - 180, phoneY + 55);
+
+            // App header
+            const headerGradient = ctx.createLinearGradient(phoneX, phoneY + 80, phoneX, phoneY + 200);
+            headerGradient.addColorStop(0, '#667eea');
+            headerGradient.addColorStop(1, '#764ba2');
+            ctx.fillStyle = headerGradient;
+            ctx.roundRect(phoneX + 40, phoneY + 120, phoneWidth - 80, 120, 20);
+            ctx.fill();
+
+            // Get screenshot-specific content
+            const titles = {
+                'screenshot1': ['東京タクシーAI最適化', 'Tokyo Taxi AI Optimizer'],
+                'screenshot2': ['ルート最適化', 'Route Optimization'],
+                'screenshot3': ['天気予測分析', 'Weather Prediction'],
+                'screenshot4': ['収益分析', 'Revenue Analytics'],
+                'screenshot5': ['顧客管理', 'Customer Management'],
+                'screenshot6': ['車両管理', 'Vehicle Management'],
+                'screenshot7': ['AI洞察', 'AI Insights'],
+                'screenshot8': ['設定', 'Settings']
+            };
+
+            const emojis = {
+                'screenshot1': '🚕✨',
+                'screenshot2': '🗺️🎯',
+                'screenshot3': '🌧️📈',
+                'screenshot4': '💰📊',
+                'screenshot5': '👥💼',
+                'screenshot6': '🚗🔧',
+                'screenshot7': '🤖💡',
+                'screenshot8': '⚙️🎛️'
+            };
+
+            // Header text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 40px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(titles[screenshotId][0], phoneX + phoneWidth/2, phoneY + 170);
+            ctx.font = '24px Arial';
+            ctx.fillText(titles[screenshotId][1], phoneX + phoneWidth/2, phoneY + 210);
+
+            // Big emoji
+            ctx.font = '120px Arial';
+            ctx.fillText(emojis[screenshotId], phoneX + phoneWidth/2, phoneY + 380);
+
+            // Feature list background
+            ctx.fillStyle = '#f8f9fa';
+            ctx.roundRect(phoneX + 40, phoneY + 450, phoneWidth - 80, 800, 15);
+            ctx.fill();
+
+            // Feature items
+            const features = {
+                'screenshot1': ['📍 リアルタイム最適ルート', '🌦️ 天気予測分析', '💰 収益最大化', '📊 AI需要予測', '⚡ 燃費最適化'],
+                'screenshot2': ['🚦 渋滞回避ルート', '⏰ 到着時間予測', '💨 最短距離計算', '🏁 複数経由地対応', '📱 リアルタイム更新'],
+                'screenshot3': ['☔ 雨天需要予測', '🌨️ 雪日運行計画', '🌤️ 晴天最適ルート', '🌡️ 気温影響分析', '💡 運行提案'],
+                'screenshot4': ['💹 日別売上分析', '📈 月間収益予測', '⏰ 時間帯別効率', '🎯 目標達成率', '💡 収益改善提案'],
+                'screenshot5': ['🏆 VIP顧客管理', '📞 予約履歴追跡', '⭐ 評価システム', '🎁 ロイヤリティ特典', '📊 顧客分析'],
+                'screenshot6': ['🛠️ メンテナンス管理', '⛽ 燃費追跡', '📅 点検スケジュール', '💰 修理費用管理', '🔔 アラート通知'],
+                'screenshot7': ['🧠 需要パターン学習', '🎯 最適化提案', '📊 パフォーマンス分析', '🔮 将来予測', '💰 利益最大化戦略'],
+                'screenshot8': ['🌐 言語設定', '🔔 通知設定', '🗺️ マップ設定', '💾 データ同期', '🔒 プライバシー設定']
+            };
+
+            ctx.fillStyle = '#2c3e50';
+            ctx.font = 'bold 32px Arial';
+            ctx.textAlign = 'left';
+
+            features[screenshotId].forEach((feature, index) => {
+                // Feature background
+                ctx.fillStyle = 'white';
+                ctx.roundRect(phoneX + 80, phoneY + 500 + (index * 120), phoneWidth - 160, 80, 10);
+                ctx.fill();
+
+                // Blue accent bar
+                ctx.fillStyle = '#3498db';
+                ctx.roundRect(phoneX + 80, phoneY + 500 + (index * 120), 8, 80, 4);
+                ctx.fill();
+
+                // Feature text
+                ctx.fillStyle = '#2c3e50';
+                ctx.fillText(feature, phoneX + 120, phoneY + 550 + (index * 120));
+            });
+
+            // Download the image
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `tokyo-taxi-ai-${screenshotId}.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+        }
+
+        function downloadAllScreenshots() {
+            const screenshots = ['screenshot1', 'screenshot2', 'screenshot3', 'screenshot4', 'screenshot5', 'screenshot6', 'screenshot7', 'screenshot8'];
+            
+            screenshots.forEach((id, index) => {
+                setTimeout(() => {
+                    downloadScreenshot(id);
+                }, index * 1000); // 1 second delay between downloads
+            });
+        }
+
+        // Add roundRect method to canvas context
+        CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+            if (w < 2 * r) r = w / 2;
+            if (h < 2 * r) r = h / 2;
+            this.beginPath();
+            this.moveTo(x + r, y);
+            this.arcTo(x + w, y, x + w, y + h, r);
+            this.arcTo(x + w, y + h, x, y + h, r);
+            this.arcTo(x, y + h, x, y, r);
+            this.arcTo(x, y, x + w, y, r);
+            this.closePath();
+            return this;
+        }
+    </script>
+</body>
+</html>
