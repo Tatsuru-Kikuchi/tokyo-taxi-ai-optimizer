@@ -1,17 +1,16 @@
-# GitHub Pages Force Refresh
+# GitHub Pages Force Rebuild Trigger
+# Updated: 2025-07-31 17:39 JST
 
-This file forces GitHub Pages to rebuild and update the cached content.
+This file forces GitHub Pages to rebuild the site and serve the app asset files correctly.
 
-Build Version: v4.1.2025073104
-Force Update: github-pages-cache-bust
-Last Update: Thu Jul 31 2025 14:49 JST
+## App Asset Files Status:
+- app-icons.html ✅
+- app-screenshots.html ✅  
+- app-assets.html ✅
 
-All links and assets preserved:
-✅ https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/
-✅ All navigation links functional
-✅ All external links preserved
-✅ Developer contact information maintained
-✅ Repository structure intact
-✅ Apple marketing ready
+## Expected URLs (after rebuild):
+- https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/app-icons.html
+- https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/app-screenshots.html
+- https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/app-assets.html
 
-Status: MASSIVE UI DEPLOYMENT ACTIVE
+Rebuild trigger: pages-asset-fix-20250731-1739
