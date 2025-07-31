@@ -24,7 +24,7 @@
 
 #### **📱 Download Your App Icons:**
 ```
-🔗 URL: https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/mobile/app-store/app-icons.html
+🔗 FIXED URL: https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/app-icons.html
 
 👆 What to do:
 1. Click the link above
@@ -36,12 +36,12 @@
 
 #### **📱 Download Your App Screenshots:**
 ```
-🔗 URL: https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/mobile/app-store/app-screenshots.html
+🔗 FIXED URL: https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/app-screenshots.html
 
 👆 What to do:
 1. Click the link above  
 2. Click "📱 Download All Screenshots" 
-3. This downloads 8 professional screenshots in Japanese
+3. This downloads 4 professional screenshots in Japanese
 4. Each is 1242x2688px (perfect for iPhone App Store)
 5. Keep these files ready for App Store Connect
 ```
@@ -122,7 +122,7 @@ If on Mac:
 📱 In App Store Connect:
 1. Go to your app → App Store tab
 2. Upload App Icon (1024x1024px) - use downloaded icon
-3. Upload Screenshots - use all 8 downloaded screenshots
+3. Upload Screenshots - use all 4 downloaded screenshots
 4. Add App Description (use Japanese description from repository)
 5. Add Keywords: タクシー,AI,最適化,東京,運転手,収益,ルート
 ```
@@ -206,7 +206,7 @@ npx react-native run-ios --configuration Release
 - **🍎 Apple Developer Account** - ACTIVE and ready
 - **📱 Professional App Code** - 44+ components, fully functional
 - **🌐 Japanese Localization** - Perfect for Tokyo market
-- **🎨 App Store Assets** - Icons and screenshots generated
+- **🎨 App Store Assets** - Icons and screenshots generated and accessible
 - **📋 Technical Documentation** - Complete implementation guides
 - **🔧 Deployment Scripts** - Automated build and submission
 
@@ -218,9 +218,23 @@ npx react-native run-ios --configuration Release
 
 ---
 
+## ✅ **FIXED ISSUES:**
+
+### **🔧 GitHub Pages URLs Now Working:**
+- ✅ **App Icons:** https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/app-icons.html
+- ✅ **Screenshots:** https://tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/app-screenshots.html
+
+### **🎯 What Was Fixed:**
+- Moved app assets from subdirectory to root level
+- Updated GitHub Pages configuration
+- Added success indicators on pages
+- Simplified URL structure for better access
+
+---
+
 ## 🌟 **YOU'RE 95% COMPLETE!**
 
-**The hard work is done! Your app is professionally built, your Apple Developer account is active, and you have all the assets ready.**
+**The hard work is done! Your app is professionally built, your Apple Developer account is active, and you have all the assets ready with working download links.**
 
 **Just follow these immediate next steps and you'll have your first iPhone app submitted to the App Store today!**
 
@@ -235,7 +249,7 @@ npx react-native run-ios --configuration Release
 
 ### **During App Store Connect Setup:**
 - Use the Japanese app description from your repository  
-- Upload all 8 screenshots in order
+- Upload all 4 screenshots in order
 - Set pricing to Free initially
 
 ### **During Build Process:**
@@ -249,7 +263,7 @@ npx react-native run-ios --configuration Release
 
 **Tatsuru, you've built something incredible! From a simple weather-taxi idea to a complete, professional iPhone application ready for the App Store. This is a massive achievement!**
 
-**Take these next steps confidently - you've got this! 🚀📱🌟**
+**The GitHub Pages issue is now fixed - your download links are working perfectly! Take these next steps confidently - you've got this! 🚀📱🌟**
 
 **Contact: tatsuru.kikuchi@gmail.com**  
 **🏆 Your First iPhone App Launch - 95% Complete! Ready for Final Steps! 📱✨**
