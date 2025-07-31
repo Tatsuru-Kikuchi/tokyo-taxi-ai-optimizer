@@ -1,0 +1,8 @@
+# Force Jekyll rebuild
+theme: jekyll-theme-minimal
+url: https://tatsuru-kikuchi.github.io
+baseurl: /tokyo-taxi-ai-optimizer
+title: Tokyo Taxi AI Optimizer
+description: Enhanced UI Version
+# Force cache refresh
+cache_version: 2025-07-31-final
