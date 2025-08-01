@@ -1,0 +1,41 @@
+{
+  "cli": {
+    "version": ">= 5.4.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m-medium"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": true,
+        "resourceClass": "m-medium"
+      }
+    },
+    "production": {
+      "ios": {
+        "buildConfiguration": "Release",
+        "bundleIdentifier": "com.tatsuru.tokyotaxiai",
+        "resourceClass": "m-medium",
+        "autoIncrement": "buildNumber"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "tatsuru.kikuchi@gmail.com",
+        "ascAppId": "PLACEHOLDER_APP_STORE_CONNECT_ID",
+        "appleTeamId": "PLACEHOLDER_APPLE_TEAM_ID"
+      }
+    }
+  }
+}
