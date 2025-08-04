@@ -1,1 +1,50 @@
-{\n  \"cli\": {\n    \"version\": \">= 5.2.0\"\n  },\n  \"build\": {\n    \"development\": {\n      \"developmentClient\": true,\n      \"distribution\": \"internal\",\n      \"ios\": {\n        \"resourceClass\": \"default\"\n      },\n      \"android\": {\n        \"resourceClass\": \"default\"\n      }\n    },\n    \"preview\": {\n      \"distribution\": \"internal\",\n      \"ios\": {\n        \"resourceClass\": \"default\",\n        \"simulator\": true\n      },\n      \"android\": {\n        \"resourceClass\": \"default\",\n        \"buildType\": \"apk\"\n      }\n    },\n    \"production\": {\n      \"ios\": {\n        \"resourceClass\": \"large\",\n        \"bundleIdentifier\": \"com.tatsuru-kikuchi.tokyo-taxi-ai\",\n        \"buildConfiguration\": \"Release\",\n        \"scheme\": \"TokyoTaxiAI\"\n      },\n      \"android\": {\n        \"resourceClass\": \"large\",\n        \"buildType\": \"app-bundle\"\n      }\n    }\n  },\n  \"submit\": {\n    \"production\": {\n      \"ios\": {\n        \"appleId\": \"tatsuru.kikuchi@gmail.com\",\n        \"ascAppId\": \"TBD\",\n        \"appleTeamId\": \"TBD\"\n      },\n      \"android\": {\n        \"serviceAccountKeyPath\": \"./path/to/service-account-key.json\",\n        \"track\": \"production\"\n      }\n    }\n  }\n}"
+{
+  "cli": {
+    "version": ">= 5.2.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "default"
+      },
+      "android": {
+        "resourceClass": "default"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "default",
+        "simulator": true
+      },
+      "android": {
+        "resourceClass": "default",
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "ios": {
+        "resourceClass": "large",
+        "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
+        "buildConfiguration": "Release"
+      },
+      "android": {
+        "resourceClass": "large",
+        "buildType": "app-bundle"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "tatsuru.kikuchi@icloud.com",
+        "appleTeamId": "B67J43NU85"
+      },
+      "android": {
+        "track": "production"
+      }
+    }
+  }
+}
