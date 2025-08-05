@@ -11,7 +11,6 @@ import {
   Alert,
   Platform
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { registerRootComponent } from 'expo';
 
 const { width, height } = Dimensions.get('window');
@@ -62,6 +61,30 @@ function App() {
       '⛈️ Weather Opportunity!',
       `Rain started in Shinjuku area.\nExpected demand increase: +34%\nRecommended position: Near train stations\nEstimated additional revenue: ¥2,400/hour`,
       [{ text: 'Go to Area', style: 'default' }, { text: 'Later', style: 'cancel' }]
+    );
+  };
+
+  const handleMapView = () => {
+    Alert.alert(
+      '🗺️ Interactive Map',
+      `Map Features Coming Soon:\n• Rain zones visualization\n• Demand hotspots\n• Optimal pickup locations\n• Real-time traffic data\n• Customer locations`,
+      [{ text: 'OK', style: 'default' }]
+    );
+  };
+
+  const handleWeatherForecast = () => {
+    Alert.alert(
+      '🌦️ AI Weather Forecast',
+      `Next 3 Hours:\n14:00 - Light Rain (Shibuya +25% demand)\n15:00 - Heavy Rain (Shinjuku +45% demand)\n16:00 - Cloudy (Normal demand)\n\nRecommendation: Position near Shibuya Station`,
+      [{ text: 'Set Alert', style: 'default' }, { text: 'Close', style: 'cancel' }]
+    );
+  };
+
+  const handleDemandAnalysis = () => {
+    Alert.alert(
+      '📊 AI Demand Analysis',
+      `Current Hotspots:\n🔥 Shibuya Station - Very High\n🔥 Shinjuku South - High\n🟡 Tokyo Station - Medium\n🟢 Ginza - Low\n\nPredicted in 30min:\n📈 Roppongi Hills +60%\n📈 Akasaka +35%`,
+      [{ text: 'Navigate', style: 'default' }, { text: 'Close', style: 'cancel' }]
     );
   };
 
@@ -117,13 +140,8 @@ function App() {
         </Text>
       </View>
 
-      {/* AI Status Banner */}
-      <LinearGradient
-        colors={['#667eea', '#764ba2']}
-        style={styles.aiBanner}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 0 }}
-      >
+      {/* AI Status Banner - Fixed without LinearGradient */}
+      <View style={styles.aiBanner}>
         <View style={styles.aiBannerContent}>
           <Text style={styles.aiBannerTitle}>🤖 AI最適化システム</Text>
           <Text style={styles.aiBannerStatus}>稼働中 • 精度 {aiAccuracy.toFixed(1)}%</Text>
@@ -131,7 +149,7 @@ function App() {
         <TouchableOpacity style={styles.optimizeButton} onPress={handleOptimizeRoute}>
           <Text style={styles.optimizeButtonText}>最適化</Text>
         </TouchableOpacity>
-      </LinearGradient>
+      </View>
 
       {/* Revenue Stats */}
       <View style={styles.section}>
@@ -167,7 +185,7 @@ function App() {
         </View>
       </View>
 
-      {/* Quick Actions */}
+      {/* Enhanced Quick Actions */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>⚡ クイックアクション</Text>
         <View style={styles.actionsGrid}>
@@ -175,13 +193,13 @@ function App() {
             icon="🎯"
             title="需要予測"
             description="3時間先までの需要を87%精度で予測"
-            onPress={() => Alert.alert('需要予測', '渋谷エリア: 高需要予測\n新宿エリア: 中需要予測\n品川エリア: 低需要予測')}
+            onPress={handleDemandAnalysis}
           />
           <FeatureCard
             icon="⛈️"
             title="天気連動"
             description="雨天時の需要増加を活用した最適化"
-            onPress={handleWeatherAlert}
+            onPress={handleWeatherForecast}
           />
           <FeatureCard
             icon="🚆"
@@ -190,11 +208,27 @@ function App() {
             onPress={() => Alert.alert('交通情報', 'JR山手線: 5分遅延\n→ 品川駅周辺で需要増加予測\n→ 推定追加収益: ¥1,800')}
           />
           <FeatureCard
-            icon="📊"
-            title="収益分析"
-            description="リアルタイム収益データと改善提案"
-            onPress={() => Alert.alert('収益分析', '今日の実績:\n• 効率: +23%\n• 待機時間: -31%\n• 走行距離: +12%')}
+            icon="🗺️"
+            title="マップ表示"
+            description="雨エリア・需要ホットスポット・最適ルート"
+            onPress={handleMapView}
           />
+        </View>
+      </View>
+
+      {/* New Map Integration Section */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>🗺️ リアルタイムマップ</Text>
+        <View style={styles.mapPreview}>
+          <Text style={styles.mapTitle}>📍 現在の最適エリア</Text>
+          <View style={styles.mapInfo}>
+            <Text style={styles.mapLocation}>🎯 推奨位置: 渋谷駅周辺</Text>
+            <Text style={styles.mapWeather}>🌧️ 雨エリア: 新宿・池袋</Text>
+            <Text style={styles.mapDemand}>📈 高需要: 六本木ヒルズ</Text>
+          </View>
+          <TouchableOpacity style={styles.mapButton} onPress={handleMapView}>
+            <Text style={styles.mapButtonText}>フルマップを表示</Text>
+          </TouchableOpacity>
         </View>
       </View>
 
@@ -254,6 +288,26 @@ function App() {
           </View>
         </View>
 
+        {/* Enhanced Weather & Demand Analytics */}
+        <View style={styles.forecastCard}>
+          <Text style={styles.forecastTitle}>🌦️ 3時間天気予測</Text>
+          <View style={styles.forecastRow}>
+            <Text style={styles.forecastTime}>14:00</Text>
+            <Text style={styles.forecastWeather}>🌧️ 小雨</Text>
+            <Text style={styles.forecastDemand}>需要 +25%</Text>
+          </View>
+          <View style={styles.forecastRow}>
+            <Text style={styles.forecastTime}>15:00</Text>
+            <Text style={styles.forecastWeather}>⛈️ 強雨</Text>
+            <Text style={styles.forecastDemand}>需要 +45%</Text>
+          </View>
+          <View style={styles.forecastRow}>
+            <Text style={styles.forecastTime}>16:00</Text>
+            <Text style={styles.forecastWeather}>☁️ 曇り</Text>
+            <Text style={styles.forecastDemand}>需要 通常</Text>
+          </View>
+        </View>
+
         {/* AI Insights */}
         <View style={styles.insightsCard}>
           <Text style={styles.insightsTitle}>🧠 AI洞察</Text>
@@ -292,17 +346,32 @@ function App() {
           <Text style={styles.settingLabel}>🔐 プライバシー</Text>
           <Text style={styles.settingValue}>設定済み</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.settingItem}>
+          <Text style={styles.settingLabel}>🗺️ マップ設定</Text>
+          <Text style={styles.settingValue}>準備中</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.settingItem}>
+          <Text style={styles.settingLabel}>📞 配車機能</Text>
+          <Text style={styles.settingValue}>開発中</Text>
+        </TouchableOpacity>
         
         <View style={styles.aboutSection}>
           <Text style={styles.aboutTitle}>アプリについて</Text>
           <Text style={styles.aboutText}>
-            Tokyo Taxi AI Optimizer v1.1.0{"\n"}
+            Tokyo Taxi AI Optimizer v1.2.0{"\n"}
             先進的経済学研究に基づく{"\n"}
             科学的実証済みシステム{"\n"}
             {"\n"}
-            開発者: 菊池達琉{"\n"}
+            開発者: Tatsuru Kikuchi{"\n"}
             研究機関: 経済学研究所{"\n"}
-            技術協力: ODPT, 気象庁
+            技術協力: ODPT, 気象庁{"\n"}
+            {"\n"}
+            🚀 近日追加予定:{"\n"}
+            • Google Maps統合{"\n"}
+            • リアルタイム配車{"\n"}
+            • チャット機能
           </Text>
         </View>
       </View>
@@ -369,6 +438,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#7f8c8d',
   },
+  // Fixed aiBanner without LinearGradient
   aiBanner: {
     borderRadius: 15,
     padding: 20,
@@ -376,6 +446,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: '#667eea', // Solid color instead of gradient
   },
   aiBannerContent: {
     flex: 1,
@@ -474,6 +545,100 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#7f8c8d',
     lineHeight: 16,
+  },
+  // New Map Preview Section
+  mapPreview: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 20,
+    borderLeftWidth: 4,
+    borderLeftColor: '#e74c3c',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  mapTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    marginBottom: 15,
+  },
+  mapInfo: {
+    marginBottom: 15,
+  },
+  mapLocation: {
+    fontSize: 14,
+    color: '#e74c3c',
+    marginBottom: 5,
+    fontWeight: '500',
+  },
+  mapWeather: {
+    fontSize: 14,
+    color: '#3498db',
+    marginBottom: 5,
+  },
+  mapDemand: {
+    fontSize: 14,
+    color: '#f39c12',
+  },
+  mapButton: {
+    backgroundColor: '#e74c3c',
+    padding: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  mapButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  // Weather Forecast Card
+  forecastCard: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 20,
+    marginBottom: 20,
+    borderLeftWidth: 4,
+    borderLeftColor: '#3498db',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  forecastTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    marginBottom: 15,
+  },
+  forecastRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ecf0f1',
+  },
+  forecastTime: {
+    fontSize: 14,
+    color: '#2c3e50',
+    fontWeight: '500',
+    flex: 1,
+  },
+  forecastWeather: {
+    fontSize: 14,
+    flex: 1.5,
+    textAlign: 'center',
+  },
+  forecastDemand: {
+    fontSize: 12,
+    color: '#e74c3c',
+    fontWeight: 'bold',
+    flex: 1,
+    textAlign: 'right',
   },
   researchCard: {
     backgroundColor: 'white',
