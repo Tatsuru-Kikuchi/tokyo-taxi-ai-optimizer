@@ -205,7 +205,7 @@ function App() {
           <Text style={styles.researchTitle}>先進的経済学研究に基づくシステム</Text>
           <Text style={styles.researchDescription}>
             • 3ヶ月間の実証実験データ（150台のタクシー）{"\n"}
-            • 統計的有意性: p {"<"} 0.01（99%信頼区間）{"\n"}
+            • 統計的有意性: p &lt; 0.01（99%信頼区間）{"\n"}
             • 雨天時需要相関係数: 0.847{"\n"}
             • 経済効果: 年間171億円の業界インパクト
           </Text>
