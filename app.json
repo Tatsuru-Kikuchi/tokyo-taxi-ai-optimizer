@@ -36,11 +36,6 @@
     "web": {
       "favicon": "./assets/images/icon-1024.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "your-project-id-here"
-      }
-    },
     "plugins": [
       [
         "expo-location",
