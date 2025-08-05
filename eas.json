@@ -1,6 +1,7 @@
 {
   "cli": {
-    "version": ">= 5.2.0"
+    "version": ">= 5.2.0",
+    "appVersionSource": "remote"
   },
   "build": {
     "development": {
@@ -26,11 +27,11 @@
     },
     "production": {
       "ios": {
-        "resourceClass": "large",
+        "resourceClass": "default",
         "buildConfiguration": "Release"
       },
       "android": {
-        "resourceClass": "large",
+        "resourceClass": "default",
         "buildType": "app-bundle"
       }
     }
