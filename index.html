@@ -3,864 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tokyo Taxi AI Optimizer - 先進的経済学研究に基づく科学的実証済みAIテクノロジー</title>
-    <meta name="description" content="東京大学経済学部研究により収益30.2%向上を実証済み。リアルタイム気象データと交通情報を統合したAI最適化システム。">
-    
-    <!-- AGGRESSIVE CACHE BUSTING v4.2 -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="-1">
-    <meta name="cache-bust" content="v4.2.2025073105">
-    <meta name="build-version" content="massive-ui-enhanced-v4.2">
-    <meta name="last-modified" content="Thu, 31 Jul 2025 14:58:00 GMT">
-    <meta name="force-refresh" content="github-pages-complete-rebuild">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
+    <title>東京タクシーAI最適化 - プライバシーポリシー</title>
     <style>
-        :root {
-            --primary: #1a365d;
-            --japanese-red: #dc143c;
-            --japanese-gold: #ffd700;
-            --success: #38a169;
-            --warning: #d69e2e;
-            --text-dark: #1a202c;
-            --text-light: #4a5568;
-            --bg-light: #f7fafc;
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --shadow-elegant: 0 30px 60px rgba(0,0,0,0.2);
-            --shadow-hover: 0 40px 80px rgba(0,0,0,0.25);
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
-        body {
-            font-family: 'Inter', 'Noto Sans JP', sans-serif;
-            line-height: 1.8;
-            color: var(--text-dark);
-            font-size: 55px; /* EXTREMELY MASSIVE base font size */
-            overflow-x: auto;
-            background: #ffffff;
-        }
-        
-        /* COMPLETE REBUILD SUCCESS NOTIFICATION */
-        .rebuild-success-notification {
-            position: fixed;
-            top: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 6rem 12rem;
-            border-radius: 120px;
-            font-size: 5rem;
-            font-weight: 900;
-            z-index: 10000;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.3);
-            animation: rebuildSuccess 35s ease-in-out;
-            text-align: center;
-            border: 25px solid var(--japanese-gold);
-        }
-        
-        @keyframes rebuildSuccess {
-            0% { transform: translateX(-50%) translateY(-500px) scale(0.1); opacity: 0; }
-            10%, 85% { transform: translateX(-50%) translateY(0) scale(1); opacity: 1; }
-            100% { transform: translateX(-50%) translateY(-500px) scale(0.1); opacity: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
         
         .container {
-            max-width: 3800px; /* ULTRA MASSIVE container */
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 450px; /* ENORMOUS padding */
-            width: 100%;
-        }
-        
-        /* ENORMOUS HEADER */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(50px);
-            border-bottom: 25px solid rgba(26, 54, 93, 0.3);
-            z-index: 1000;
-            padding: 120px 0;
-            box-shadow: var(--shadow-elegant);
-        }
-        
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12rem 0;
-            min-height: 450px;
-        }
-        
-        .logo {
-            font-weight: 900;
-            font-size: 13rem; /* ENORMOUS logo */
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10rem;
-            text-shadow: 15px 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .logo i {
-            color: var(--japanese-red);
-            font-size: 15rem; /* ENORMOUS icon */
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30rem; /* ENORMOUS gaps */
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 700;
-            font-size: 6rem; /* ENORMOUS nav text */
-            transition: all 0.8s ease;
-            position: relative;
-            padding: 10rem 0;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-            transform: translateY(-25px) scale(1.25);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 25px; /* ENORMOUS underline */
-            bottom: -50px;
-            left: 0;
-            background: var(--primary);
-            transition: width 0.8s ease;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        .cta-button {
-            background: var(--bg-gradient);
-            color: white;
-            padding: 9rem 18rem; /* ENORMOUS button */
-            border-radius: 300px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 5.5rem;
-            transition: all 0.8s ease;
-            box-shadow: var(--shadow-elegant);
-            border: 18px solid rgba(255,255,255,0.6);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-30px) scale(1.2);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        /* ENORMOUS HERO SECTION */
-        .hero {
-            background: var(--bg-gradient);
-            color: white;
-            padding: 750px 0 700px; /* ENORMOUS padding */
-            position: relative;
-            overflow: hidden;
-            min-height: 300vh; /* ENORMOUS height */
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="tokyo" x="0" y="0" width="300" height="300" patternUnits="userSpaceOnUse"><path d="M0 150h300M150 0v300" stroke="%23ffffff" stroke-width="8" opacity="0.9"/></pattern></defs><rect width="100%" height="100%" fill="url(%23tokyo)"/></svg>') center/cover;
-            animation: enormousFloat 100s ease-in-out infinite;
-        }
-        
-        @keyframes enormousFloat {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-200px) rotate(20deg); }
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 32rem; /* EVEN MORE ENORMOUS title */
-            font-weight: 900;
-            margin-bottom: 25rem;
-            text-shadow: 35px 35px 70px rgba(0,0,0,1);
-            letter-spacing: -30px;
-            line-height: 1.1;
-            animation: titleEnormousGlow 25s ease-in-out infinite alternate;
-        }
-        
-        @keyframes titleEnormousGlow {
-            0% { text-shadow: 35px 35px 70px rgba(0,0,0,1); }
-            100% { text-shadow: 35px 35px 120px rgba(255,255,255,1); }
-        }
-        
-        .hero .subtitle {
-            font-size: 14rem; /* ENORMOUS subtitle */
-            margin-bottom: 20rem;
-            font-weight: 700;
-            text-shadow: 30px 30px 60px rgba(0,0,0,1);
-            line-height: 1.4;
-        }
-        
-        .hero .tagline {
-            font-size: 11rem; /* ENORMOUS tagline */
-            margin-bottom: 40rem;
-            font-weight: 600;
-            text-shadow: 25px 25px 50px rgba(0,0,0,1);
-            line-height: 1.5;
-        }
-        
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(1300px, 1fr)); /* EVEN MORE ENORMOUS cards */
-            gap: 40rem; /* ENORMOUS gaps */
-            margin: 50rem 0;
-        }
-        
-        .stat-card {
-            background: rgba(255, 255, 255, 0.65);
-            backdrop-filter: blur(90px);
-            border-radius: 350px; /* ENORMOUS rounded */
-            padding: 40rem; /* ENORMOUS padding */
-            text-align: center;
-            border: 35px solid rgba(255, 255, 255, 1); /* ENORMOUS border */
-            transition: all 3s ease;
-            min-height: 1400px; /* ENORMOUS cards */
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: -100%;
-            left: -100%;
-            width: 300%;
-            height: 300%;
-            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
-            transform: rotate(45deg);
-            transition: transform 3.5s ease;
-        }
-        
-        .stat-card:hover::before {
-            transform: rotate(45deg) scale(3.5);
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-140px) scale(1.35);
-            background: rgba(255, 255, 255, 0.8);
-            border-color: var(--japanese-gold);
-        }
-        
-        .stat-number {
-            font-size: 28rem; /* EVEN MORE ENORMOUS numbers */
-            font-weight: 900;
-            color: var(--japanese-gold);
-            display: block;
-            text-shadow: 35px 35px 70px rgba(0,0,0,1);
-            margin-bottom: 25rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .stat-label {
-            font-size: 10rem; /* ENORMOUS labels */
-            font-weight: 700;
-            margin-top: 25rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-actions {
-            display: flex;
-            gap: 40rem; /* ENORMOUS gaps */
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 50rem;
-        }
-        
-        .btn-primary, .btn-secondary {
-            padding: 14rem 35rem; /* ENORMOUS buttons */
-            border-radius: 450px;
-            font-weight: 800;
-            font-size: 10rem; /* ENORMOUS text */
-            display: inline-flex;
-            align-items: center;
-            gap: 14rem;
-            min-width: 1500px; /* ENORMOUS width */
-            justify-content: center;
-            transition: all 3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-primary {
-            background: var(--japanese-red);
-            color: white;
-            text-decoration: none;
-            box-shadow: var(--shadow-elegant);
-            border: 30px solid rgba(255,255,255,0.8);
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255,255,255,0.7);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 3.5s ease;
-        }
-        
-        .btn-primary:hover::before {
-            width: 1400px;
-            height: 1400px;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-60px) scale(1.4);
-            box-shadow: var(--shadow-hover);
-            background: #b91c1c;
-        }
-        
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.7);
-            color: white;
-            text-decoration: none;
-            border: 35px solid rgba(255, 255, 255, 1);
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.85);
-            transform: translateY(-60px) scale(1.4);
-        }
-        
-        /* ENORMOUS SECTIONS */
-        .about, .features, .research, .download, .developer-info {
-            padding: 800px 0; /* ENORMOUS section padding */
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 60rem; /* ENORMOUS margins */
-        }
-        
-        .section-title {
-            font-size: 28rem; /* ENORMOUS section titles */
-            font-weight: 900;
-            color: var(--primary);
-            margin-bottom: 30rem;
-            position: relative;
-            letter-spacing: -30px;
-            line-height: 1.2;
-            text-shadow: 25px 25px 50px rgba(0,0,0,0.1);
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -250px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1400px; /* ENORMOUS underline */
-            height: 70px; /* ENORMOUS thickness */
-            background: var(--japanese-red);
-            border-radius: 60px;
-        }
-        
-        .section-subtitle {
-            font-size: 12rem; /* ENORMOUS subtitles */
-            color: var(--text-light);
-            max-width: 4200px; /* ENORMOUS text block */
-            margin: 0 auto;
-            font-weight: 600;
-            line-height: 2.8;
-        }
-        
-        /* ENORMOUS CONTACT INFO */
-        .developer-card {
             background: white;
-            border-radius: 350px;
-            padding: 55rem; /* ENORMOUS padding */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .header {
             text-align: center;
-            box-shadow: var(--shadow-elegant);
-            max-width: 4000px; /* ENORMOUS card */
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-            border: 35px solid #e2e8f0;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
         }
         
-        .developer-card::before {
-            content: '';
-            position: absolute;
-            top: -100%;
-            left: -100%;
-            width: 300%;
-            height: 300%;
-            background: radial-gradient(circle, rgba(26, 54, 93, 0.3) 0%, transparent 70%);
-            animation: developerEnormousGlow 40s ease-in-out infinite;
+        h1 { 
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
         
-        @keyframes developerEnormousGlow {
-            0%, 100% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(180deg) scale(2.5); }
+        .app-info {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 10px;
         }
         
-        .developer-title {
-            font-size: 20rem; /* ENORMOUS title */
-            color: var(--primary);
-            margin-bottom: 30rem;
-            font-weight: 800;
-            position: relative;
-            z-index: 2;
+        .last-updated {
+            color: #999;
+            font-size: 0.9em;
         }
         
-        .developer-name {
-            font-size: 26rem; /* ENORMOUS name */
-            color: var(--japanese-red);
-            margin-bottom: 25rem;
-            font-weight: 900;
-            position: relative;
-            z-index: 2;
-            text-shadow: 25px 25px 50px rgba(0,0,0,0.1);
+        h2 { 
+            color: #2c3e50;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
         }
         
-        .developer-role {
-            font-size: 12rem; /* ENORMOUS role text */
-            color: var(--text-light);
-            margin-bottom: 35rem;
-            font-weight: 600;
-            position: relative;
-            z-index: 2;
+        p { 
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        ul {
+            margin: 15px 0 20px 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #555;
         }
         
         .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 35rem; /* ENORMOUS gaps */
-            flex-wrap: wrap;
-            margin-top: 35rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12rem;
-            font-size: 10rem; /* ENORMOUS text */
-            color: var(--text-dark);
-            font-weight: 700;
-            padding: 15rem 30rem; /* ENORMOUS padding */
-            background: var(--bg-light);
-            border-radius: 350px;
-            transition: all 2.5s ease;
-            min-width: 1400px; /* ENORMOUS contact items */
-            border: 30px solid #e2e8f0;
-            box-shadow: var(--shadow-elegant);
-        }
-        
-        .contact-item:hover {
-            transform: translateY(-40px) scale(1.3);
-            background: var(--primary);
-            color: white;
-            box-shadow: var(--shadow-hover);
-            border-color: var(--primary);
-        }
-        
-        .contact-item i {
-            color: var(--primary);
-            font-size: 12rem; /* ENORMOUS icons */
-        }
-        
-        .contact-item:hover i {
-            color: white;
-        }
-        
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 3200px) {
-            .container {
-                max-width: 95%;
-                padding: 0 300px;
-            }
-            
-            .hero h1 {
-                font-size: 30rem;
-            }
-            
-            .section-title {
-                font-size: 25rem;
-            }
-        }
-        
-        @media (max-width: 2800px) {
-            .hero h1 {
-                font-size: 28rem;
-            }
-            
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30rem;
-            }
-        }
-        
-        @media (max-width: 2400px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .container {
-                padding: 0 250px;
-            }
-            
-            .hero h1 {
-                font-size: 25rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 12rem;
-            }
-            
-            .hero .tagline {
-                font-size: 9rem;
-            }
-            
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 30rem;
-            }
-        }
-        
-        @media (max-width: 1800px) {
-            body {
-                font-size: 50px;
-            }
-            
-            .container {
-                padding: 0 200px;
-            }
-            
-            .hero h1 {
-                font-size: 18rem;
-            }
-            
-            .section-title {
-                font-size: 18rem;
-            }
-            
-            .hero-actions {
-                flex-direction: column;
-                align-items: center;
-                gap: 25rem;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 25rem;
-            }
-        }
-        
-        /* ENORMOUS LOADING ANIMATION */
-        .enormous-loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--bg-gradient);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 5s ease;
-        }
-        
-        .enormous-loading.hide {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .enormous-spinner {
-            width: 600px; /* ENORMOUS spinner */
-            height: 600px;
-            border: 60px solid rgba(255, 255, 255, 0.3);
-            border-top: 60px solid white;
-            border-radius: 50%;
-            animation: enormousSpin 6s linear infinite;
-            margin-bottom: 15rem;
-        }
-        
-        .enormous-loading-text {
-            color: white;
-            font-size: 8rem; /* ENORMOUS loading text */
-            font-weight: 700;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
             text-align: center;
-            line-height: 3.5;
-            text-shadow: 20px 20px 40px rgba(0,0,0,0.8);
         }
         
-        @keyframes enormousSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .contact-info strong {
+            color: #667eea;
         }
         
-        /* SCROLL ANIMATIONS */
-        .enormous-fade-in {
-            opacity: 0;
-            transform: translateY(350px);
-            transition: all 6s ease;
-        }
-        
-        .enormous-fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Complete Rebuild Success Notification -->
-    <div class="rebuild-success-notification">
-        🎉 COMPLETE GITHUB REBUILD SUCCESS! 🎉<br>
-        MASSIVE UI FULLY DEPLOYED & CACHED!<br>
-        ✅ Enhanced v4.2 - Apple Marketing Ready! ✅
+    <div class="container">
+        <div class="header">
+            <h1>🚕 東京タクシーAI最適化</h1>
+            <div class="app-info">プライバシーポリシー</div>
+            <div class="last-updated">最終更新日：2025年8月5日</div>
+        </div>
+        
+        <h2>1. 収集する情報</h2>
+        <p>本アプリは以下の情報を収集します：</p>
+        <ul>
+            <li><strong>位置情報</strong>：タクシー最適化のため</li>
+            <li><strong>アプリ使用統計</strong>：サービス改善のため</li>
+            <li><strong>デバイス情報</strong>：技術サポートのため</li>
+        </ul>
+        
+        <h2>2. 情報の使用目的</h2>
+        <p>収集した情報は以下の目的で使用します：</p>
+        <ul>
+            <li>AI需要予測機能の提供</li>
+            <li>天気・交通情報との連携</li>
+            <li>収益最適化アルゴリズムの改善</li>
+            <li>カスタマーサポート</li>
+        </ul>
+        
+        <h2>3. 情報の共有</h2>
+        <p>個人情報は第三者と共有しません。統計データのみ匿名化して研究目的で使用する場合があります。</p>
+        
+        <h2>4. データの安全性</h2>
+        <p>適切な技術的・組織的措置により、お客様の情報を保護します。データは暗号化され、アクセスは制限されています。</p>
+        
+        <h2>5. データの保持期間</h2>
+        <p>収集したデータは、サービス提供に必要な期間のみ保持し、不要になった場合は速やかに削除します。</p>
+        
+        <h2>6. ユーザーの権利</h2>
+        <p>ユーザーは以下の権利を有します：</p>
+        <ul>
+            <li>個人データの開示請求</li>
+            <li>個人データの訂正・削除請求</li>
+            <li>データ処理の停止請求</li>
+        </ul>
+        
+        <h2>7. Cookieとトラッキング</h2>
+        <p>本アプリでは、サービス改善のため匿名化された使用データを収集しますが、個人を特定できる情報は含まれません。</p>
+        
+        <h2>8. 第三者サービス</h2>
+        <p>本アプリは以下の第三者サービスを使用しています：</p>
+        <ul>
+            <li>位置情報サービス（Apple Location Services）</li>
+            <li>天気データ（気象庁API）</li>
+            <li>交通情報（公共交通オープンデータ）</li>
+        </ul>
+        
+        <h2>9. プライバシーポリシーの変更</h2>
+        <p>本ポリシーは必要に応じて更新されます。重要な変更がある場合は、アプリ内で通知いたします。</p>
+        
+        <div class="contact-info">
+            <h2>お問い合わせ</h2>
+            <p>プライバシーに関するご質問は以下までご連絡ください：</p>
+            <p><strong>Email: tatsuru.kikuchi@icloud.com</strong></p>
+            <p><strong>開発者: 菊池達琉</strong></p>
+        </div>
     </div>
-    
-    <!-- Enormous Loading Screen -->
-    <div class="enormous-loading" id="enormousLoading">
-        <div class="enormous-spinner"></div>
-        <div class="enormous-loading-text">
-            🚕 Tokyo Taxi AI Optimizer<br>
-            COMPLETE REBUILD v4.2 - Enhanced Massive Interface...<br>
-            🎯 ALL ASSETS PRESERVED - APPLE MARKETING READY!
-        </div>
-    </div>
-    
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <a href="#" class="logo">
-                <i class="fas fa-taxi"></i>
-                Tokyo Taxi AI
-            </a>
-            <ul class="nav-links">
-                <li><a href="#about">について</a></li>
-                <li><a href="#research">研究</a></li>
-                <li><a href="#developer">開発者</a></li>
-                <li><a href="#download">ダウンロード</a></li>
-            </ul>
-            <a href="#download" class="cta-button">今すぐ開始</a>
-        </nav>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Tokyo Taxi AI Optimizer</h1>
-                <p class="subtitle">先進的経済学研究に基づく科学的実証済みAIテクノロジー</p>
-                <p class="tagline">収益30.2%向上を実現するタクシー最適化システム</p>
-                
-                <div class="hero-stats">
-                    <div class="stat-card enormous-fade-in">
-                        <span class="stat-number">30.2%</span>
-                        <div class="stat-label">収益向上率</div>
-                    </div>
-                    <div class="stat-card enormous-fade-in">
-                        <span class="stat-number">99.5%</span>
-                        <div class="stat-label">システム稼働率</div>
-                    </div>
-                    <div class="stat-card enormous-fade-in">
-                        <span class="stat-number">24/7</span>
-                        <div class="stat-label">リアルタイム最適化</div>
-                    </div>
-                    <div class="stat-card enormous-fade-in">
-                        <span class="stat-number">100%</span>
-                        <div class="stat-label">学術的検証済み</div>
-                    </div>
-                </div>
-                
-                <div class="hero-actions">
-                    <a href="#research" class="btn-primary">
-                        <i class="fas fa-chart-line"></i>
-                        研究結果を見る
-                    </a>
-                    <a href="#download" class="btn-secondary">
-                        <i class="fas fa-download"></i>
-                        無料体験開始
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header enormous-fade-in">
-                <h2 class="section-title">革新的なAIタクシー最適化</h2>
-                <p class="section-subtitle">科学的研究に基づく実証済みソリューションで、タクシー業界の収益性を根本から変革します。リアルタイムデータと先進的機械学習により、従来の直感的運営から完全データ駆動型の最適化システムへ。業界をリードする革新的テクノロジーで、あなたのタクシー事業を次のレベルへ導きます。</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Research Section -->
-    <section class="research" id="research" style="background: var(--primary); color: white; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 1000\"><defs><pattern id=\"research\" x=\"0\" y=\"0\" width=\"200\" height=\"200\" patternUnits=\"userSpaceOnUse\"><circle cx=\"100\" cy=\"100\" r=\"15\" fill=\"%23ffffff\" opacity=\"0.6\"/></pattern></defs><rect width=\"100%\" height=\"100%\" fill=\"url(%23research)\"/></svg>') center/cover;"></div>
-        <div class="container" style="position: relative; z-index: 2;">
-            <div class="section-header enormous-fade-in">
-                <h2 class="section-title" style="color: white;">学術的実証研究</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">先進的経済学研究による科学的検証済みテクノロジー</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 50rem; align-items: center; margin-top: 60rem;">
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 35rem;">
-                    <div style="background: rgba(255,255,255,0.7); backdrop-filter: blur(100px); border-radius: 350px; padding: 40rem; text-align: center; border: 35px solid rgba(255,255,255,0.9); min-height: 1300px; transition: all 3s ease;" class="enormous-fade-in">
-                        <span style="font-size: 26rem; font-weight: 900; color: var(--japanese-gold); display: block; text-shadow: 35px 35px 70px rgba(0,0,0,1); margin-bottom: 25rem;">30.2%</span>
-                        <div style="font-size: 10rem; font-weight: 700; margin-top: 25rem;">実証済み収益向上率</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.7); backdrop-filter: blur(100px); border-radius: 350px; padding: 40rem; text-align: center; border: 35px solid rgba(255,255,255,0.9); min-height: 1300px; transition: all 3s ease;" class="enormous-fade-in">
-                        <span style="font-size: 26rem; font-weight: 900; color: var(--japanese-gold); display: block; text-shadow: 35px 35px 70px rgba(0,0,0,1); margin-bottom: 25rem;">¥285,000</span>
-                        <div style="font-size: 10rem; font-weight: 700; margin-top: 25rem;">年間収益増加額</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.7); backdrop-filter: blur(100px); border-radius: 350px; padding: 40rem; text-align: center; border: 35px solid rgba(255,255,255,0.9); min-height: 1300px; transition: all 3s ease;" class="enormous-fade-in">
-                        <span style="font-size: 26rem; font-weight: 900; color: var(--japanese-gold); display: block; text-shadow: 35px 35px 70px rgba(0,0,0,1); margin-bottom: 25rem;">95%</span>
-                        <div style="font-size: 10rem; font-weight: 700; margin-top: 25rem;">需要予測精度</div>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.7); backdrop-filter: blur(100px); border-radius: 350px; padding: 40rem; text-align: center; border: 35px solid rgba(255,255,255,0.9); min-height: 1300px; transition: all 3s ease;" class="enormous-fade-in">
-                        <span style="font-size: 26rem; font-weight: 900; color: var(--japanese-gold); display: block; text-shadow: 35px 35px 70px rgba(0,0,0,1); margin-bottom: 25rem;">99.5%</span>
-                        <div style="font-size: 10rem; font-weight: 700; margin-top: 25rem;">システム稼働率</div>
-                    </div>
-                </div>
-                
-                <div class="enormous-fade-in">
-                    <h3 style="font-size: 20rem; margin-bottom: 25rem; color: white; font-weight: 800;">科学的検証による信頼性</h3>
-                    <p style="font-size: 10rem; line-height: 2.8; margin-bottom: 25rem; font-weight: 500;">本システムは先進的経済学研究に基づいて開発され、厳密な統計的手法により効果が実証されています。従来の直感的な運営手法から、データ駆動型の科学的アプローチへの転換を可能にします。</p>
-                    <p style="font-size: 10rem; line-height: 2.8; margin-bottom: 30rem; font-weight: 500;">学術的な信頼性と実用性を両立し、タクシー業界における収益最適化の新たな標準を確立します。研究成果は査読付き学術論文として発表予定です。</p>
-                    
-                    <a href="https://github.com/Tatsuru-Kikuchi/MCP-taxi" style="display: inline-flex; align-items: center; gap: 14rem; background: var(--japanese-red); color: white; padding: 15rem 30rem; border-radius: 450px; font-weight: 800; font-size: 9rem; text-decoration: none; transition: all 3s ease; border: 30px solid rgba(255,255,255,0.8);">
-                        <i class="fas fa-graduation-cap"></i>
-                        研究論文を読む
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Developer Info Section -->
-    <section class="developer-info" id="developer">
-        <div class="container">
-            <div class="developer-card enormous-fade-in">
-                <h2 class="developer-title">開発者情報</h2>
-                <h3 class="developer-name">Tatsuru Kikuchi</h3>
-                <p class="developer-role">データサイエンティスト・AI実装スペシャリスト</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>tatsuru.kikuchi@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+81-80-3641-9973</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Download Section -->
-    <section class="download" id="download">
-        <div class="container">
-            <div class="section-header enormous-fade-in">
-                <h2 class="section-title">モバイルアプリ</h2>
-                <p class="section-subtitle">iOS・Android対応のモバイルアプリを開発中です。2025年8月リリース予定。事前登録で特別割引をご利用いただけます。GitHub上で最新の開発状況をご確認いただけます。Apple Developer支払い問題解決により、App Store申請準備完了し、マーケティング展開準備整いました！</p>
-                
-                <div style="margin-top: 30rem;">
-                    <a href="https://github.com/Tatsuru-Kikuchi/tokyo-taxi-ai-optimizer" class="btn-primary">
-                        <i class="fab fa-github"></i>
-                        GitHubで詳細を見る
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <script>
-        // Complete rebuild v4.2 loading
-        window.addEventListener('load', function() {
-            setTimeout(() => {
-                document.getElementById('enormousLoading').classList.add('hide');
-            }, 7000);
-        });
-        
-        // Smooth scrolling preserved
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-        
-        // Enhanced scroll animations preserved
-        const enormousObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 1000);
-                }
-            });
-        }, { threshold: 0.5, rootMargin: '0px 0px -800px 0px' });
-        
-        document.querySelectorAll('.enormous-fade-in').forEach(el => {
-            enormousObserver.observe(el);
-        });
-        
-        // Complete rebuild v4.2 console
-        console.log('🚀✨🎉 COMPLETE GITHUB REBUILD v4.2 SUCCESS! 🎉✨🚀');
-        console.log('🎯 ENHANCED MASSIVE UI FULLY DEPLOYED!');
-        console.log('📏 ALL LINKS & ASSETS PRESERVED!');
-        console.log('🍎 APPLE DEVELOPER READY - MARKETING LAUNCH!');
-        console.log('📧 Developer: Tatsuru Kikuchi');
-        console.log('📧 Email: tatsuru.kikuchi@gmail.com');
-        console.log('📱 Phone: +81-80-3641-9973');
-        console.log('🚀 Complete Rebuild v4.2 Deployment Success!');
-        console.log('✅ Domain: tatsuru-kikuchi.github.io/tokyo-taxi-ai-optimizer/');
-        console.log('🎊 READY FOR APPLE APP STORE MARKETING! 🎊');
-        console.log('📦 Build Version: v4.2.2025073105');
-        console.log('🔄 Cache Status: FULLY REFRESHED');
-    </script>
 </body>
 </html>
