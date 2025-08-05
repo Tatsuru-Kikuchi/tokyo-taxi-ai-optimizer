@@ -1,1 +1,664 @@
-import React, { useState, useEffect } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  ScrollView,\n  TouchableOpacity,\n  SafeAreaView,\n  StatusBar,\n  Dimensions,\n  Alert,\n  Platform\n} from 'react-native';\nimport { LinearGradient } from 'expo-linear-gradient';\n\nconst { width, height } = Dimensions.get('window');\n\nexport default function App() {\n  const [activeTab, setActiveTab] = useState('home');\n  const [currentRevenue, setCurrentRevenue] = useState(25200);\n  const [optimizedRevenue, setOptimizedRevenue] = useState(33150);\n  const [aiAccuracy, setAiAccuracy] = useState(87);\n  const [demandLevel, setDemandLevel] = useState('High');\n  const [weatherCondition, setWeatherCondition] = useState('Rain');\n  const [currentTime, setCurrentTime] = useState(new Date());\n\n  // Update time every minute\n  useEffect(() => {\n    const timer = setInterval(() => {\n      setCurrentTime(new Date());\n    }, 60000);\n    return () => clearInterval(timer);\n  }, []);\n\n  // Simulate real-time data updates\n  useEffect(() => {\n    const dataTimer = setInterval(() => {\n      setAiAccuracy(prev => Math.min(100, prev + Math.random() * 2 - 1));\n      setDemandLevel(\n        Math.random() > 0.5 ? 'High' : \n        Math.random() > 0.3 ? 'Medium' : 'Low'\n      );\n    }, 10000);\n    return () => clearInterval(dataTimer);\n  }, []);\n\n  const revenueIncrease = ((optimizedRevenue - currentRevenue) / currentRevenue * 100).toFixed(1);\n  const dailyIncrease = optimizedRevenue - currentRevenue;\n  const annualIncrease = dailyIncrease * 365;\n\n  const handleOptimizeRoute = () => {\n    Alert.alert(\n      '🎯 Route Optimized!',\n      `AI suggests heading to Shibuya Station area.\\nExpected wait time: 3.2 minutes\\nDemand surge: +42%\\nWeather bonus: Rain detected (+18%)`,\n      [{ text: 'Navigate', style: 'default' }, { text: 'Dismiss', style: 'cancel' }]\n    );\n  };\n\n  const handleWeatherAlert = () => {\n    Alert.alert(\n      '⛈️ Weather Opportunity!',\n      `Rain started in Shinjuku area.\\nExpected demand increase: +34%\\nRecommended position: Near train stations\\nEstimated additional revenue: ¥2,400/hour`,\n      [{ text: 'Go to Area', style: 'default' }, { text: 'Later', style: 'cancel' }]\n    );\n  };\n\n  const StatCard = ({ title, value, subtitle, color, onPress }) => (\n    <TouchableOpacity\n      style={[styles.statCard, { borderLeftColor: color }]}\n      onPress={onPress}\n      activeOpacity={0.8}\n    >\n      <Text style={styles.statTitle}>{title}</Text>\n      <Text style={[styles.statValue, { color }]}>{value}</Text>\n      {subtitle && <Text style={styles.statSubtitle}>{subtitle}</Text>}\n    </TouchableOpacity>\n  );\n\n  const FeatureCard = ({ icon, title, description, onPress }) => (\n    <TouchableOpacity\n      style={styles.featureCard}\n      onPress={onPress}\n      activeOpacity={0.8}\n    >\n      <Text style={styles.featureIcon}>{icon}</Text>\n      <Text style={styles.featureTitle}>{title}</Text>\n      <Text style={styles.featureDescription}>{description}</Text>\n    </TouchableOpacity>\n  );\n\n  const TabButton = ({ id, icon, label, isActive, onPress }) => (\n    <TouchableOpacity\n      style={[styles.tabButton, isActive && styles.tabButtonActive]}\n      onPress={() => onPress(id)}\n      activeOpacity={0.7}\n    >\n      <Text style={[styles.tabIcon, isActive && styles.tabIconActive]}>{icon}</Text>\n      <Text style={[styles.tabLabel, isActive && styles.tabLabelActive]}>{label}</Text>\n    </TouchableOpacity>\n  );\n\n  const renderHomeContent = () => (\n    <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>\n      {/* Header */}\n      <View style={styles.header}>\n        <Text style={styles.greeting}>\n          おはよう！ {currentTime.getHours() < 12 ? '朝' : currentTime.getHours() < 18 ? '午後' : '夜'}の運転\n        </Text>\n        <Text style={styles.dateTime}>\n          {currentTime.toLocaleDateString('ja-JP', {\n            year: 'numeric',\n            month: 'long',\n            day: 'numeric',\n            weekday: 'long'\n          })}\n        </Text>\n      </View>\n\n      {/* AI Status Banner */}\n      <LinearGradient\n        colors={['#667eea', '#764ba2']}\n        style={styles.aiBanner}\n        start={{ x: 0, y: 0 }}\n        end={{ x: 1, y: 0 }}\n      >\n        <View style={styles.aiBannerContent}>\n          <Text style={styles.aiBannerTitle}>🤖 AI最適化システム</Text>\n          <Text style={styles.aiBannerStatus}>稼働中 • 精度 {aiAccuracy.toFixed(1)}%</Text>\n        </View>\n        <TouchableOpacity style={styles.optimizeButton} onPress={handleOptimizeRoute}>\n          <Text style={styles.optimizeButtonText}>最適化</Text>\n        </TouchableOpacity>\n      </LinearGradient>\n\n      {/* Revenue Stats */}\n      <View style={styles.section}>\n        <Text style={styles.sectionTitle}>📊 収益分析</Text>\n        <View style={styles.statsGrid}>\n          <StatCard\n            title=\"本日の収益\"\n            value={`¥${currentRevenue.toLocaleString()}`}\n            subtitle=\"従来システム\"\n            color=\"#95a5a6\"\n          />\n          <StatCard\n            title=\"AI最適化後\"\n            value={`¥${optimizedRevenue.toLocaleString()}`}\n            subtitle={`+¥${dailyIncrease.toLocaleString()} (+${revenueIncrease}%)`}\n            color=\"#2ecc71\"\n          />\n        </View>\n        <View style={styles.statsGrid}>\n          <StatCard\n            title=\"年間増収予測\"\n            value={`¥${(annualIncrease / 1000).toFixed(0)}万`}\n            subtitle=\"285万円の追加収入\"\n            color=\"#f39c12\"\n          />\n          <StatCard\n            title=\"現在の需要\"\n            value={demandLevel}\n            subtitle={weatherCondition === 'Rain' ? '雨天ボーナス +18%' : '通常レベル'}\n            color={demandLevel === 'High' ? '#e74c3c' : demandLevel === 'Medium' ? '#f39c12' : '#95a5a6'}\n            onPress={handleWeatherAlert}\n          />\n        </View>\n      </View>\n\n      {/* Quick Actions */}\n      <View style={styles.section}>\n        <Text style={styles.sectionTitle}>⚡ クイックアクション</Text>\n        <View style={styles.actionsGrid}>\n          <FeatureCard\n            icon=\"🎯\"\n            title=\"需要予測\"\n            description=\"3時間先までの需要を87%精度で予測\"\n            onPress={() => Alert.alert('需要予測', '渋谷エリア: 高需要予測\\n新宿エリア: 中需要予測\\n品川エリア: 低需要予測')}\n          />\n          <FeatureCard\n            icon=\"⛈️\"\n            title=\"天気連動\"\n            description=\"雨天時の需要増加を活用した最適化\"\n            onPress={handleWeatherAlert}\n          />\n          <FeatureCard\n            icon=\"🚆\"\n            title=\"交通情報\"\n            description=\"電車遅延による需要急増を検知\"\n            onPress={() => Alert.alert('交通情報', 'JR山手線: 5分遅延\\n→ 品川駅周辺で需要増加予測\\n→ 推定追加収益: ¥1,800')}\n          />\n          <FeatureCard\n            icon=\"📊\"\n            title=\"収益分析\"\n            description=\"リアルタイム収益データと改善提案\"\n            onPress={() => Alert.alert('収益分析', '今日の実績:\\n• 効率: +23%\\n• 待機時間: -31%\\n• 走行距離: +12%')}\n          />\n        </View>\n      </View>\n\n      {/* Research Foundation */}\n      <View style={styles.section}>\n        <Text style={styles.sectionTitle}>🔬 研究基盤</Text>\n        <View style={styles.researchCard}>\n          <Text style={styles.researchTitle}>先進的経済学研究に基づくシステム</Text>\n          <Text style={styles.researchDescription}>\n            • 3ヶ月間の実証実験データ（150台のタクシー）{\"\\n\"}\n            • 統計的有意性: p < 0.01（99%信頼区間）{\"\\n\"}\n            • 雨天時需要相関係数: 0.847{\"\\n\"}\n            • 経済効果: 年間171億円の業界インパクト\n          </Text>\n        </View>\n      </View>\n\n      <View style={{ height: 100 }} />\n    </ScrollView>\n  );\n\n  const renderAnalyticsContent = () => (\n    <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>\n      <View style={styles.section}>\n        <Text style={styles.sectionTitle}>📈 詳細分析</Text>\n        \n        {/* Performance Metrics */}\n        <View style={styles.metricsContainer}>\n          <View style={styles.metricRow}>\n            <Text style={styles.metricLabel}>分単位収益</Text>\n            <View style={styles.metricComparison}>\n              <Text style={styles.metricBefore}>¥52.3</Text>\n              <Text style={styles.metricArrow}>→</Text>\n              <Text style={styles.metricAfter}>¥68.1</Text>\n              <Text style={styles.metricImprovement}>+30.2%</Text>\n            </View>\n          </View>\n          \n          <View style={styles.metricRow}>\n            <Text style={styles.metricLabel}>待機時間</Text>\n            <View style={styles.metricComparison}>\n              <Text style={styles.metricBefore}>6.8分</Text>\n              <Text style={styles.metricArrow}>→</Text>\n              <Text style={styles.metricAfter}>4.2分</Text>\n              <Text style={styles.metricImprovement}>-38.2%</Text>\n            </View>\n          </View>\n          \n          <View style={styles.metricRow}>\n            <Text style={styles.metricLabel}>稼働率</Text>\n            <View style={styles.metricComparison}>\n              <Text style={styles.metricBefore}>65%</Text>\n              <Text style={styles.metricArrow}>→</Text>\n              <Text style={styles.metricAfter}>83%</Text>\n              <Text style={styles.metricImprovement}>+27.7%</Text>\n            </View>\n          </View>\n        </View>\n\n        {/* AI Insights */}\n        <View style={styles.insightsCard}>\n          <Text style={styles.insightsTitle}>🧠 AI洞察</Text>\n          <Text style={styles.insightsText}>\n            • 雨天時の収益は平均84.7%増加{\"\\n\"}\n            • 朝の通勤時間帯（7-9時）が最も効率的{\"\\n\"}\n            • 渋谷-新宿間のルートが最高収益{\"\\n\"}\n            • 電車遅延時の駅周辺需要は156%増加\n          </Text>\n        </View>\n      </View>\n    </ScrollView>\n  );\n\n  const renderSettingsContent = () => (\n    <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>\n      <View style={styles.section}>\n        <Text style={styles.sectionTitle}>⚙️ 設定</Text>\n        \n        <TouchableOpacity style={styles.settingItem}>\n          <Text style={styles.settingLabel}>🔔 通知設定</Text>\n          <Text style={styles.settingValue}>オン</Text>\n        </TouchableOpacity>\n        \n        <TouchableOpacity style={styles.settingItem}>\n          <Text style={styles.settingLabel}>🌍 言語</Text>\n          <Text style={styles.settingValue}>日本語</Text>\n        </TouchableOpacity>\n        \n        <TouchableOpacity style={styles.settingItem}>\n          <Text style={styles.settingLabel}>📊 データ同期</Text>\n          <Text style={styles.settingValue}>自動</Text>\n        </TouchableOpacity>\n        \n        <TouchableOpacity style={styles.settingItem}>\n          <Text style={styles.settingLabel}>🔐 プライバシー</Text>\n          <Text style={styles.settingValue}>設定済み</Text>\n        </TouchableOpacity>\n        \n        <View style={styles.aboutSection}>\n          <Text style={styles.aboutTitle}>アプリについて</Text>\n          <Text style={styles.aboutText}>\n            Tokyo Taxi AI Optimizer v1.0.0{\"\\n\"}\n            先進的経済学研究に基づく{\"\\n\"}\n            科学的実証済みシステム{\"\\n\"}\n            {\"\\n\"}\n            開発者: 菊池達琉{\"\\n\"}\n            研究機関: 経済学研究所{\"\\n\"}\n            技術協力: ODPT, 気象庁\n          </Text>\n        </View>\n      </View>\n    </ScrollView>\n  );\n\n  return (\n    <SafeAreaView style={styles.container}>\n      <StatusBar barStyle=\"light-content\" backgroundColor=\"#667eea\" />\n      \n      {/* Content */}\n      {activeTab === 'home' && renderHomeContent()}\n      {activeTab === 'analytics' && renderAnalyticsContent()}\n      {activeTab === 'settings' && renderSettingsContent()}\n      \n      {/* Bottom Navigation */}\n      <View style={styles.bottomNav}>\n        <TabButton\n          id=\"home\"\n          icon=\"🏠\"\n          label=\"ホーム\"\n          isActive={activeTab === 'home'}\n          onPress={setActiveTab}\n        />\n        <TabButton\n          id=\"analytics\"\n          icon=\"📊\"\n          label=\"分析\"\n          isActive={activeTab === 'analytics'}\n          onPress={setActiveTab}\n        />\n        <TabButton\n          id=\"settings\"\n          icon=\"⚙️\"\n          label=\"設定\"\n          isActive={activeTab === 'settings'}\n          onPress={setActiveTab}\n        />\n      </View>\n    </SafeAreaView>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    backgroundColor: '#f8f9fa',\n  },\n  content: {\n    flex: 1,\n    paddingHorizontal: 20,\n  },\n  header: {\n    paddingTop: 20,\n    paddingBottom: 15,\n  },\n  greeting: {\n    fontSize: 24,\n    fontWeight: 'bold',\n    color: '#2c3e50',\n    marginBottom: 5,\n  },\n  dateTime: {\n    fontSize: 16,\n    color: '#7f8c8d',\n  },\n  aiBanner: {\n    borderRadius: 15,\n    padding: 20,\n    marginBottom: 25,\n    flexDirection: 'row',\n    alignItems: 'center',\n    justifyContent: 'space-between',\n  },\n  aiBannerContent: {\n    flex: 1,\n  },\n  aiBannerTitle: {\n    fontSize: 18,\n    fontWeight: 'bold',\n    color: 'white',\n    marginBottom: 5,\n  },\n  aiBannerStatus: {\n    fontSize: 14,\n    color: 'rgba(255,255,255,0.9)',\n  },\n  optimizeButton: {\n    backgroundColor: 'rgba(255,255,255,0.2)',\n    paddingHorizontal: 20,\n    paddingVertical: 10,\n    borderRadius: 20,\n    borderWidth: 1,\n    borderColor: 'rgba(255,255,255,0.3)',\n  },\n  optimizeButtonText: {\n    color: 'white',\n    fontWeight: 'bold',\n    fontSize: 16,\n  },\n  section: {\n    marginBottom: 30,\n  },\n  sectionTitle: {\n    fontSize: 20,\n    fontWeight: 'bold',\n    color: '#2c3e50',\n    marginBottom: 15,\n  },\n  statsGrid: {\n    flexDirection: 'row',\n    justifyContent: 'space-between',\n    marginBottom: 15,\n  },\n  statCard: {\n    backgroundColor: 'white',\n    borderRadius: 12,\n    padding: 15,\n    flex: 0.48,\n    borderLeftWidth: 4,\n    shadowColor: '#000',\n    shadowOffset: { width: 0, height: 2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 4,\n    elevation: 3,\n  },\n  statTitle: {\n    fontSize: 14,\n    color: '#7f8c8d',\n    marginBottom: 8,\n  },\n  statValue: {\n    fontSize: 20,\n    fontWeight: 'bold',\n    marginBottom: 5,\n  },\n  statSubtitle: {\n    fontSize: 12,\n    color: '#95a5a6',\n  },\n  actionsGrid: {\n    flexDirection: 'row',\n    flexWrap: 'wrap',\n    justifyContent: 'space-between',\n  },\n  featureCard: {\n    backgroundColor: 'white',\n    borderRadius: 12,\n    padding: 20,\n    width: '48%',\n    marginBottom: 15,\n    shadowColor: '#000',\n    shadowOffset: { width: 0, height: 2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 4,\n    elevation: 3,\n  },\n  featureIcon: {\n    fontSize: 32,\n    marginBottom: 10,\n  },\n  featureTitle: {\n    fontSize: 16,\n    fontWeight: 'bold',\n    color: '#2c3e50',\n    marginBottom: 8,\n  },\n  featureDescription: {\n    fontSize: 12,\n    color: '#7f8c8d',\n    lineHeight: 16,\n  },\n  researchCard: {\n    backgroundColor: 'white',\n    borderRadius: 12,\n    padding: 20,\n    borderLeftWidth: 4,\n    borderLeftColor: '#3498db',\n    shadowColor: '#000',\n    shadowOffset: { width: 0, height: 2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 4,\n    elevation: 3,\n  },\n  researchTitle: {\n    fontSize: 16,\n    fontWeight: 'bold',\n    color: '#2c3e50',\n    marginBottom: 10,\n  },\n  researchDescription: {\n    fontSize: 14,\n    color: '#7f8c8d',\n    lineHeight: 20,\n  },\n  metricsContainer: {\n    backgroundColor: 'white',\n    borderRadius: 12,\n    padding: 20,\n    marginBottom: 20,\n    shadowColor: '#000',\n    shadowOffset: { width: 0, height: 2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 4,\n    elevation: 3,\n  },\n  metricRow: {\n    flexDirection: 'row',\n    justifyContent: 'space-between',\n    alignItems: 'center',\n    paddingVertical: 15,\n    borderBottomWidth: 1,\n    borderBottomColor: '#ecf0f1',\n  },\n  metricLabel: {\n    fontSize: 16,\n    color: '#2c3e50',\n    fontWeight: '500',\n    flex: 1,\n  },\n  metricComparison: {\n    flexDirection: 'row',\n    alignItems: 'center',\n    flex: 1,\n    justifyContent: 'flex-end',\n  },\n  metricBefore: {\n    fontSize: 14,\n    color: '#95a5a6',\n    marginRight: 8,\n  },\n  metricArrow: {\n    fontSize: 16,\n    color: '#3498db',\n    marginRight: 8,\n  },\n  metricAfter: {\n    fontSize: 16,\n    color: '#2c3e50',\n    fontWeight: 'bold',\n    marginRight: 8,\n  },\n  metricImprovement: {\n    fontSize: 14,\n    color: '#2ecc71',\n    fontWeight: 'bold',\n  },\n  insightsCard: {\n    backgroundColor: 'white',\n    borderRadius: 12,\n    padding: 20,\n    borderLeftWidth: 4,\n    borderLeftColor: '#9b59b6',\n    shadowColor: '#000',\n    shadowOffset: { width: 0, height: 2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 4,\n    elevation: 3,\n  },\n  insightsTitle: {\n    fontSize: 18,\n    fontWeight: 'bold',\n    color: '#2c3e50',\n    marginBottom: 15,\n  },\n  insightsText: {\n    fontSize: 14,\n    color: '#7f8c8d',\n    lineHeight: 22,\n  },\n  settingItem: {\n    backgroundColor: 'white',\n    borderRadius: 12,\n    padding: 20,\n    marginBottom: 10,\n    flexDirection: 'row',\n    justifyContent: 'space-between',\n    alignItems: 'center',\n    shadowColor: '#000',\n    shadowOffset: { width: 0, height: 2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 4,\n    elevation: 3,\n  },\n  settingLabel: {\n    fontSize: 16,\n    color: '#2c3e50',\n  },\n  settingValue: {\n    fontSize: 16,\n    color: '#3498db',\n    fontWeight: '500',\n  },\n  aboutSection: {\n    backgroundColor: 'white',\n    borderRadius: 12,\n    padding: 20,\n    marginTop: 20,\n    shadowColor: '#000',\n    shadowOffset: { width: 0, height: 2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 4,\n    elevation: 3,\n  },\n  aboutTitle: {\n    fontSize: 18,\n    fontWeight: 'bold',\n    color: '#2c3e50',\n    marginBottom: 15,\n  },\n  aboutText: {\n    fontSize: 14,\n    color: '#7f8c8d',\n    lineHeight: 20,\n  },\n  bottomNav: {\n    flexDirection: 'row',\n    backgroundColor: 'white',\n    borderTopWidth: 1,\n    borderTopColor: '#ecf0f1',\n    paddingTop: 10,\n    paddingBottom: Platform.OS === 'ios' ? 30 : 10,\n    shadowColor: '#000',\n    shadowOffset: { width: 0, height: -2 },\n    shadowOpacity: 0.1,\n    shadowRadius: 4,\n    elevation: 10,\n  },\n  tabButton: {\n    flex: 1,\n    alignItems: 'center',\n    paddingVertical: 8,\n  },\n  tabButtonActive: {\n    backgroundColor: 'rgba(102, 126, 234, 0.1)',\n    borderRadius: 12,\n    marginHorizontal: 5,\n  },\n  tabIcon: {\n    fontSize: 24,\n    marginBottom: 4,\n  },\n  tabIconActive: {\n    fontSize: 26,\n  },\n  tabLabel: {\n    fontSize: 12,\n    color: '#7f8c8d',\n  },\n  tabLabelActive: {\n    color: '#667eea',\n    fontWeight: '500',\n  },\n});"
+import React, { useState, useEffect } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  TouchableOpacity,
+  SafeAreaView,
+  StatusBar,
+  Dimensions,
+  Alert,
+  Platform
+} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { registerRootComponent } from 'expo';
+
+const { width, height } = Dimensions.get('window');
+
+function App() {
+  const [activeTab, setActiveTab] = useState('home');
+  const [currentRevenue, setCurrentRevenue] = useState(25200);
+  const [optimizedRevenue, setOptimizedRevenue] = useState(33150);
+  const [aiAccuracy, setAiAccuracy] = useState(87);
+  const [demandLevel, setDemandLevel] = useState('High');
+  const [weatherCondition, setWeatherCondition] = useState('Rain');
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // Update time every minute
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 60000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Simulate real-time data updates
+  useEffect(() => {
+    const dataTimer = setInterval(() => {
+      setAiAccuracy(prev => Math.min(100, prev + Math.random() * 2 - 1));
+      setDemandLevel(
+        Math.random() > 0.5 ? 'High' : 
+        Math.random() > 0.3 ? 'Medium' : 'Low'
+      );
+    }, 10000);
+    return () => clearInterval(dataTimer);
+  }, []);
+
+  const revenueIncrease = ((optimizedRevenue - currentRevenue) / currentRevenue * 100).toFixed(1);
+  const dailyIncrease = optimizedRevenue - currentRevenue;
+  const annualIncrease = dailyIncrease * 365;
+
+  const handleOptimizeRoute = () => {
+    Alert.alert(
+      '🎯 Route Optimized!',
+      `AI suggests heading to Shibuya Station area.\nExpected wait time: 3.2 minutes\nDemand surge: +42%\nWeather bonus: Rain detected (+18%)`,
+      [{ text: 'Navigate', style: 'default' }, { text: 'Dismiss', style: 'cancel' }]
+    );
+  };
+
+  const handleWeatherAlert = () => {
+    Alert.alert(
+      '⛈️ Weather Opportunity!',
+      `Rain started in Shinjuku area.\nExpected demand increase: +34%\nRecommended position: Near train stations\nEstimated additional revenue: ¥2,400/hour`,
+      [{ text: 'Go to Area', style: 'default' }, { text: 'Later', style: 'cancel' }]
+    );
+  };
+
+  const StatCard = ({ title, value, subtitle, color, onPress }) => (
+    <TouchableOpacity
+      style={[styles.statCard, { borderLeftColor: color }]}
+      onPress={onPress}
+      activeOpacity={0.8}
+    >
+      <Text style={styles.statTitle}>{title}</Text>
+      <Text style={[styles.statValue, { color }]}>{value}</Text>
+      {subtitle && <Text style={styles.statSubtitle}>{subtitle}</Text>}
+    </TouchableOpacity>
+  );
+
+  const FeatureCard = ({ icon, title, description, onPress }) => (
+    <TouchableOpacity
+      style={styles.featureCard}
+      onPress={onPress}
+      activeOpacity={0.8}
+    >
+      <Text style={styles.featureIcon}>{icon}</Text>
+      <Text style={styles.featureTitle}>{title}</Text>
+      <Text style={styles.featureDescription}>{description}</Text>
+    </TouchableOpacity>
+  );
+
+  const TabButton = ({ id, icon, label, isActive, onPress }) => (
+    <TouchableOpacity
+      style={[styles.tabButton, isActive && styles.tabButtonActive]}
+      onPress={() => onPress(id)}
+      activeOpacity={0.7}
+    >
+      <Text style={[styles.tabIcon, isActive && styles.tabIconActive]}>{icon}</Text>
+      <Text style={[styles.tabLabel, isActive && styles.tabLabelActive]}>{label}</Text>
+    </TouchableOpacity>
+  );
+
+  const renderHomeContent = () => (
+    <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      {/* Header */}
+      <View style={styles.header}>
+        <Text style={styles.greeting}>
+          おはよう！ {currentTime.getHours() < 12 ? '朝' : currentTime.getHours() < 18 ? '午後' : '夜'}の運転
+        </Text>
+        <Text style={styles.dateTime}>
+          {currentTime.toLocaleDateString('ja-JP', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long'
+          })}
+        </Text>
+      </View>
+
+      {/* AI Status Banner */}
+      <LinearGradient
+        colors={['#667eea', '#764ba2']}
+        style={styles.aiBanner}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0 }}
+      >
+        <View style={styles.aiBannerContent}>
+          <Text style={styles.aiBannerTitle}>🤖 AI最適化システム</Text>
+          <Text style={styles.aiBannerStatus}>稼働中 • 精度 {aiAccuracy.toFixed(1)}%</Text>
+        </View>
+        <TouchableOpacity style={styles.optimizeButton} onPress={handleOptimizeRoute}>
+          <Text style={styles.optimizeButtonText}>最適化</Text>
+        </TouchableOpacity>
+      </LinearGradient>
+
+      {/* Revenue Stats */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>📊 収益分析</Text>
+        <View style={styles.statsGrid}>
+          <StatCard
+            title="本日の収益"
+            value={`¥${currentRevenue.toLocaleString()}`}
+            subtitle="従来システム"
+            color="#95a5a6"
+          />
+          <StatCard
+            title="AI最適化後"
+            value={`¥${optimizedRevenue.toLocaleString()}`}
+            subtitle={`+¥${dailyIncrease.toLocaleString()} (+${revenueIncrease}%)`}
+            color="#2ecc71"
+          />
+        </View>
+        <View style={styles.statsGrid}>
+          <StatCard
+            title="年間増収予測"
+            value={`¥${(annualIncrease / 1000).toFixed(0)}万`}
+            subtitle="285万円の追加収入"
+            color="#f39c12"
+          />
+          <StatCard
+            title="現在の需要"
+            value={demandLevel}
+            subtitle={weatherCondition === 'Rain' ? '雨天ボーナス +18%' : '通常レベル'}
+            color={demandLevel === 'High' ? '#e74c3c' : demandLevel === 'Medium' ? '#f39c12' : '#95a5a6'}
+            onPress={handleWeatherAlert}
+          />
+        </View>
+      </View>
+
+      {/* Quick Actions */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>⚡ クイックアクション</Text>
+        <View style={styles.actionsGrid}>
+          <FeatureCard
+            icon="🎯"
+            title="需要予測"
+            description="3時間先までの需要を87%精度で予測"
+            onPress={() => Alert.alert('需要予測', '渋谷エリア: 高需要予測\n新宿エリア: 中需要予測\n品川エリア: 低需要予測')}
+          />
+          <FeatureCard
+            icon="⛈️"
+            title="天気連動"
+            description="雨天時の需要増加を活用した最適化"
+            onPress={handleWeatherAlert}
+          />
+          <FeatureCard
+            icon="🚆"
+            title="交通情報"
+            description="電車遅延による需要急増を検知"
+            onPress={() => Alert.alert('交通情報', 'JR山手線: 5分遅延\n→ 品川駅周辺で需要増加予測\n→ 推定追加収益: ¥1,800')}
+          />
+          <FeatureCard
+            icon="📊"
+            title="収益分析"
+            description="リアルタイム収益データと改善提案"
+            onPress={() => Alert.alert('収益分析', '今日の実績:\n• 効率: +23%\n• 待機時間: -31%\n• 走行距離: +12%')}
+          />
+        </View>
+      </View>
+
+      {/* Research Foundation */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>🔬 研究基盤</Text>
+        <View style={styles.researchCard}>
+          <Text style={styles.researchTitle}>先進的経済学研究に基づくシステム</Text>
+          <Text style={styles.researchDescription}>
+            • 3ヶ月間の実証実験データ（150台のタクシー）{"\n"}
+            • 統計的有意性: p < 0.01（99%信頼区間）{"\n"}
+            • 雨天時需要相関係数: 0.847{"\n"}
+            • 経済効果: 年間171億円の業界インパクト
+          </Text>
+        </View>
+      </View>
+
+      <View style={{ height: 100 }} />
+    </ScrollView>
+  );
+
+  const renderAnalyticsContent = () => (
+    <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>📈 詳細分析</Text>
+        
+        {/* Performance Metrics */}
+        <View style={styles.metricsContainer}>
+          <View style={styles.metricRow}>
+            <Text style={styles.metricLabel}>分単位収益</Text>
+            <View style={styles.metricComparison}>
+              <Text style={styles.metricBefore}>¥52.3</Text>
+              <Text style={styles.metricArrow}>→</Text>
+              <Text style={styles.metricAfter}>¥68.1</Text>
+              <Text style={styles.metricImprovement}>+30.2%</Text>
+            </View>
+          </View>
+          
+          <View style={styles.metricRow}>
+            <Text style={styles.metricLabel}>待機時間</Text>
+            <View style={styles.metricComparison}>
+              <Text style={styles.metricBefore}>6.8分</Text>
+              <Text style={styles.metricArrow}>→</Text>
+              <Text style={styles.metricAfter}>4.2分</Text>
+              <Text style={styles.metricImprovement}>-38.2%</Text>
+            </View>
+          </View>
+          
+          <View style={styles.metricRow}>
+            <Text style={styles.metricLabel}>稼働率</Text>
+            <View style={styles.metricComparison}>
+              <Text style={styles.metricBefore}>65%</Text>
+              <Text style={styles.metricArrow}>→</Text>
+              <Text style={styles.metricAfter}>83%</Text>
+              <Text style={styles.metricImprovement}>+27.7%</Text>
+            </View>
+          </View>
+        </View>
+
+        {/* AI Insights */}
+        <View style={styles.insightsCard}>
+          <Text style={styles.insightsTitle}>🧠 AI洞察</Text>
+          <Text style={styles.insightsText}>
+            • 雨天時の収益は平均84.7%増加{"\n"}
+            • 朝の通勤時間帯（7-9時）が最も効率的{"\n"}
+            • 渋谷-新宿間のルートが最高収益{"\n"}
+            • 電車遅延時の駅周辺需要は156%増加
+          </Text>
+        </View>
+      </View>
+    </ScrollView>
+  );
+
+  const renderSettingsContent = () => (
+    <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>⚙️ 設定</Text>
+        
+        <TouchableOpacity style={styles.settingItem}>
+          <Text style={styles.settingLabel}>🔔 通知設定</Text>
+          <Text style={styles.settingValue}>オン</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.settingItem}>
+          <Text style={styles.settingLabel}>🌍 言語</Text>
+          <Text style={styles.settingValue}>日本語</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.settingItem}>
+          <Text style={styles.settingLabel}>📊 データ同期</Text>
+          <Text style={styles.settingValue}>自動</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.settingItem}>
+          <Text style={styles.settingLabel}>🔐 プライバシー</Text>
+          <Text style={styles.settingValue}>設定済み</Text>
+        </TouchableOpacity>
+        
+        <View style={styles.aboutSection}>
+          <Text style={styles.aboutTitle}>アプリについて</Text>
+          <Text style={styles.aboutText}>
+            Tokyo Taxi AI Optimizer v1.1.0{"\n"}
+            先進的経済学研究に基づく{"\n"}
+            科学的実証済みシステム{"\n"}
+            {"\n"}
+            開発者: 菊池達琉{"\n"}
+            研究機関: 経済学研究所{"\n"}
+            技術協力: ODPT, 気象庁
+          </Text>
+        </View>
+      </View>
+    </ScrollView>
+  );
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="light-content" backgroundColor="#667eea" />
+      
+      {/* Content */}
+      {activeTab === 'home' && renderHomeContent()}
+      {activeTab === 'analytics' && renderAnalyticsContent()}
+      {activeTab === 'settings' && renderSettingsContent()}
+      
+      {/* Bottom Navigation */}
+      <View style={styles.bottomNav}>
+        <TabButton
+          id="home"
+          icon="🏠"
+          label="ホーム"
+          isActive={activeTab === 'home'}
+          onPress={setActiveTab}
+        />
+        <TabButton
+          id="analytics"
+          icon="📊"
+          label="分析"
+          isActive={activeTab === 'analytics'}
+          onPress={setActiveTab}
+        />
+        <TabButton
+          id="settings"
+          icon="⚙️"
+          label="設定"
+          isActive={activeTab === 'settings'}
+          onPress={setActiveTab}
+        />
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f8f9fa',
+  },
+  content: {
+    flex: 1,
+    paddingHorizontal: 20,
+  },
+  header: {
+    paddingTop: 20,
+    paddingBottom: 15,
+  },
+  greeting: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    marginBottom: 5,
+  },
+  dateTime: {
+    fontSize: 16,
+    color: '#7f8c8d',
+  },
+  aiBanner: {
+    borderRadius: 15,
+    padding: 20,
+    marginBottom: 25,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  aiBannerContent: {
+    flex: 1,
+  },
+  aiBannerTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'white',
+    marginBottom: 5,
+  },
+  aiBannerStatus: {
+    fontSize: 14,
+    color: 'rgba(255,255,255,0.9)',
+  },
+  optimizeButton: {
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.3)',
+  },
+  optimizeButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  section: {
+    marginBottom: 30,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    marginBottom: 15,
+  },
+  statsGrid: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 15,
+  },
+  statCard: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 15,
+    flex: 0.48,
+    borderLeftWidth: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  statTitle: {
+    fontSize: 14,
+    color: '#7f8c8d',
+    marginBottom: 8,
+  },
+  statValue: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  statSubtitle: {
+    fontSize: 12,
+    color: '#95a5a6',
+  },
+  actionsGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  featureCard: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 20,
+    width: '48%',
+    marginBottom: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  featureIcon: {
+    fontSize: 32,
+    marginBottom: 10,
+  },
+  featureTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    marginBottom: 8,
+  },
+  featureDescription: {
+    fontSize: 12,
+    color: '#7f8c8d',
+    lineHeight: 16,
+  },
+  researchCard: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 20,
+    borderLeftWidth: 4,
+    borderLeftColor: '#3498db',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  researchTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    marginBottom: 10,
+  },
+  researchDescription: {
+    fontSize: 14,
+    color: '#7f8c8d',
+    lineHeight: 20,
+  },
+  metricsContainer: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 20,
+    marginBottom: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  metricRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ecf0f1',
+  },
+  metricLabel: {
+    fontSize: 16,
+    color: '#2c3e50',
+    fontWeight: '500',
+    flex: 1,
+  },
+  metricComparison: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
+  metricBefore: {
+    fontSize: 14,
+    color: '#95a5a6',
+    marginRight: 8,
+  },
+  metricArrow: {
+    fontSize: 16,
+    color: '#3498db',
+    marginRight: 8,
+  },
+  metricAfter: {
+    fontSize: 16,
+    color: '#2c3e50',
+    fontWeight: 'bold',
+    marginRight: 8,
+  },
+  metricImprovement: {
+    fontSize: 14,
+    color: '#2ecc71',
+    fontWeight: 'bold',
+  },
+  insightsCard: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 20,
+    borderLeftWidth: 4,
+    borderLeftColor: '#9b59b6',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  insightsTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    marginBottom: 15,
+  },
+  insightsText: {
+    fontSize: 14,
+    color: '#7f8c8d',
+    lineHeight: 22,
+  },
+  settingItem: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 20,
+    marginBottom: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  settingLabel: {
+    fontSize: 16,
+    color: '#2c3e50',
+  },
+  settingValue: {
+    fontSize: 16,
+    color: '#3498db',
+    fontWeight: '500',
+  },
+  aboutSection: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 20,
+    marginTop: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  aboutTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    marginBottom: 15,
+  },
+  aboutText: {
+    fontSize: 14,
+    color: '#7f8c8d',
+    lineHeight: 20,
+  },
+  bottomNav: {
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    borderTopWidth: 1,
+    borderTopColor: '#ecf0f1',
+    paddingTop: 10,
+    paddingBottom: Platform.OS === 'ios' ? 30 : 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: -2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 10,
+  },
+  tabButton: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: 8,
+  },
+  tabButtonActive: {
+    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+    borderRadius: 12,
+    marginHorizontal: 5,
+  },
+  tabIcon: {
+    fontSize: 24,
+    marginBottom: 4,
+  },
+  tabIconActive: {
+    fontSize: 26,
+  },
+  tabLabel: {
+    fontSize: 12,
+    color: '#7f8c8d',
+  },
+  tabLabelActive: {
+    color: '#667eea',
+    fontWeight: '500',
+  },
+});
+
+// Register the main component
+registerRootComponent(App);
+
+export default App;
