@@ -27,7 +27,6 @@
     "production": {
       "ios": {
         "resourceClass": "large",
-        "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
         "buildConfiguration": "Release"
       },
       "android": {
