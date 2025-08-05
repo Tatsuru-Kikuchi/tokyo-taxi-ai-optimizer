@@ -140,7 +140,7 @@ function App() {
         </Text>
       </View>
 
-      {/* AI Status Banner - Fixed without LinearGradient */}
+      {/* AI Status Banner - Completely native, no external components */}
       <View style={styles.aiBanner}>
         <View style={styles.aiBannerContent}>
           <Text style={styles.aiBannerTitle}>🤖 AI最適化システム</Text>
@@ -360,7 +360,7 @@ function App() {
         <View style={styles.aboutSection}>
           <Text style={styles.aboutTitle}>アプリについて</Text>
           <Text style={styles.aboutText}>
-            Tokyo Taxi AI Optimizer v1.2.0{"\n"}
+            Tokyo Taxi AI Optimizer v1.1.1{"\n"}
             先進的経済学研究に基づく{"\n"}
             科学的実証済みシステム{"\n"}
             {"\n"}
@@ -438,7 +438,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#7f8c8d',
   },
-  // Fixed aiBanner without LinearGradient
+  // Completely native aiBanner - no external dependencies
   aiBanner: {
     borderRadius: 15,
     padding: 20,
@@ -446,7 +446,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#667eea', // Solid color instead of gradient
+    backgroundColor: '#667eea', // Pure native background color
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
   },
   aiBannerContent: {
     flex: 1,
