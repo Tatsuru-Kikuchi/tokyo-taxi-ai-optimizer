@@ -1,6 +1,6 @@
 {
   "name": "tokyo-taxi-ai-app",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "./App.js",
   "scripts": {
     "start": "expo start",
@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "expo": "~53.0.20",
-    "expo-linear-gradient": "~13.0.2",
     "expo-location": "~18.1.6",
     "expo-status-bar": "~2.2.3",
     "react": "19.0.0",
