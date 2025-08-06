@@ -283,7 +283,7 @@ function App() {
               <Text style={styles.metricBefore}>65%</Text>
               <Text style={styles.metricArrow}>→</Text>
               <Text style={styles.metricAfter}>83%</Text>
-              <Text style={styles.metricImp}>+27.7%</Text>
+              <Text style={styles.metricImprovement}>+27.7%</Text>
             </View>
           </View>
         </View>
@@ -360,7 +360,7 @@ function App() {
         <View style={styles.aboutSection}>
           <Text style={styles.aboutTitle}>アプリについて</Text>
           <Text style={styles.aboutText}>
-            Tokyo Taxi AI Optimizer v1.1.1 (Build 2){"\n"}
+            Tokyo Taxi AI Optimizer v1.1.1 (Build 3){"\n"}
             先進的経済学研究に基づく{"\n"}
             科学的実証済みシステム{"\n"}
             {"\n"}
