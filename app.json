@@ -14,13 +14,13 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
+  "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
       "buildNumber": "3",
       "icon": "./assets/images/icon-1024.png",
       "config": {
-        "googleMapsApiKey": "YOUR_API_KEY_HERE"
+        "googleMapsApiKey": "AIzaSyD3s9ewOUj83nQkMHP8kcc8Obhe8tshi5E"
       },
       "infoPlist": {
         "CFBundleDisplayName": "東京タクシーAI",
