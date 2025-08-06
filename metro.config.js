@@ -1,1 +1,33 @@
-const { getDefaultConfig } = require('@expo/metro-config');\n\n// Get the default Expo Metro config\nconst defaultConfig = getDefaultConfig(__dirname);\n\n// Customize the config if needed\n// Example: Add custom resolver or transformer settings\n// defaultConfig.resolver.assetExts.push('your-custom-extension');\n\n// For Tokyo Taxi AI Optimizer - ensure all assets are included\ndefaultConfig.resolver.assetExts.push(\n  // Add any custom asset extensions if needed\n  'db', 'mp3', 'ttf', 'obj', 'png', 'jpg'\n);\n\n// Enable TypeScript support if using TypeScript\ndefaultConfig.resolver.sourceExts.push('tsx', 'ts', 'jsx', 'js', 'json');\n\n// Ensure proper handling of React Native modules\ndefaultConfig.resolver.platforms = ['ios', 'android', 'web', 'native'];\n\n// Optimize for production builds\nif (process.env.NODE_ENV === 'production') {\n  defaultConfig.transformer.minifierConfig = {\n    // Optimize bundle size\n    keep_fnames: true,\n    mangle: {\n      keep_fnames: true,\n    },\n  };\n}\n\nmodule.exports = defaultConfig;"
+const { getDefaultConfig } = require('@expo/metro-config');
+
+// Get the default Expo Metro config
+const defaultConfig = getDefaultConfig(__dirname);
+
+// Customize the config if needed
+// Example: Add custom resolver or transformer settings
+// defaultConfig.resolver.assetExts.push('your-custom-extension');
+
+// For Tokyo Taxi AI Optimizer - ensure all assets are included
+defaultConfig.resolver.assetExts.push(
+  // Add any custom asset extensions if needed
+  'db', 'mp3', 'ttf', 'obj', 'png', 'jpg'
+);
+
+// Enable TypeScript support if using TypeScript
+defaultConfig.resolver.sourceExts.push('tsx', 'ts', 'jsx', 'js', 'json');
+
+// Ensure proper handling of React Native modules
+defaultConfig.resolver.platforms = ['ios', 'android', 'web', 'native'];
+
+// Optimize for production builds
+if (process.env.NODE_ENV === 'production') {
+  defaultConfig.transformer.minifierConfig = {
+    // Optimize bundle size
+    keep_fnames: true,
+    mangle: {
+      keep_fnames: true,
+    },
+  };
+}
+
+module.exports = defaultConfig;
