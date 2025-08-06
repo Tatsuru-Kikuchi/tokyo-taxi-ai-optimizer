@@ -19,6 +19,9 @@
       "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
       "buildNumber": "3",
       "icon": "./assets/images/icon-1024.png",
+      "config": {
+        "googleMapsApiKey": "YOUR_API_KEY_HERE"
+      },
       "infoPlist": {
         "CFBundleDisplayName": "東京タクシーAI",
         "CFBundleName": "東京タクシーAIアプリ",
