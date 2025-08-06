@@ -15,16 +15,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": false,
+      "supportsTablet": "false",
       "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
-      "buildNumber": "7",
+      "buildNumber": "8",
       "icon": "./assets/images/icon-1024.png",
       "infoPlist": {
-        "CFBundleDisplayName": "東京タクシーAI",
-        "CFBundleName": "東京タクシーAIアプリ",
+        "CFBundleDisplayName": "東京AIタクシーアプリ",
+        "CFBundleName": "東京AIタクシーアプリ",
         "NSLocationWhenInUseUsageDescription": "このアプリは最適なタクシールートを提供するために位置情報を使用します",
         "NSLocationAlwaysAndWhenInUseUsageDescription": "このアプリは最適なタクシールートを提供するために位置情報を使用します",
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": "false"
       }
     },
     "android": {
