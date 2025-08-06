@@ -12,6 +12,7 @@ import {
   Platform
 } from 'react-native';
 import { registerRootComponent } from 'expo';
+import MapScreen from './src/components/maps/MapScreen';
 
 const { width, height } = Dimensions.get('window');
 
@@ -65,11 +66,7 @@ function App() {
   };
 
   const handleMapView = () => {
-    Alert.alert(
-      '🗺️ Interactive Map',
-      `Map Features Coming Soon:\n• Rain zones visualization\n• Demand hotspots\n• Optimal pickup locations\n• Real-time traffic data\n• Customer locations`,
-      [{ text: 'OK', style: 'default' }]
-    );
+    setActiveTab('map');
   };
 
   const handleWeatherForecast = () => {
@@ -140,7 +137,7 @@ function App() {
         </Text>
       </View>
 
-      {/* AI Status Banner - Completely native, no external components */}
+      {/* AI Status Banner */}
       <View style={styles.aiBanner}>
         <View style={styles.aiBannerContent}>
           <Text style={styles.aiBannerTitle}>🤖 AI最適化システム</Text>
@@ -322,6 +319,10 @@ function App() {
     </ScrollView>
   );
 
+  const renderMapContent = () => (
+    <MapScreen />
+  );
+
   const renderSettingsContent = () => (
     <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       <View style={styles.section}>
@@ -349,7 +350,7 @@ function App() {
 
         <TouchableOpacity style={styles.settingItem}>
           <Text style={styles.settingLabel}>🗺️ マップ設定</Text>
-          <Text style={styles.settingValue}>準備中</Text>
+          <Text style={styles.settingValue}>有効</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.settingItem}>
@@ -360,7 +361,7 @@ function App() {
         <View style={styles.aboutSection}>
           <Text style={styles.aboutTitle}>アプリについて</Text>
           <Text style={styles.aboutText}>
-            Tokyo Taxi AI Optimizer v1.1.1 (Build 3){"\n"}
+            Tokyo Taxi AI Optimizer v1.1.1 (Build 4){"\n"}
             先進的経済学研究に基づく{"\n"}
             科学的実証済みシステム{"\n"}
             {"\n"}
@@ -368,10 +369,10 @@ function App() {
             研究機関: 経済学研究所{"\n"}
             技術協力: ODPT, 気象庁{"\n"}
             {"\n"}
-            🚀 近日追加予定:{"\n"}
-            • Google Maps統合{"\n"}
-            • リアルタイム配車{"\n"}
-            • チャット機能
+            🚀 新機能:{"\n"}
+            • Google Maps統合 ✅{"\n"}
+            • リアルタイム需要表示 ✅{"\n"}
+            • 雨天エリア可視化 ✅
           </Text>
         </View>
       </View>
@@ -385,6 +386,7 @@ function App() {
       {/* Content */}
       {activeTab === 'home' && renderHomeContent()}
       {activeTab === 'analytics' && renderAnalyticsContent()}
+      {activeTab === 'map' && renderMapContent()}
       {activeTab === 'settings' && renderSettingsContent()}
       
       {/* Bottom Navigation */}
@@ -401,6 +403,13 @@ function App() {
           icon="📊"
           label="分析"
           isActive={activeTab === 'analytics'}
+          onPress={setActiveTab}
+        />
+        <TabButton
+          id="map"
+          icon="🗺️"
+          label="マップ"
+          isActive={activeTab === 'map'}
           onPress={setActiveTab}
         />
         <TabButton
