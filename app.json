@@ -17,7 +17,7 @@
   "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
-      "buildNumber": "3",
+      "buildNumber": "4",
       "icon": "./assets/images/icon-1024.png",
       "config": {
         "googleMapsApiKey": "AIzaSyD3s9ewOUj83nQkMHP8kcc8Obhe8tshi5E"
