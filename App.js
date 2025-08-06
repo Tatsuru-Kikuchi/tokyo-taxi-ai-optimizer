@@ -12,7 +12,7 @@ import {
   Platform
 } from 'react-native';
 import { registerRootComponent } from 'expo';
-import MapScreen from './src/components/maps/MapScreen';
+ // import MapScreen from './src/components/maps/MapScreen';
 
 const { width, height } = Dimensions.get('window');
 
@@ -38,7 +38,7 @@ function App() {
     const dataTimer = setInterval(() => {
       setAiAccuracy(prev => Math.min(100, prev + Math.random() * 2 - 1));
       setDemandLevel(
-        Math.random() > 0.5 ? 'High' : 
+        Math.random() > 0.5 ? 'High' :
         Math.random() > 0.3 ? 'Medium' : 'Low'
       );
     }, 10000);
@@ -251,7 +251,7 @@ function App() {
     <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>📈 詳細分析</Text>
-        
+
         {/* Performance Metrics */}
         <View style={styles.metricsContainer}>
           <View style={styles.metricRow}>
@@ -263,7 +263,7 @@ function App() {
               <Text style={styles.metricImprovement}>+30.2%</Text>
             </View>
           </View>
-          
+
           <View style={styles.metricRow}>
             <Text style={styles.metricLabel}>待機時間</Text>
             <View style={styles.metricComparison}>
@@ -273,7 +273,7 @@ function App() {
               <Text style={styles.metricImprovement}>-38.2%</Text>
             </View>
           </View>
-          
+
           <View style={styles.metricRow}>
             <Text style={styles.metricLabel}>稼働率</Text>
             <View style={styles.metricComparison}>
@@ -319,30 +319,30 @@ function App() {
     </ScrollView>
   );
 
-  const renderMapContent = () => (
-    <MapScreen />
-  );
+ //  const renderMapContent = () => (
+ //   <MapScreen />
+ //  );
 
   const renderSettingsContent = () => (
     <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>⚙️ 設定</Text>
-        
+
         <TouchableOpacity style={styles.settingItem}>
           <Text style={styles.settingLabel}>🔔 通知設定</Text>
           <Text style={styles.settingValue}>オン</Text>
         </TouchableOpacity>
-        
+
         <TouchableOpacity style={styles.settingItem}>
           <Text style={styles.settingLabel}>🌍 言語</Text>
           <Text style={styles.settingValue}>日本語</Text>
         </TouchableOpacity>
-        
+
         <TouchableOpacity style={styles.settingItem}>
           <Text style={styles.settingLabel}>📊 データ同期</Text>
           <Text style={styles.settingValue}>自動</Text>
         </TouchableOpacity>
-        
+
         <TouchableOpacity style={styles.settingItem}>
           <Text style={styles.settingLabel}>🔐 プライバシー</Text>
           <Text style={styles.settingValue}>設定済み</Text>
@@ -357,7 +357,7 @@ function App() {
           <Text style={styles.settingLabel}>📞 配車機能</Text>
           <Text style={styles.settingValue}>開発中</Text>
         </TouchableOpacity>
-        
+
         <View style={styles.aboutSection}>
           <Text style={styles.aboutTitle}>アプリについて</Text>
           <Text style={styles.aboutText}>
@@ -382,13 +382,13 @@ function App() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#667eea" />
-      
+
       {/* Content */}
       {activeTab === 'home' && renderHomeContent()}
       {activeTab === 'analytics' && renderAnalyticsContent()}
       {activeTab === 'map' && renderMapContent()}
       {activeTab === 'settings' && renderSettingsContent()}
-      
+
       {/* Bottom Navigation */}
       <View style={styles.bottomNav}>
         <TabButton
