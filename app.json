@@ -17,7 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
-      "buildNumber": "2",
+      "buildNumber": "3",
       "icon": "./assets/images/icon-1024.png",
       "infoPlist": {
         "CFBundleDisplayName": "東京タクシーAI",
