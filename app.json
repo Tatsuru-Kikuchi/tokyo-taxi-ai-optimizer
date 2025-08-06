@@ -2,7 +2,7 @@
   "expo": {
     "name": "東京タクシーAIアプリ",
     "slug": "tokyo-taxi-ai-app",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon-1024.png",
     "userInterfaceStyle": "light",
@@ -15,9 +15,9 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
-      "buildNumber": "5",
+      "buildNumber": "7",
       "icon": "./assets/images/icon-1024.png",
       "infoPlist": {
         "CFBundleDisplayName": "東京タクシーAI",
