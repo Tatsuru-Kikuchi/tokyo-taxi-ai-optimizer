@@ -1,0 +1,212 @@
+cat > App.js << 'EOF'
+import React from 'react';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <StatusBar style="auto" />
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
+        
+        {/* Header */}
+        <View style={styles.header}>
+          <Text style={styles.title}>🚕 東京タクシーAIアプリ</Text>
+          <Text style={styles.subtitle}>先進的経済学研究に基づく最適化システム</Text>
+        </View>
+
+        {/* Stats Cards */}
+        <View style={styles.statsContainer}>
+          <View style={styles.statCard}>
+            <Text style={styles.statNumber}>+30.2%</Text>
+            <Text style={styles.statLabel}>収益向上</Text>
+          </View>
+          <View style={styles.statCard}>
+            <Text style={styles.statNumber}>87%</Text>
+            <Text style={styles.statLabel}>AI予測精度</Text>
+          </View>
+        </View>
+
+        <View style={styles.statsContainer}>
+          <View style={styles.statCard}>
+            <Text style={styles.statNumber}>-38%</Text>
+            <Text style={styles.statLabel}>待機時間削減</Text>
+          </View>
+          <View style={styles.statCard}>
+            <Text style={styles.statNumber}>¥285k</Text>
+            <Text style={styles.statLabel}>年間収入増加</Text>
+          </View>
+        </View>
+
+        {/* Features */}
+        <View style={styles.featuresContainer}>
+          <Text style={styles.sectionTitle}>🌟 主要機能</Text>
+          
+          <View style={styles.featureCard}>
+            <Text style={styles.featureIcon}>🤖</Text>
+            <Text style={styles.featureTitle}>AI需要予測</Text>
+            <Text style={styles.featureText}>天気と交通情報を統合した87%精度の需要ホットスポット予測</Text>
+          </View>
+
+          <View style={styles.featureCard}>
+            <Text style={styles.featureIcon}>⛈️</Text>
+            <Text style={styles.featureTitle}>天気連動最適化</Text>
+            <Text style={styles.featureText}>実証済みの雨天時需要増加（相関係数0.847）を活用した収益最大化</Text>
+          </View>
+
+          <View style={styles.featureCard}>
+            <Text style={styles.featureIcon}>🚆</Text>
+            <Text style={styles.featureTitle}>交通情報統合</Text>
+            <Text style={styles.featureText}>ODPT APIによるリアルタイム電車遅延需要急増検知</Text>
+          </View>
+        </View>
+
+        {/* Call to Action */}
+        <TouchableOpacity style={styles.ctaButton}>
+          <Text style={styles.ctaText}>🚀 収益最適化を開始</Text>
+        </TouchableOpacity>
+
+        {/* Footer */}
+        <View style={styles.footer}>
+          <Text style={styles.footerText}>研究検証済み • 本格運用対応</Text>
+          <Text style={styles.footerText}>© 2025 Tatsuru Kikuchi</Text>
+        </View>
+
+      </ScrollView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f8f9fa',
+  },
+  scrollContainer: {
+    padding: 20,
+    paddingTop: 60,
+  },
+  header: {
+    alignItems: 'center',
+    marginBottom: 30,
+    padding: 20,
+    backgroundColor: '#667eea',
+    borderRadius: 15,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: 'white',
+    textAlign: 'center',
+    marginBottom: 10,
+    fontFamily: 'System', // Good Japanese font support
+  },
+  subtitle: {
+    fontSize: 16,
+    color: 'rgba(255,255,255,0.9)',
+    textAlign: 'center',
+    fontFamily: 'System',
+  },
+  statsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 15,
+  },
+  statCard: {
+    flex: 1,
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginHorizontal: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  statNumber: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#FFD700',
+    marginBottom: 5,
+  },
+  statLabel: {
+    fontSize: 12,
+    color: '#666',
+    textAlign: 'center',
+    fontFamily: 'System',
+  },
+  featuresContainer: {
+    marginTop: 20,
+    marginBottom: 30,
+  },
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 20,
+    textAlign: 'center',
+    fontFamily: 'System',
+  },
+  featureCard: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  featureIcon: {
+    fontSize: 30,
+    marginBottom: 10,
+  },
+  featureTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 8,
+    fontFamily: 'System',
+  },
+  featureText: {
+    fontSize: 14,
+    color: '#666',
+    lineHeight: 20,
+    fontFamily: 'System',
+  },
+  ctaButton: {
+    backgroundColor: '#FFD700',
+    padding: 18,
+    borderRadius: 25,
+    alignItems: 'center',
+    marginVertical: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  ctaText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+    fontFamily: 'System',
+  },
+  footer: {
+    alignItems: 'center',
+    marginTop: 30,
+    paddingTop: 20,
+    borderTopWidth: 1,
+    borderTopColor: '#eee',
+  },
+  footerText: {
+    fontSize: 12,
+    color: '#666',
+    marginBottom: 5,
+    fontFamily: 'System',
+  },
+});
+EOF

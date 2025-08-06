@@ -1,0 +1,17 @@
+{
+  "cli": {
+    "version": ">= 5.2.0",
+    "appVersionSource": "local"
+  },
+  "build": {
+    "production": {}
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "tatsuru.kikuchi@icloud.com",
+        "appleTeamId": "B67J43NU85"
+      }
+    }
+  }
+}

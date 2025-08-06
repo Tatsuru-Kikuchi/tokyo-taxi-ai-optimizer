@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "東京タクシーAIアプリ",
+    "slug": "tokyo-taxi-ai-app",
+    "version": "1.1.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon-1024.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/icon-1024.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#667eea"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
+      "buildNumber": "4",
+      "icon": "./assets/images/icon-1024.png",
+      "infoPlist": {
+        "CFBundleDisplayName": "東京タクシーAI",
+        "CFBundleName": "東京タクシーAIアプリ",
+        "NSLocationWhenInUseUsageDescription": "このアプリは最適なタクシールートを提供するために位置情報を使用します",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "このアプリは最適なタクシールートを提供するために位置情報を使用します"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon-1024.png",
+        "backgroundColor": "#667eea"
+      },
+      "package": "com.tatsuru-kikuchi.tokyo-taxi-ai"
+    },
+    "web": {
+      "favicon": "./assets/images/icon-1024.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "このアプリは最適なタクシールートを提供するために位置情報を使用します。"
+        }
+      ]
+    ]
+  }
+}

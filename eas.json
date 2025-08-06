@@ -1,50 +1,22 @@
 {
   "cli": {
-    "version": ">= 5.2.0",
-    "appVersionSource": "remote"
+    "version": ">= 3.0.0"
   },
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal",
-      "ios": {
-        "resourceClass": "default"
-      },
-      "android": {
-        "resourceClass": "default"
-      }
+      "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal",
-      "ios": {
-        "resourceClass": "default",
-        "simulator": true
-      },
-      "android": {
-        "resourceClass": "default",
-        "buildType": "apk"
-      }
+      "distribution": "internal"
     },
     "production": {
       "ios": {
-        "resourceClass": "default",
-        "buildConfiguration": "Release"
-      },
-      "android": {
-        "resourceClass": "default",
-        "buildType": "app-bundle"
+        "resourceClass": "default"
       }
     }
   },
   "submit": {
-    "production": {
-      "ios": {
-        "appleId": "tatsuru.kikuchi@icloud.com",
-        "appleTeamId": "B67J43NU85"
-      },
-      "android": {
-        "track": "production"
-      }
-    }
+    "production": {}
   }
 }

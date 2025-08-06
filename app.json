@@ -2,7 +2,7 @@
   "expo": {
     "name": "東京タクシーAIアプリ",
     "slug": "tokyo-taxi-ai-app",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon-1024.png",
     "userInterfaceStyle": "light",
@@ -17,13 +17,14 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
-      "buildNumber": "1.1.0",
+      "buildNumber": "4",
       "icon": "./assets/images/icon-1024.png",
       "infoPlist": {
         "CFBundleDisplayName": "東京タクシーAI",
         "CFBundleName": "東京タクシーAIアプリ",
         "NSLocationWhenInUseUsageDescription": "このアプリは最適なタクシールートを提供するために位置情報を使用します",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "このアプリは最適なタクシールートを提供するために位置情報を使用します"
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "このアプリは最適なタクシールートを提供するために位置情報を使用します",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -31,7 +32,11 @@
         "foregroundImage": "./assets/images/icon-1024.png",
         "backgroundColor": "#667eea"
       },
-      "package": "com.tatsuru-kikuchi.tokyo-taxi-ai"
+      "package": "com.tatsuru-kikuchi.tokyo-taxi-ai",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/images/icon-1024.png"
@@ -43,6 +48,11 @@
           "locationAlwaysAndWhenInUsePermission": "このアプリは最適なタクシールートを提供するために位置情報を使用します。"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8895ba86-e4b4-4389-8516-61589ee9ab17"
+      }
+    }
   }
 }

@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18F2F14C2E3DB39A0095A547 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F14B2E3DB39A0095A547 /* Algorithms */; };
+		18F2F14F2E3DB4030095A547 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F14E2E3DB4030095A547 /* ArgumentParser */; };
+		18F2F1522E3DB4160095A547 /* SwiftASN1 in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1512E3DB4160095A547 /* SwiftASN1 */; };
+		18F2F1552E3DB42B0095A547 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1542E3DB42B0095A547 /* AsyncAlgorithms */; };
+		18F2F1582E3DB43D0095A547 /* Atomics in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1572E3DB43D0095A547 /* Atomics */; };
+		18F2F15B2E3DB4A80095A547 /* X509 in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F15A2E3DB4A80095A547 /* X509 */; };
+		18F2F15F2E3DB4CA0095A547 /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F15E2E3DB4CA0095A547 /* Crypto */; };
+		18F2F1612E3DB4CA0095A547 /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1602E3DB4CA0095A547 /* _CryptoExtras */; };
+		18F2F1652E3DB5010095A547 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1642E3DB5010095A547 /* SwiftProtobuf */; };
+		18F2F1672E3DB5010095A547 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1662E3DB5010095A547 /* SwiftProtobufPluginLibrary */; };
+		18F2F16A2E3DB50F0095A547 /* SystemPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1692E3DB50F0095A547 /* SystemPackage */; };
+		18F2F1712E3DC84E0095A547 /* ComplexModule in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1702E3DC84E0095A547 /* ComplexModule */; };
+		18F2F1732E3DC84E0095A547 /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1722E3DC84E0095A547 /* Numerics */; };
+		18F2F1752E3DC84E0095A547 /* RealModule in Frameworks */ = {isa = PBXBuildFile; productRef = 18F2F1742E3DC84E0095A547 /* RealModule */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18F2F1392E3D13D20095A547 /* Tokyo Taxi AI Optimizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tokyo Taxi AI Optimizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		18F2F13B2E3D13D20095A547 /* Tokyo Taxi AI Optimizer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Tokyo Taxi AI Optimizer";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18F2F1362E3D13D20095A547 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F2F14F2E3DB4030095A547 /* ArgumentParser in Frameworks */,
+				18F2F14C2E3DB39A0095A547 /* Algorithms in Frameworks */,
+				18F2F1752E3DC84E0095A547 /* RealModule in Frameworks */,
+				18F2F1672E3DB5010095A547 /* SwiftProtobufPluginLibrary in Frameworks */,
+				18F2F15B2E3DB4A80095A547 /* X509 in Frameworks */,
+				18F2F1582E3DB43D0095A547 /* Atomics in Frameworks */,
+				18F2F1612E3DB4CA0095A547 /* _CryptoExtras in Frameworks */,
+				18F2F1522E3DB4160095A547 /* SwiftASN1 in Frameworks */,
+				18F2F1712E3DC84E0095A547 /* ComplexModule in Frameworks */,
+				18F2F1732E3DC84E0095A547 /* Numerics in Frameworks */,
+				18F2F16A2E3DB50F0095A547 /* SystemPackage in Frameworks */,
+				18F2F15F2E3DB4CA0095A547 /* Crypto in Frameworks */,
+				18F2F1552E3DB42B0095A547 /* AsyncAlgorithms in Frameworks */,
+				18F2F1652E3DB5010095A547 /* SwiftProtobuf in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18F2F1302E3D13D20095A547 = {
+			isa = PBXGroup;
+			children = (
+				18F2F13B2E3D13D20095A547 /* Tokyo Taxi AI Optimizer */,
+				18F2F13A2E3D13D20095A547 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18F2F13A2E3D13D20095A547 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18F2F1392E3D13D20095A547 /* Tokyo Taxi AI Optimizer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18F2F1382E3D13D20095A547 /* Tokyo Taxi AI Optimizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F2F1442E3D13D50095A547 /* Build configuration list for PBXNativeTarget "Tokyo Taxi AI Optimizer" */;
+			buildPhases = (
+				18F2F1352E3D13D20095A547 /* Sources */,
+				18F2F1362E3D13D20095A547 /* Frameworks */,
+				18F2F1372E3D13D20095A547 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18F2F16E2E3DC0140095A547 /* PBXTargetDependency */,
+				18F2F16C2E3DBE3E0095A547 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				18F2F13B2E3D13D20095A547 /* Tokyo Taxi AI Optimizer */,
+			);
+			name = "Tokyo Taxi AI Optimizer";
+			packageProductDependencies = (
+				18F2F14B2E3DB39A0095A547 /* Algorithms */,
+				18F2F14E2E3DB4030095A547 /* ArgumentParser */,
+				18F2F1512E3DB4160095A547 /* SwiftASN1 */,
+				18F2F1542E3DB42B0095A547 /* AsyncAlgorithms */,
+				18F2F1572E3DB43D0095A547 /* Atomics */,
+				18F2F15A2E3DB4A80095A547 /* X509 */,
+				18F2F15E2E3DB4CA0095A547 /* Crypto */,
+				18F2F1602E3DB4CA0095A547 /* _CryptoExtras */,
+				18F2F1642E3DB5010095A547 /* SwiftProtobuf */,
+				18F2F1662E3DB5010095A547 /* SwiftProtobufPluginLibrary */,
+				18F2F1692E3DB50F0095A547 /* SystemPackage */,
+				18F2F1702E3DC84E0095A547 /* ComplexModule */,
+				18F2F1722E3DC84E0095A547 /* Numerics */,
+				18F2F1742E3DC84E0095A547 /* RealModule */,
+			);
+			productName = "Tokyo Taxi AI Optimizer";
+			productReference = 18F2F1392E3D13D20095A547 /* Tokyo Taxi AI Optimizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18F2F1312E3D13D20095A547 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					18F2F1382E3D13D20095A547 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = 18F2F1342E3D13D20095A547 /* Build configuration list for PBXProject "Tokyo Taxi AI Optimizer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18F2F1302E3D13D20095A547;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				18F2F14A2E3DB39A0095A547 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				18F2F14D2E3DB4030095A547 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				18F2F1502E3DB4160095A547 /* XCRemoteSwiftPackageReference "swift-asn1" */,
+				18F2F1532E3DB42B0095A547 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
+				18F2F1562E3DB43D0095A547 /* XCRemoteSwiftPackageReference "swift-atomics" */,
+				18F2F1592E3DB4A80095A547 /* XCRemoteSwiftPackageReference "swift-certificates" */,
+				18F2F15C2E3DB4B50095A547 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				18F2F15D2E3DB4CA0095A547 /* XCRemoteSwiftPackageReference "swift-crypto" */,
+				18F2F1622E3DB4E20095A547 /* XCRemoteSwiftPackageReference "swift-nio" */,
+				18F2F1632E3DB5010095A547 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+				18F2F1682E3DB50F0095A547 /* XCRemoteSwiftPackageReference "swift-system" */,
+				18F2F16F2E3DC84E0095A547 /* XCRemoteSwiftPackageReference "swift-numerics" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 18F2F13A2E3D13D20095A547 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18F2F1382E3D13D20095A547 /* Tokyo Taxi AI Optimizer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18F2F1372E3D13D20095A547 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18F2F1352E3D13D20095A547 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18F2F16C2E3DBE3E0095A547 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 18F2F16B2E3DBE3E0095A547 /* SwiftProtobufPlugin */;
+		};
+		18F2F16E2E3DC0140095A547 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 18F2F16D2E3DC0140095A547 /* SystemPackage */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18F2F1422E3D13D50095A547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALTERNATIVE_DISTRIBUTION_WEB = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC_EXCEPTIONS = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_LINK_OBJC_RUNTIME = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Tatsuru Kikuchi (M76DF88LCW)";
+				COMPILER_INDEX_STORE_ENABLE = YES;
+				COPYING_PRESERVES_HFS_DATA = NO;
+				COPY_HEADERS_RUN_UNIFDEF = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = B67J43NU85;
+				DOCC_EXTRACT_OBJC_INFO_FOR_SWIFT_SYMBOLS = YES;
+				DOCC_EXTRACT_SWIFT_INFO_FOR_OBJC_SYMBOLS = YES;
+				EAGER_LINKING = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_DEBUG_DYLIB = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_ON_DEMAND_RESOURCES = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FUSE_BUILD_SCRIPT_PHASES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = YES;
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
+				GCC_ENABLE_TRIGRAPHS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				GENERATE_PROFILING_CODE = YES;
+				GENERATE_TEXT_BASED_STUBS = YES;
+				INFOPLIST_PREPROCESS = NO;
+				INLINE_PRIVATE_FRAMEWORKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_NO_PIE = YES;
+				LD_WARN_DUPLICATE_LIBRARIES = YES;
+				LD_WARN_UNUSED_DYLIBS = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MERGEABLE_LIBRARY = YES;
+				MERGED_BINARY_TYPE = automatic;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OSACOMPILE_EXECUTE_ONLY = YES;
+				RUN_DOCUMENTATION_COMPILER = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_TEXT_BASED_API = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_SKIP_AUTOLINKING_ALL_FRAMEWORKS = YES;
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_UPCOMING_FEATURE_CONCISE_MAGIC_FILE = NO;
+				SWIFT_VERSION = 6.0;
+				TAPI_ENABLE_PROJECT_HEADERS = YES;
+				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = YES;
+				TREAT_MISSING_SCRIPT_PHASE_OUTPUTS_AS_ERRORS = YES;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		18F2F1432E3D13D50095A547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALTERNATIVE_DISTRIBUTION_WEB = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC_EXCEPTIONS = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_LINK_OBJC_RUNTIME = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Tatsuru Kikuchi (M76DF88LCW)";
+				COMPILER_INDEX_STORE_ENABLE = YES;
+				COPYING_PRESERVES_HFS_DATA = NO;
+				COPY_HEADERS_RUN_UNIFDEF = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = B67J43NU85;
+				DOCC_EXTRACT_OBJC_INFO_FOR_SWIFT_SYMBOLS = YES;
+				DOCC_EXTRACT_SWIFT_INFO_FOR_OBJC_SYMBOLS = YES;
+				EAGER_LINKING = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_DEBUG_DYLIB = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_ON_DEMAND_RESOURCES = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FUSE_BUILD_SCRIPT_PHASES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = YES;
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
+				GCC_ENABLE_TRIGRAPHS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				GENERATE_PROFILING_CODE = YES;
+				GENERATE_TEXT_BASED_STUBS = YES;
+				INFOPLIST_PREPROCESS = NO;
+				INLINE_PRIVATE_FRAMEWORKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_NO_PIE = YES;
+				LD_WARN_DUPLICATE_LIBRARIES = YES;
+				LD_WARN_UNUSED_DYLIBS = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MERGEABLE_LIBRARY = YES;
+				MERGED_BINARY_TYPE = automatic;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OSACOMPILE_EXECUTE_ONLY = YES;
+				RUN_DOCUMENTATION_COMPILER = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_TEXT_BASED_API = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_SKIP_AUTOLINKING_ALL_FRAMEWORKS = YES;
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_UPCOMING_FEATURE_CONCISE_MAGIC_FILE = NO;
+				SWIFT_VERSION = 6.0;
+				TAPI_ENABLE_PROJECT_HEADERS = YES;
+				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = YES;
+				TREAT_MISSING_SCRIPT_PHASE_OUTPUTS_AS_ERRORS = YES;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
+		18F2F1452E3D13D50095A547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Tokyo Taxi AI Optimizer/Tokyo Taxi AI Optimizer.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = B67J43NU85;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = B67J43NU85;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tokyo-Taxi-AI-Optimizer-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tatsuru.tokyotaxiai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Tatsuru Kikuchi";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "Tokyo Taxi AI App Store";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18F2F1462E3D13D50095A547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Tokyo Taxi AI Optimizer/Tokyo Taxi AI Optimizer.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tokyo-Taxi-AI-Optimizer-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tatsuru.tokyotaxiai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18F2F1342E3D13D20095A547 /* Build configuration list for PBXProject "Tokyo Taxi AI Optimizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F2F1422E3D13D50095A547 /* Debug */,
+				18F2F1432E3D13D50095A547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18F2F1442E3D13D50095A547 /* Build configuration list for PBXNativeTarget "Tokyo Taxi AI Optimizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F2F1452E3D13D50095A547 /* Debug */,
+				18F2F1462E3D13D50095A547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18F2F14A2E3DB39A0095A547 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+		18F2F14D2E3DB4030095A547 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.1;
+			};
+		};
+		18F2F1502E3DB4160095A547 /* XCRemoteSwiftPackageReference "swift-asn1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-asn1.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+		18F2F1532E3DB42B0095A547 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+		18F2F1562E3DB43D0095A547 /* XCRemoteSwiftPackageReference "swift-atomics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-atomics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+		18F2F1592E3DB4A80095A547 /* XCRemoteSwiftPackageReference "swift-certificates" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-certificates.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.0;
+			};
+		};
+		18F2F15C2E3DB4B50095A547 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+		18F2F15D2E3DB4CA0095A547 /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.13.3;
+			};
+		};
+		18F2F1622E3DB4E20095A547 /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.85.0;
+			};
+		};
+		18F2F1632E3DB5010095A547 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.30.0;
+			};
+		};
+		18F2F1682E3DB50F0095A547 /* XCRemoteSwiftPackageReference "swift-system" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-system.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.1;
+			};
+		};
+		18F2F16F2E3DC84E0095A547 /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-numerics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18F2F14B2E3DB39A0095A547 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F14A2E3DB39A0095A547 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		18F2F14E2E3DB4030095A547 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F14D2E3DB4030095A547 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		18F2F1512E3DB4160095A547 /* SwiftASN1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F1502E3DB4160095A547 /* XCRemoteSwiftPackageReference "swift-asn1" */;
+			productName = SwiftASN1;
+		};
+		18F2F1542E3DB42B0095A547 /* AsyncAlgorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F1532E3DB42B0095A547 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncAlgorithms;
+		};
+		18F2F1572E3DB43D0095A547 /* Atomics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F1562E3DB43D0095A547 /* XCRemoteSwiftPackageReference "swift-atomics" */;
+			productName = Atomics;
+		};
+		18F2F15A2E3DB4A80095A547 /* X509 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F1592E3DB4A80095A547 /* XCRemoteSwiftPackageReference "swift-certificates" */;
+			productName = X509;
+		};
+		18F2F15E2E3DB4CA0095A547 /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F15D2E3DB4CA0095A547 /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
+		};
+		18F2F1602E3DB4CA0095A547 /* _CryptoExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F15D2E3DB4CA0095A547 /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = _CryptoExtras;
+		};
+		18F2F1642E3DB5010095A547 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F1632E3DB5010095A547 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		18F2F1662E3DB5010095A547 /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F1632E3DB5010095A547 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+		18F2F1692E3DB50F0095A547 /* SystemPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F1682E3DB50F0095A547 /* XCRemoteSwiftPackageReference "swift-system" */;
+			productName = SystemPackage;
+		};
+		18F2F16B2E3DBE3E0095A547 /* SwiftProtobufPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F1632E3DB5010095A547 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = "plugin:SwiftProtobufPlugin";
+		};
+		18F2F16D2E3DC0140095A547 /* SystemPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F1682E3DB50F0095A547 /* XCRemoteSwiftPackageReference "swift-system" */;
+			productName = SystemPackage;
+		};
+		18F2F1702E3DC84E0095A547 /* ComplexModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F16F2E3DC84E0095A547 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = ComplexModule;
+		};
+		18F2F1722E3DC84E0095A547 /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F16F2E3DC84E0095A547 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
+		};
+		18F2F1742E3DC84E0095A547 /* RealModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18F2F16F2E3DC84E0095A547 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = RealModule;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 18F2F1312E3D13D20095A547 /* Project object */;
+}

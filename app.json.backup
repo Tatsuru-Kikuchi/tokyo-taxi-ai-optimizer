@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "東京タクシーAIアプリ",
+    "slug": "tokyo-taxi-ai-optimizer",
+    "version": "1.1.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tatsuru-kikuchi.tokyo-taxi-ai",
+      "buildNumber": "4",
+      "icon": "./assets/images/icon-ios.png"
+    },
+    "android": {
+      "package": "com.tatsuru_kikuchi.tokyo_taxi_ai",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5c0312ca-1c9c-4917-a178-91f65a8f90e0"
+      }
+    },
+    "sdkVersion": "53.0.0"
+  }
+}
